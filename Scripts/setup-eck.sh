@@ -24,6 +24,10 @@ curl -X POST "http://localhost:30920/_security/user/sdg" -H "Content-Type: appli
   "email" : "sdg@elastic-pahlsoft.com"
 }'
 
+echo "Loading Elastic Rules, this will take a moment."
+echo
+curl -X PUT "http://localhost:30001/api/detection_engine/rules/prepackaged" -u "sdg:changme"  --header "kbn-xsrf: true" -H "Content-Type: application/json"  -d '{}'
+
 # Install Git
 sudo apt update -y
 # Install Java
