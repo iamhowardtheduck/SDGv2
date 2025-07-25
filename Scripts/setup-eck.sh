@@ -26,7 +26,40 @@ curl -X POST "http://localhost:30920/_security/user/sdg" -H "Content-Type: appli
 
 echo "Loading Elastic Rules, this will take a moment."
 echo
-curl -X PUT "http://localhost:30001/api/detection_engine/rules/prepackaged" -u "sdg:changme"  --header "kbn-xsrf: true" -H "Content-Type: application/json"  -d '{}'
+curl -X PUT "http://localhost:30002/api/detection_engine/rules/prepackaged" -u "sdg:changme"  --header "kbn-xsrf: true" -H "Content-Type: application/json"  -d '{}'
+
+echo "Creating Elastic-Agent policy"
+echo
+curl -X PUT "http://localhost:30002/api/fleet/agent_policies?sys_monitoring=true" -H "Content-Type: application/json" -u "sdg:changeme" -d @- << 'EOF' 
+{
+  "name": "Host with the Most",
+  "description": "A collection of various intergrations for a single host that is running way more than it should",
+  "namespace": "default",
+  "monitoring_enabled": [
+    "logs",
+    "metrics",
+    "traces"
+  ],
+  "inactivity_timeout": 1209600,
+  "is_protected": false
+}
+EOF
+
+curl -X PUT "http://localhost:30002/api/fleet/package_policies" -H "Content-Type: application/json" -u "sdg:changeme" -d @- << 'EOF' 
+{
+  "policy_ids": [
+    ""
+  ],
+  "package": {
+    "name": "ti_util",
+    "version": "1.7.0"
+  },
+  "name": "ti_util-1",
+  "description": "",
+  "namespace": "",
+  "inputs": {}
+}
+EOF
 
 # Install Git
 sudo apt update -y
