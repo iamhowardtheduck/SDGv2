@@ -41,7 +41,7 @@ gradle_version=$(gradle -v | grep "Gradle " | awk '{print $2}')
 echo "Gradle installed: Version $gradle_version"
 
 # Install Simple-Data-Generator
-gradle clean; gradle build fatJar
+cd /root/SDGv2 && gradle clean; gradle build fatJar
 
 source /opt/workshops/elastic-retry.sh
 
