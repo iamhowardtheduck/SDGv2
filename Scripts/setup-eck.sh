@@ -61,6 +61,148 @@ curl -X PUT "http://localhost:30002/api/fleet/package_policies" -H "Content-Type
 }
 EOF
 
+curl -X PUT "http://localhost:30002/api/fleet/package_policies" -H "Content-Type: application/json" -u "sdg:changeme" -d @- << 'EOF' 
+{
+  "policy_ids": [
+    ""
+  ],
+  "package": {
+    "name": "windows",
+    "version": "3.1.0"
+  },
+  "name": "windows-1",
+  "description": "",
+  "namespace": "",
+  "inputs": {
+    "windows-winlog": {
+      "enabled": true,
+      "streams": {
+        "windows.applocker_exe_and_dll": {
+          "enabled": true,
+          "vars": {
+            "preserve_original_event": false,
+            "event_id": null,
+            "ignore_older": "72h",
+            "language": 0,
+            "tags": [],
+            "custom": "# Winlog configuration example\n#batch_read_size: 100"
+          }
+        },
+        "windows.applocker_msi_and_script": {
+          "enabled": true,
+          "vars": {
+            "preserve_original_event": false,
+            "event_id": null,
+            "ignore_older": "72h",
+            "language": 0,
+            "tags": [],
+            "custom": "# Winlog configuration example\n#batch_read_size: 100"
+          }
+        },
+        "windows.applocker_packaged_app_deployment": {
+          "enabled": true,
+          "vars": {
+            "preserve_original_event": false,
+            "event_id": null,
+            "ignore_older": "72h",
+            "language": 0,
+            "tags": [],
+            "custom": "# Winlog configuration example\n#batch_read_size: 100"
+          }
+        },
+        "windows.applocker_packaged_app_execution": {
+          "enabled": true,
+          "vars": {
+            "preserve_original_event": false,
+            "event_id": null,
+            "ignore_older": "72h",
+            "language": 0,
+            "tags": [],
+            "custom": "# Winlog configuration example\n#batch_read_size: 100"
+          }
+        },
+        "windows.forwarded": {
+          "enabled": true,
+          "vars": {
+            "preserve_original_event": false,
+            "ignore_older": "72h",
+            "language": 0,
+            "tags": [
+              "forwarded"
+            ],
+            "custom": "# Winlog configuration example\n#batch_read_size: 100"
+          }
+        },
+        "windows.powershell": {
+          "enabled": true,
+          "vars": {
+            "preserve_original_event": false,
+            "event_id": "400, 403, 600, 800",
+            "ignore_older": "72h",
+            "language": 0,
+            "tags": [],
+            "custom": "# Winlog configuration example\n#batch_read_size: 100"
+          }
+        },
+        "windows.powershell_operational": {
+          "enabled": true,
+          "vars": {
+            "preserve_original_event": false,
+            "event_id": "4103, 4104, 4105, 4106",
+            "ignore_older": "72h",
+            "language": 0,
+            "tags": [],
+            "custom": "# Winlog configuration example\n#batch_read_size: 100"
+          }
+        },
+        "windows.sysmon_operational": {
+          "enabled": true,
+          "vars": {
+            "preserve_original_event": false,
+            "ignore_older": "72h",
+            "language": 0,
+            "tags": [],
+            "custom": "# Winlog configuration example\n#batch_read_size: 100"
+          }
+        },
+        "windows.windows_defender": {
+          "enabled": true,
+          "vars": {
+            "preserve_original_event": false,
+            "event_id": null,
+            "ignore_older": "72h",
+            "language": 0,
+            "tags": [],
+            "custom": "# Winlog configuration example\n#batch_read_size: 100"
+          }
+        }
+      }
+    },
+    "windows-windows/metrics": {
+      "enabled": true,
+      "streams": {
+        "windows.perfmon": {
+          "enabled": true,
+          "vars": {
+            "perfmon.group_measurements_by_instance": false,
+            "perfmon.ignore_non_existent_counters": false,
+            "perfmon.refresh_wildcard_counters": false,
+            "perfmon.queries": "- object: 'Process'\n  instance: [\"*\"]\n  counters:\n   - name: '% Processor Time'\n     field: cpu_perc\n     format: \"float\"\n   - name: \"Working Set\"\n",
+            "period": "10s"
+          }
+        },
+        "windows.service": {
+          "enabled": true,
+          "vars": {
+            "period": "60s"
+          }
+        }
+      }
+    }
+  }
+}
+EOF
+
 # Install Git
 sudo apt update -y
 # Install Java
