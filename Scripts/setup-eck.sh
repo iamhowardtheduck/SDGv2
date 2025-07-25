@@ -49,3 +49,6 @@ bash /opt/workshops/elastic-llm.sh -k false -m anthropic
 
 # Use Security view
 bash /opt/workshops/elastic-view.sh -v security
+
+# Create SecOps Elastic-Agent policy
+curl -X POST "http://localhost:30002/api/fleet/agent_policies?sys_monitoring=true" --header "kbn-xsrf: true"  -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Agent-Policies/secops-policy.json
