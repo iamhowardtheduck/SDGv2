@@ -15,7 +15,7 @@ gradle_version=$(gradle -v | grep "Gradle " | awk '{print $2}')
 echo "Gradle installed: Version $gradle_version"
 
 # Install Simple-Data-Generator
-cd /root/SDGv2 && gradle clean; gradle build fatJar
+cd /workspace/workshop/SDGv2 && gradle clean; gradle build fatJar
 
 echo "[1/4] Running osquery-setup.sh..."
 bash Scripts/osquery-setup.sh
