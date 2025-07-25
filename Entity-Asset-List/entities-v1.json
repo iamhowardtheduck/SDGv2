@@ -1,0 +1,10 @@
+{"records":[
+  {"id_field":"host.name","id_value":"Quantum-Teleporter","criticality_level":"extreme_impact"},
+  {"id_field":"host.name","id_value":"Lunch-Payment-Processor","criticality_level":"medium_impact"},
+  {"id_field":"user.name","id_value":"BossMan","criticality_level":"extreme_impact"},
+  {"id_field":"user.name","id_value":"LunchLady","criticality_level":"low_impact"},
+  {"id_field":"service.name","id_value":"Quantum-Crypto-Calculator","criticality_level":"extreme_impact"},
+  {"id_field":"service.name","id_value":"Lunch-Ordering-Service","criticality_level":"low_impact"},
+  {"id_field":"service.name","id_value":"Guest-SignIn","criticality_level":"high_impact"}
+]
+}
