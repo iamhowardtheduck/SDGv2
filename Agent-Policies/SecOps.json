@@ -1,0 +1,22 @@
+{
+  "name": "SecOps",
+  "description": "Security focused",
+  "namespace": "default",
+  "monitoring_enabled": [
+    "logs",
+    "metrics",
+    "traces"
+  ],
+  "inactivity_timeout": 1209600,
+  "is_protected": false,
+  "global_data_tags": [
+    {
+      "name": "secops.author",
+      "value": "Mr-Snuffy"
+    },
+    {
+      "name": "secops.group",
+      "value": "APT-Hunterz"
+    }
+  ]
+}
