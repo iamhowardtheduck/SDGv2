@@ -223,7 +223,7 @@ echo "Gradle installed: Version $gradle_version"
 cd /root/SDGv2 && gradle clean; gradle build fatJar
 
 # Install LLM Connector
-bash /opt/workshops/elastic-llm.sh -k false -m anthropic -e true
+bash /opt/workshops/elastic-llm.sh -k false -m anthropic
 
 # Use Security view
 bash /opt/workshops/elastic-view.sh -v security
