@@ -53,3 +53,6 @@ bash /opt/workshops/elastic-view.sh -v security
 # Create Elastic-Agent policies
 curl -X POST "http://localhost:30002/api/fleet/agent_policies?sys_monitoring=true" --header "kbn-xsrf: true"  -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Agent-Policies/Infra.json
 curl -X POST "http://localhost:30002/api/fleet/agent_policies?sys_monitoring=true" --header "kbn-xsrf: true"  -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Agent-Policies/SecOps.json
+
+# Create Entity Asset lists
+curl -X POST "http://localhost:30002/api/asset_criticality/bulk" --header "kbn-xsrf: true"  -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Entity-Asset-List/entities-v1.json
