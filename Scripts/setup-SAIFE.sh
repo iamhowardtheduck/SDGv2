@@ -139,4 +139,4 @@ echo "Custom Ingest Pipelines loaded"
 echo
 
 # Create dataviews
-curl -X POST "http://localhost:30002/api/data_views/data_view" --header "kbn-xsrf: true"  -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Dataviews/winlogbeat.json
+curl -X POST "http://localhost:30002/api/data_views/data_view" --header "kbn-xsrf: true"  -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Dataviews/Winlogbeat.json
