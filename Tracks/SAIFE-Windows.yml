@@ -1,0 +1,57 @@
+elasticsearchScheme: http
+elasticsearchHost: localhost
+elasticsearchPort: 30920
+elasticsearchUser: sdg
+elasticsearchPassword: changeme
+workloads:
+  - workloadName: logs-windows.sysmon_operational-default
+    workloadThreads: 4
+    workloadSleep: 5
+    indexName: logs-windows.sysmon_operational-default
+    fields:
+      - name: eventcategory
+        type: random_string_from_list
+        custom_list: iam,iam,iam,iam,iam,iam,iam,authentication,authentication,authentication,process,configuration,process,configuration,driver,registry,registry
+
+      - name: wincode
+        type: int
+        range: 1,422
+
+      - name: processname
+        type: path
+
+      - name: parentprocessname
+        type: path
+
+      - name: eventtype
+        type: random_string_from_list
+        custom_list: access,admin,allowed,change,connection,creation,deletion,denied,end,error,group,indicator,info,installation,protocol,start,user
+
+      - name: 2rip1
+        type: int
+        range: 10,10
+
+      - name: 2rip2
+        type: int
+        range: 0,255
+
+      - name: 2rip3
+        type: int
+        range: 0,255
+
+      - name: 2rip4
+        type: int
+        range: 0,254
+
+      - name: processpename
+        type: path        
+
+      - name: processargs
+        type: appname
+
+      - name: registry1
+        type: appname
+
+      - name: registry2
+        type: appname        
+        
