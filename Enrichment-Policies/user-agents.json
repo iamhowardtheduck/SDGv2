@@ -1,0 +1,7 @@
+{
+  "match": {
+    "indices": "enrich-user_agents",
+    "match_field": "code",
+    "enrich_fields": ["user_agent.os.full"]
+  }
+}
