@@ -1,0 +1,128 @@
+{
+  "processors": [
+    {
+      "rename": {
+        "field": "nginx.http.request.method",
+        "target_field": "http.request.method",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "rename": {
+        "field": "nginx.http.version",
+        "target_field": "http.version",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "rename": {
+        "field": "nginx.http.response.status_code",
+        "target_field": "http.response.status_code",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "rename": {
+        "field": "nginx.event.category",
+        "target_field": "event.category",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "rename": {
+        "field": "nginx.event.type",
+        "target_field": "event.type",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "rename": {
+        "field": "nginx.event.kind",
+        "target_field": "event.kind",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "rename": {
+        "field": "nginx.event.outcome",
+        "target_field": "event.outcome",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "rename": {
+        "field": "nginx.log.file.path",
+        "target_field": "log.file.path",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "rename": {
+        "field": "nginx.url.original",
+        "target_field": "url.original",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "rename": {
+        "field": "httpbodybytes",
+        "target_field": "http.response.body.bytes",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "rename": {
+        "field": "loglevel",
+        "target_field": "log.level",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "rename": {
+        "field": "datastreamdataset",
+        "target_field": "data_stream.dataset",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "remove": {
+        "field": [
+          "nginxcode",
+          "uacode",
+          "rip2",
+          "rip3",
+          "rip4",
+          "nginx.code",
+          "uas.user_agent.os",
+          "uas.code",
+          "uas.user_agent",
+          "nginx.http.request",
+          "nginx.http.response",
+          "nginx.event",
+          "nginx",
+          "nginx.log.file",
+          "nginx.url",
+          "uas",
+          "ripcodes",
+          "rip1",
+          "rips.ripcodes",
+          "slowloris"
+        ],
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    }
+  ]
+}
