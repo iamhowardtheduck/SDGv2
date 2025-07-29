@@ -1,0 +1,135 @@
+{
+  "processors": [
+    {
+      "enrich": {
+        "field": "nginxcode",
+        "policy_name": "enrich-nginx",
+        "target_field": "nginx",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "enrich": {
+        "field": "uacode",
+        "policy_name": "user-agents",
+        "target_field": "uas",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "enrich": {
+        "field": "ripcodes",
+        "policy_name": "remote-ips",
+        "target_field": "rips",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "rename": {
+        "field": "uas.user_agent.os.full",
+        "target_field": "user_agent.os.full",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "rename": {
+        "field": "rips.rip1",
+        "target_field": "rip1",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "user_agent": {
+        "field": "user_agent.os.full",
+        "extract_device_type": true,
+        "ignore_missing": true
+      }
+    },
+    {
+      "set": {
+        "field": "source.ip",
+        "value": "{{rip1}}.{{rip2}}.{{rip3}}.{{rip4}}",
+        "ignore_failure": true
+      }
+    },
+    {
+      "geoip": {
+        "field": "source.ip",
+        "target_field": "source.geo",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "set": {
+        "field": "nginx.url.original",
+        "value": "/?{{slowloris}}",
+        "if": "ctx.nginx?.url?.original == '/?REPLACE-ME-WITH-INTEGER-FOR-SLOWLORIS-DDOS'",
+        "ignore_failure": true
+      }
+    },
+    {
+      "pipeline": {
+        "name": "nginx-cleanup",
+        "ignore_missing_pipeline": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "pipeline": {
+        "name": "timestamp-cleanup",
+        "ignore_missing_pipeline": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "set": {
+        "field": "message",
+        "value": "SSL_do_handshake() failed (SSL: error:0A00006C:SSL routines::bad key share) while SSL handshaking, client: {{source.ip}}, server: 0.0.0.0:443",
+        "if": "ctx?.log?.level == 'crit'"
+      }
+    },
+    {
+      "set": {
+        "field": "message",
+        "value": "FastCGI sent in stderr: \"Primary script unknown\" while reading response header from upstream, client: {{source.ip}}, server: _, request: \"GET /ws/ec/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1\", upstream: \"fastcgi://127.0.0.1:9999\", host: \"72.95.137.39:443\"",
+        "if": "ctx?.log?.level == 'error'"
+      }
+    },
+    {
+      "set": {
+        "field": "log.file.path",
+        "value": "/var/log/nginx/error.log",
+        "if": "ctx?.log?.level == 'error'"
+      }
+    },
+    {
+      "set": {
+        "field": "log.file.path",
+        "value": "/var/log/nginx/error.log",
+        "if": "ctx?.log?.level == 'crit'"
+      }
+    },
+    {
+      "set": {
+        "field": "data_stream.dataset",
+        "value": "nginx.error",
+        "if": "ctx?.log?.level == 'crit' || ctx?.log?.level == 'error'",
+        "ignore_failure": true
+      }
+    },
+    {
+      "set": {
+        "field": "event.dataset",
+        "value": "nginx.error",
+        "if": "ctx?.log?.level == 'crit' || ctx?.log?.level == 'error'",
+        "ignore_failure": true
+      }
+    }
+  ]
+}
