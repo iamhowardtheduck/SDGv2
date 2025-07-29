@@ -1,0 +1,19 @@
+{
+  "processors": [
+    {
+      "rename": {
+        "field": "_ingest.timestamp",
+        "target_field": "event.ingested",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "set": {
+        "field": "@timestamp",
+        "ignore_failure": true,
+        "copy_from": "event.ingested"
+      }
+    }
+  ]
+}
