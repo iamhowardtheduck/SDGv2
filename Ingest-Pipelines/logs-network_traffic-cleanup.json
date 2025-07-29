@@ -1,0 +1,25 @@
+{
+  "processors": [
+    {
+      "remove": {
+        "field": [
+          "rip1",
+          "rip2",
+          "rip3",
+          "rip4",
+          "rip.ripcodes",
+          "rips.rip1",
+          "ripcodes",
+          "2rip1",
+          "2rip2",
+          "2rip3",
+          "2rip4",
+          "rip2.ripcodes2",
+          "rips.ripcodes"
+        ],
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    }
+  ]
+}
