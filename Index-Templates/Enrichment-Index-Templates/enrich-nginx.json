@@ -1,0 +1,82 @@
+{
+  "template": {
+    "settings": {
+      "index": {
+        "number_of_replicas": 0
+      }
+    },
+    "mappings": {
+      "properties": {
+        "code": {
+          "type": "long"
+        },
+        "event": {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "keyword"
+            },
+            "kind": {
+              "type": "keyword"
+            },
+            "outcome": {
+              "type": "keyword"
+            },
+            "type": {
+              "type": "keyword"
+            }
+          }
+        },
+        "http": {
+          "type": "object",
+          "properties": {
+            "version": {
+              "type": "keyword"
+            },
+            "request": {
+              "type": "object",
+              "properties": {
+                "method": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "response": {
+              "type": "object",
+              "properties": {
+                "status_code": {
+                  "type": "keyword"
+                }
+              }
+            }
+          }
+        },
+        "log": {
+          "type": "object",
+          "properties": {
+            "file": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "keyword"
+                }
+              }
+            }
+          }
+        },
+        "url": {
+          "type": "object",
+          "properties": {
+            "original": {
+              "type": "keyword"
+            }
+          }
+        }
+      }
+    }
+  },
+  "index_patterns": [
+    "enrich-nginx*"
+  ],
+  "allow_auto_create": true
+}
