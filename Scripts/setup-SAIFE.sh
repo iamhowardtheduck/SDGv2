@@ -98,3 +98,25 @@ curl -X POST "http://localhost:30920/enrich-user_agents/_bulk" -H "Content-Type:
 echo
 echo "Enrichment data loaded"
 echo
+
+# Create enrichment policies
+curl -X POST "http://localhost:30920/_enrich/policy/enrich-bluecoat" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" --data-binary @/root/SDGv2/Enrichment-Policies/enrich-bluecoat.json
+curl -X POST "http://localhost:30920/_enrich/policy/enrich-nginx" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" --data-binary @/root/SDGv2/Enrichment-Policies/enrich-nginx.json
+curl -X POST "http://localhost:30920/_enrich/policy/enrich-windows.sysmon_operational" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" --data-binary @/root/SDGv2/Enrichment-Policies/enrich-windows.sysmon_operational.json
+curl -X POST "http://localhost:30920/_enrich/policy/remote-ips" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" --data-binary @/root/SDGv2/Enrichment-Policies/remote-ips.json
+curl -X POST "http://localhost:30920/_enrich/policy/user-agents" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" --data-binary @/root/SDGv2/Enrichment-Policies/user-agents.json
+
+echo
+echo "Enrichment policies loaded"
+echo
+
+# Execute enrichment policies
+curl -X POST "http://localhost:30920/_enrich/policy/enrich-windows.sysmon_operational/_execute" -u "sdg:changeme"
+curl -X POST "http://localhost:30920/_enrich/policy/remote-ips/_execute" -u "sdg:changeme"
+curl -X POST "http://localhost:30920/_enrich/policy/enrich-bluecoat/_execute" -u "sdg:changeme"
+curl -X POST "http://localhost:30920/_enrich/policy/enrich-nginx/_execute" -u "sdg:changeme"
+curl -X POST "http://localhost:30920/_enrich/policy/user-agents/_execute" -u "sdg:changeme"
+
+echo
+echo "Enrichment policies executed"
+echo
