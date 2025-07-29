@@ -91,7 +91,7 @@ echo
 # Load enrichment data sources
 curl -X POST "http://localhost:30920/enrich-windows.sysmon_operational/_bulk" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" --data-binary @/root/SDGv2/Enrichment-Data/enrich-windows.sysmon_operational.ndjson
 curl -X POST "http://localhost:30920/enrich-rip/_bulk" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" --data-binary @/root/SDGv2/Enrichment-Data/enrich-rip.ndjson
-curl -X POST "http://localhost:30920/enrich-bluecoat/_bulk" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" --data-binary @/root/SDGv2/Enrichment-Data/bluecoat.ndjson
+curl -X POST "http://localhost:30920/enrich-bluecoat/_bulk" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" --data-binary @/root/SDGv2/Enrichment-Data/enrich-bluecoat.ndjson
 curl -X POST "http://localhost:30920/enrich-nginxv2/_bulk" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" --data-binary @/root/SDGv2/Enrichment-Data/enrich-nginxv2.ndjson
 curl -X POST "http://localhost:30920/enrich-user_agents/_bulk" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" --data-binary @/root/SDGv2/Enrichment-Data/enrich-user_agents.ndjson
 
