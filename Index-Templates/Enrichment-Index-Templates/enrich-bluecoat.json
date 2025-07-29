@@ -1,0 +1,50 @@
+{
+  "template": {
+    "settings": {
+      "index": {
+        "number_of_shards": "1",
+        "number_of_replicas": "0"
+      }
+    },
+    "mappings": {
+ "properties": {
+      "event": {
+        "properties": {
+          "action": {
+            "type": "keyword"
+          },
+          "category": {
+            "type": "keyword"
+          },
+          "dataset": {
+            "type": "keyword"
+          },
+          "kind": {
+            "type": "keyword"
+          },
+          "module": {
+            "type": "keyword"
+          },
+          "outcome": {
+            "type": "keyword"
+          },
+          "type": {
+            "type": "keyword"
+          }
+        }
+      },
+      "proxcode": {
+        "type": "long"
+      },
+      "proxy": {
+        "properties": {
+          "category": {
+            "type": "keyword"
+          }
+        }
+      }
+    }
+    }
+  },
+  "index_patterns": ["enrich-bluecoat*"]
+}
