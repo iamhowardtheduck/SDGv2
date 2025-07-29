@@ -1,0 +1,174 @@
+{ "index": { "_index": "enrich-bluecoat", "_id": "1" } }
+{"event": {"action": "TCP_DENIED", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "failure", "type": "connection"}, "proxcode": 1, "proxy": {"category":  "Abortion"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "2" } }
+{"event": {"action":"TCP_DENIED", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "failure", "type": "connection"}, "proxcode": 2, "proxy": {"category":  "Adult/Mature Content"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "3" } }
+{"event": {"action":"TCP_MISS", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 3, "proxy": {"category":  "Alcohol"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "4" } }
+{"event": {"action":"TCP_DENIED", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "failure", "type": "connection"}, "proxcode": 4, "proxy": {"category":  "Alternative Sexuality/Lifestyles"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "5" } }
+{"event": {"action":"TCP_MISS", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 5, "proxy": {"category":  "Alternative Spirituality/Belief"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "6" } }
+{"event": {"action":"TCP_MISS", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 6, "proxy": {"category":  "Art/Culture"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "7" } }
+{"event": {"action":"TCP_DENIED", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "failure", "type": "connection"}, "proxcode": 7, "proxy": {"category":  "Auctions"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "8" } }
+{"event": {"action":"TCP_REFRESH_HIT", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 8, "proxy": {"category":  "Audio/Video Clips"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "9" } }
+{"event": {"action":"TCP_MISS", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 9, "proxy": {"category":  "Blogs/Personal Pages"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "10" } }
+{"event": {"action":"TCP_REFRESH_HIT", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 10, "proxy": {"category":  "Brokerage/Trading"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "11" } }
+{"event": {"action":"TCP_REFRESH_HIT", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 11, "proxy": {"category":  "Business/Economy"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "12" } }
+{"event": {"action":"TCP_MISS", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 12, "proxy": {"category":  "Charitable Organizations"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "13" } }
+{"event": {"action":"TCP_MISS", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 13, "proxy": {"category":  "Chat/Instant Messaging"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "14" } }
+{"event": {"action":"TCP_DENIED", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "failure", "type": "connection"}, "proxcode": 14, "proxy": {"category":  "Child Pornography"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "15" } }
+{"event": {"action":"TCP_REFRESH_HIT", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 15, "proxy": {"category":  "Computers/Internet"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "16" } }
+{"event": {"action":"TCP_MISS", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 16, "proxy": {"category":  "Content Servers"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "17" } }
+{"event": {"action":"TCP_DENIED", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "failure", "type": "connection"}, "proxcode": 17, "proxy": {"category":  "Dynamic DNS Host"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "18" } }
+{"event": {"action":"TCP_HIT", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 18, "proxy": {"category":  "Education"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "19" } }
+{"event": {"action":"TCP_HIT", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 19, "proxy": {"category":  "Email"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "20" } }
+{"event": {"action":"TCP_MISS", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 20, "proxy": {"category":  "Entertainment"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "21" } }
+{"event": {"action":"TCP_DENIED", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "failure", "type": "connection"}, "proxcode": 21, "proxy": {"category":  "Extreme"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "22" } }
+{"event": {"action":"TCP_HIT", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 22, "proxy": {"category":  "Financial Services"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "23" } }
+{"event": {"action":"TCP_REFRESH_HIT", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 23, "proxy": {"category":  "For Kids"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "24" } }
+{"event": {"action":"TCP_DENIED", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "failure", "type": "connection"}, "proxcode": 24, "proxy": {"category":  "Gambling"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "25" } }
+{"event": {"action":"TCP_REFRESH_HIT", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 25, "proxy": {"category":  "Games"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "26" } }
+{"event": {"action":"TCP_REFRESH_HIT", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 26, "proxy": {"category":  "Government/Legal"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "27" } }
+{"event": {"action":"TCP_MISS", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 27, "proxy": {"category":  "Greeting Cards"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "28" } }
+{"event": {"action":"TCP_DENIED", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "failure", "type": "connection"}, "proxcode": 28, "proxy": {"category":  "Hacking"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "29" } }
+{"event": {"action":"TCP_MISS", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 29, "proxy": {"category":  "Health"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "30" } }
+{"event": {"action":"TCP_MISS", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 30, "proxy": {"category":  "Humor/Jokes"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "31" } }
+{"event": {"action":"TCP_DENIED", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "failure", "type": "connection"}, "proxcode": 31, "proxy": {"category":  "Illegal Drugs"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "32" } }
+{"event": {"action":"TCP_REFRESH_HIT", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 32, "proxy": {"category":  "Informational"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "33" } }
+{"event": {"action":"TCP_REFRESH_HIT", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 33, "proxy": {"category":  "Internet Telephony"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "34" } }
+{"event": {"action":"TCP_DENIED", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "failure", "type": "connection"}, "proxcode": 34, "proxy": {"category":  "Intimate Apparel/Swimsuit"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "35" } }
+{"event": {"action":"TCP_REFRESH_HIT", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 35, "proxy": {"category":  "Job Search/Careers"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "36" } }
+{"event": {"action":"TCP_REFRESH_HIT", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 36, "proxy": {"category":  "LGBT"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "37" } }
+{"event": {"action":"TCP_DENIED", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "failure", "type": "connection"}, "proxcode": 37, "proxy": {"category":  "Malicious Outbound Data/Botnets"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "38" } }
+{"event": {"action":"TCP_DENIED", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "failure", "type": "connection"}, "proxcode": 38, "proxy": {"category":  "Malicious Sources"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "39" } }
+{"event": {"action":"TCP_DENIED", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "failure", "type": "connection"}, "proxcode": 39, "proxy": {"category":  "Media Sharing"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "40" } }
+{"event": {"action":"TCP_REFRESH_HIT", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 40, "proxy": {"category":  "Military"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "41" } }
+{"event": {"action":"TCP_HIT", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 41, "proxy": {"category":  "News/Media"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "42" } }
+{"event": {"action":"TCP_HIT", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 42, "proxy": {"category":  "Newsgroups/Forums"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "43" } }
+{"event": {"action":"TCP_MISS", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 43, "proxy": {"category":  "Non-viewable"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "44" } }
+{"event": {"action":"TCP_DENIED", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "failure", "type": "connection"}, "proxcode": 44, "proxy": {"category":  "Nudity"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "45" } }
+{"event": {"action":"TCP_REFRESH_MISS", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 45, "proxy": {"category":  "Online Meetings"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "46" } }
+{"event": {"action":"TCP_REFRESH_HIT", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 46, "proxy": {"category":  "Online Storage"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "47" } }
+{"event": {"action":"TCP_MISS", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 47, "proxy": {"category":  "Open/Mixed Content"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "48" } }
+{"event": {"action":"TCP_REFRESH_HIT", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 48, "proxy": {"category":  "Pay to Surf"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "49" } }
+{"event": {"action":"TCP_DENIED", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "failure", "type": "connection"}, "proxcode": 49, "proxy": {"category":  "Peer-to-Peer (P2P)"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "50" } }
+{"event": {"action":"TCP_DENIED", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "failure", "type": "connection"}, "proxcode": 50, "proxy": {"category":  "Personals/Dating"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "51" } }
+{"event": {"action":"TCP_DENIED", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "failure", "type": "connection"}, "proxcode": 51, "proxy": {"category":  "Phishing"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "52" } }
+{"event": {"action":"TCP_REFRESH_HIT", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 52, "proxy": {"category":  "Placeholders"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "53" } }
+{"event": {"action":"TCP_MISS", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 53, "proxy": {"category":  "Political/Activist Groups"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "54" } }
+{"event": {"action":"TCP_DENIED", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "failure", "type": "connection"}, "proxcode": 54, "proxy": {"category":  "Pornography"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "55" } }
+{"event": {"action":"TCP_DENIED", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "failure", "type": "connection"}, "proxcode": 55, "proxy": {"category":  "Potentially Unwanted Software"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "56" } }
+{"event": {"action":"TCP_DENIED", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "failure", "type": "connection"}, "proxcode": 56, "proxy": {"category":  "Proxy Avoidance"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "57" } }
+{"event": {"action":"TCP_REFRESH_HIT", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 57, "proxy": {"category":  "Radio/Audio Streams"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "58" } }
+{"event": {"action":"TCP_MISS", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 58, "proxy": {"category":  "Real Estate"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "59" } }
+{"event": {"action":"TCP_HIT", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 59, "proxy": {"category":  "Reference"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "60" } }
+{"event": {"action":"TCP_REFRESH_MISS", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 60, "proxy": {"category":  "Religion"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "61" } }
+{"event": {"action":"TCP_DENIED", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "failure", "type": "connection"}, "proxcode": 61, "proxy": {"category":  "Remote Access Tools"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "62" } }
+{"event": {"action":"TCP_REFRESH_HIT", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 62, "proxy": {"category":  "Restaurants/Dining/Food"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "63" } }
+{"event": {"action":"TCP_DENIED", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "failure", "type": "connection"}, "proxcode": 63, "proxy": {"category":  "Scam/Questionable/Illegal"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "64" } }
+{"event": {"action":"TCP_REFRESH_HIT", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 64, "proxy": {"category":  "Search Engines/Portals"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "65" } }
+{"event": {"action":"TCP_REFRESH_HIT", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 65, "proxy": {"category":  "Sex Education"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "66" } }
+{"event": {"action":"TCP_MISS", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 66, "proxy": {"category":  "Shopping"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "67" } }
+{"event": {"action":"TCP_HIT", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 67, "proxy": {"category":  "Social Networking"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "68" } }
+{"event": {"action":"TCP_HIT", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 68, "proxy": {"category":  "Society/Daily Living"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "69" } }
+{"event": {"action":"TCP_MISS", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 69, "proxy": {"category":  "Software Downloads"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "70" } }
+{"event": {"action":"TCP_MISS", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 70, "proxy": {"category":  "Spam"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "71" } }
+{"event": {"action":"TCP_HIT", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 71, "proxy": {"category":  "Sports/Recreation"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "72" } }
+{"event": {"action":"TCP_DENIED", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "failure", "type": "connection"}, "proxcode": 72, "proxy": {"category":  "Suspicious"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "73" } }
+{"event": {"action":"TCP_REFRESH_HIT", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 73, "proxy": {"category":  "Tobacco"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "74" } }
+{"event": {"action":"TCP_REFRESH_HIT", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 74, "proxy": {"category":  "Translation"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "75" } }
+{"event": {"action":"TCP_MISS", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 75, "proxy": {"category":  "Travel"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "76" } }
+{"event": {"action":"TCP_MISS", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 76, "proxy": {"category":  "User-Defined"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "77" } }
+{"event": {"action":"TCP_HIT", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 77, "proxy": {"category":  "Vehicles"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "78" } }
+{"event": {"action":"TCP_DENIED", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "failure", "type": "connection"}, "proxcode": 78, "proxy": {"category":  "Violence/Hate/Racism"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "79" } }
+{"event": {"action":"TCP_REFRESH_MISS", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 79, "proxy": {"category":  "Weapons"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "80" } }
+{"event": {"action":"TCP_MISS", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 80, "proxy": {"category":  "Web Advertisements"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "81" } }
+{"event": {"action":"TCP_REFRESH_MISS", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 81, "proxy": {"category":  "Web Applications"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "82" } }
+{"event": {"action":"TCP_REFRESH_MISS", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 82, "proxy": {"category":  "Web Hosting"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "83" } }
+{"event": {"action":"TCP_TUNNEL", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 83, "proxy": {"category":  "Dynamic DNS Host"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "84" } }
+{"event": {"action":"TCP_TUNNEL", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 84, "proxy": {"category":  "Proxy Avoidance"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "85" } }
+{"event": {"action":"TCP_TUNNEL", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 85, "proxy": {"category":  "Malicious Outbound Data/Botnets"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "86" } }
+{"event": {"action":"TCP_TUNNEL", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 86, "proxy": {"category":  "Malicious Sources"}}
+{ "index": { "_index": "enrich-bluecoat", "_id": "87" } }
+{"event": {"action":"TCP_TUNNEL", "category": "network", "dataset": "bluecoat.proxy", "kind": "event", "module": "bluecoat", "outcome": "success", "type": "connection"}, "proxcode": 87, "proxy": {"category":  "Chat/Instant Messaging"}}
