@@ -1,0 +1,146 @@
+{
+  "template": {
+    "settings": {
+      "index": {
+        "default_pipeline": "enrich-email",
+        "number_of_replicas": 0
+      }
+    },
+    "mappings": {
+      "properties": {
+        "email": {
+          "type": "object",
+          "properties": {
+            "attachments": {
+              "type": "object",
+              "properties": {
+                "file": {
+                  "type": "object",
+                  "properties": {
+                    "extension": {
+                      "type": "keyword"
+                    },
+                    "hash": {
+                      "type": "object",
+                      "properties": {
+                        "md5": {
+                          "type": "keyword"
+                        },
+                        "sha1": {
+                          "type": "keyword"
+                        },
+                        "sha256": {
+                          "type": "keyword"
+                        }
+                      }
+                    },
+                    "mime_type": {
+                      "type": "keyword"
+                    },
+                    "name": {
+                      "type": "keyword"
+                    },
+                    "size": {
+                      "type": "long"
+                    }
+                  }
+                }
+              }
+            },
+            "bcc": {
+              "type": "object",
+              "properties": {
+                "address": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "cc": {
+              "type": "object",
+              "properties": {
+                "address": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "content_type": {
+              "type": "keyword"
+            },
+            "direction": {
+              "type": "keyword"
+            },
+            "from": {
+              "type": "object",
+              "properties": {
+                "address": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "reply_to": {
+              "type": "object",
+              "properties": {
+                "address": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "sender": {
+              "type": "object",
+              "properties": {
+                "address": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "subject": {
+              "type": "keyword"
+            },
+            "to": {
+              "type": "object",
+              "properties": {
+                "address": {
+                  "type": "keyword"
+                }
+              }
+            }
+          }
+        },
+        "event": {
+          "type": "object",
+          "properties": {
+            "ingested": {
+              "type": "date"
+            },
+	    "action": {
+              "type": "keyword"
+            },
+            "category": {
+              "type": "keyword"
+            },
+            "dataset": {
+              "type": "keyword"
+            },
+            "kind": {
+              "type": "keyword"
+            },
+            "module": {
+              "type": "keyword"
+            },
+            "reason": {
+              "type": "keyword"
+            }
+          }
+        }
+      }
+    }
+  },
+  "index_patterns": [
+    "logs-email*"
+  ],
+  "composed_of": [
+    "logs-network_traffic.dns@package"
+  ],
+  "ignore_missing_component_templates": [],
+  "allow_auto_create": true
+}
