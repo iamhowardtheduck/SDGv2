@@ -120,3 +120,10 @@ curl -X POST "http://localhost:30920/_enrich/policy/user-agents/_execute" -u "sd
 echo
 echo "Enrichment policies executed"
 echo
+
+# Creat ingest pipelines
+curl -X PUT "http://localhost:30920/_ingest/pipeline/logs-windows.sysmon_operational@custom" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" -d @/root/SDGv2/Ingest-Pipelines/logs-windows.sysmon_operational@custom.json
+
+echo
+echo "Custom Ingest Pipelines loaded"
+echo
