@@ -130,7 +130,7 @@ curl -X PUT "http://localhost:30920/_ingest/pipeline/enrich-email" -H "Content-T
 curl -X PUT "http://localhost:30920/_ingest/pipeline/enrich-logs-network_traffic-dns" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" -d @/root/SDGv2/Ingest-Pipelines/enrich-logs-network_traffic-dns.json
 curl -X PUT "http://localhost:30920/_ingest/pipeline/enrich-logs-network_traffic" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" -d @/root/SDGv2/Ingest-Pipelines/enrich-logs-network_traffic.json
 curl -X PUT "http://localhost:30920/_ingest/pipeline/enrich-nginx" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" -d @/root/SDGv2/Ingest-Pipelines/enrich-nginx.json
-curl -X PUT "http://localhost:30920/_ingest/pipeline/enrich-logs-network_traffic-cleanup" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" -d @/root/SDGv2/Ingest-Pipelines/enrich-logs-network_traffic-cleanup.json
+curl -X PUT "http://localhost:30920/_ingest/pipeline/logs-network_traffic-cleanup" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" -d @/root/SDGv2/Ingest-Pipelines/enrich-logs-network_traffic-cleanup.json
 curl -X PUT "http://localhost:30920/_ingest/pipeline/nginx-cleanup" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" -d @/root/SDGv2/Ingest-Pipelines/nginx-cleanup.json
 curl -X PUT "http://localhost:30920/_ingest/pipeline/timestamp-cleanup" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" -d @/root/SDGv2/Ingest-Pipelines/timestamp-cleanup.json
 
