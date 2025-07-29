@@ -1,0 +1,121 @@
+{
+  "processors": [
+    {
+      "set": {
+        "field": "event.action",
+        "value": "BLOCK",
+        "if": "ctx?.email?.direction == 'outbound' && ctx.email?.attachments?.file?.size >= 30000",
+        "ignore_failure": true,
+        "description": "Large file block to external"
+      }
+    },
+    {
+      "set": {
+        "field": "event.reason",
+        "value": "Outbound Size Restriction",
+        "if": "ctx.email?.direction == 'outbound' && ctx.email?.attachments?.file?.size >= 30000",
+        "ignore_failure": true,
+        "description": "Large file block to external reason"
+      }
+    },
+    {
+      "set": {
+        "field": "event.action",
+        "value": "BLOCK",
+        "if": "ctx?.email?.direction == 'outbound' && (ctx.email?.attachments?.file?.extension == 'mdb' || ctx.email?.attachments?.file?.extension == 'accdb'|| ctx.email?.attachments?.file?.extension == 'sqlite' || ctx.email?.attachments?.file?.extension == 'db' || ctx.email?.attachments?.file?.extension == 'sql')",
+        "ignore_failure": true,
+        "description": "Sensitive data block"
+      }
+    },
+    {
+      "set": {
+        "field": "event.reason",
+        "value": "Potentially Sensitive Data",
+        "if": "ctx?.email?.direction == 'outbound' && (ctx.email?.attachments?.file?.extension == 'mdb' || ctx.email?.attachments?.file?.extension == 'accdb'|| ctx.email?.attachments?.file?.extension == 'sqlite' || ctx.email?.attachments?.file?.extension == 'db' || ctx.email?.attachments?.file?.extension == 'sql')",
+        "ignore_failure": true,
+        "description": "Sensitive data block reason"
+      }
+    },
+    {
+      "set": {
+        "field": "event.action",
+        "value": "BLOCK",
+        "if": "ctx?.email?.direction == 'inbound' && (ctx.source?.geo?.country_iso_code == 'KP' || ctx.source?.geo?.country_iso_code == 'IR'|| ctx.source?.geo?.country_iso_code == 'CU' || ctx.source?.geo?.country_iso_code == 'IQ' || ctx.source?.geo?.country_iso_code == 'RU' || ctx.source?.geo?.country_iso_code == 'PS')",
+        "ignore_failure": true,
+        "description": "Geo block"
+      }
+    },
+    {
+      "set": {
+        "field": "event.reason",
+        "value": "Sanctioned Entity",
+        "if": "ctx?.email?.direction == 'inbound' && (ctx.source?.geo?.country_iso_code == 'KP' || ctx.source?.geo?.country_iso_code == 'IR'|| ctx.source?.geo?.country_iso_code == 'CU' || ctx.source?.geo?.country_iso_code == 'IQ' || ctx.source?.geo?.country_iso_code == 'RU' || ctx.source?.geo?.country_iso_code == 'PS')",
+        "ignore_failure": true,
+        "description": "Geo block reason"
+      }
+    },
+    {
+      "set": {
+        "field": "event.action",
+        "value": "QUARANTINE",
+        "if": "ctx?.email?.direction == 'inbound' && (ctx.email?.attachments?.file?.extension == 'zip' || ctx.email?.attachments?.file?.extension == 'rar'|| ctx.email?.attachments?.file?.extension == '7z' || ctx.email?.attachments?.file?.extension == 'tar.gz' || ctx.email?.attachments?.file?.extension == 'html')",
+        "ignore_failure": true,
+        "description": "Suspicious data quarantine"
+      }
+    },
+    {
+      "set": {
+        "field": "event.reason",
+        "value": "Additional scanning required",
+        "if": "ctx?.email?.direction == 'inbound' && (ctx.email?.attachments?.file?.extension == 'zip' || ctx.email?.attachments?.file?.extension == 'rar'|| ctx.email?.attachments?.file?.extension == '7z' || ctx.email?.attachments?.file?.extension == 'tar.gz' || ctx.email?.attachments?.file?.extension == 'html')",
+        "ignore_failure": true,
+        "description": "Suspicious data quarantine reason"
+      }
+    },
+    {
+      "set": {
+        "field": "destination.ip",
+        "value": "10.49.110.17",
+        "if": "ctx?.email?.direction == 'inbound' && ctx.email?.attachments?.file?.extension == 'pdf' && ctx.email?.attachments?.file?.size >= 40000",
+        "ignore_failure": true,
+        "description": "Specify the culprit's IP"
+      }
+    },
+    {
+      "set": {
+        "field": "email.attachments.file.extension",
+        "value": "exe",
+        "if": "ctx?.email?.direction == 'inbound' && ctx.email?.attachments?.file?.extension == 'pdf' && ctx.email?.attachments?.file?.size >= 40000",
+        "ignore_failure": true,
+        "description": "Specify the malware extension"
+      }
+    },
+    {
+      "set": {
+        "field": "email.attachments.file.size",
+        "value": "781408",
+        "if": "ctx?.email?.direction == 'inbound' && ctx.destination?.ip == '10.49.110.17'",
+        "ignore_failure": true,
+        "description": "Specify the file size"
+      }
+    },
+    {
+      "set": {
+        "field": "email.attachments.file.hash.md5",
+        "value": "9850e40113081ebe639af61c572c89e5",
+        "if": "ctx?.email?.direction == 'inbound' && ctx.destination?.ip == '10.49.110.17'",
+        "ignore_failure": true,
+        "description": "Specify the file md5"
+      }
+    },
+    {
+      "set": {
+        "field": "email.attachments.file.hash.sha256",
+        "value": "8aa4945b71a16b0d6dcbe9c5169f0e21470d010be70368d334f34974bd7761e4",
+        "if": "ctx?.email?.direction == 'inbound' && ctx.destination?.ip == '10.49.110.17'",
+        "ignore_failure": true,
+        "description": "Specify the file sha256"
+      }
+    }
+  ]
+}
