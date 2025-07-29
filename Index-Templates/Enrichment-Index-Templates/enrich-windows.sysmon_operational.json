@@ -1,0 +1,32 @@
+{
+  "template": {
+    "settings": {
+      "index": {
+        "number_of_shards": "1",
+        "number_of_replicas": "0"
+      }
+    },
+	"mappings": {
+    "properties": {
+      "message": {
+        "type": "text"
+      },
+      "wincode": {
+        "type": "long"
+      },
+      "winlog": {
+        "properties": {
+          "event_id": {
+            "type": "keyword"
+          }
+        }
+      }
+    }
+  }
+ },
+  "index_patterns": [
+    "enrich-windows.sysmon_operational*"
+  ],
+  "composed_of": [],
+  "allow_auto_create": true
+}
