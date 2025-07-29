@@ -1,0 +1,135 @@
+{
+  "template": {
+    "settings": {
+      "index": {
+        "default_pipeline": "enrich-bluecoat",
+        "number_of_shards": "1",
+        "number_of_replicas": "0"
+      }
+    },
+    "mappings": {
+      "properties": {
+        "proxy": {
+          "type": "object",
+          "properties": {
+            "request": {
+              "type": "object",
+              "properties": {
+                "bytes": {
+                  "type": "long"
+                },
+                "url": {
+                  "eager_global_ordinals": false,
+                  "norms": false,
+                  "index": true,
+                  "store": false,
+                  "type": "keyword",
+                  "index_options": "docs",
+                  "split_queries_on_whitespace": false,
+                  "doc_values": true
+                }
+              }
+            },
+            "response": {
+              "type": "object",
+              "properties": {
+                "bytes": {
+                  "type": "long"
+                }
+              }
+            },
+            "category": {
+              "type": "keyword"
+            }
+          }
+        },
+        "bc": {
+          "type": "object",
+          "properties": {
+            "event": {
+              "type": "object",
+              "properties": {
+                "ingested": {
+              	  "type": "date"
+            	},
+		"kind": {
+                  "type": "keyword"
+                },
+                "module": {
+                  "type": "keyword"
+                },
+                "action": {
+                  "type": "keyword"
+                },
+                "type": {
+                  "type": "keyword"
+                },
+                "category": {
+                  "type": "keyword"
+                },
+                "dataset": {
+                  "type": "keyword"
+                },
+                "outcome": {
+                  "type": "keyword"
+                }
+              }
+            }
+          }
+        },
+        "data_stream": {
+          "dynamic": true,
+          "type": "object",
+          "enabled": true,
+          "properties": {
+            "dataset": {
+              "type": "keyword"
+            }
+          },
+          "subobjects": true
+        },
+        "destination": {
+          "type": "object",
+          "properties": {
+            "geo": {
+              "type": "object",
+              "properties": {
+                "location": {
+                  "type": "geo_point"
+                }
+              }
+            },
+            "ip": {
+              "type": "ip"
+            }
+          }
+        },
+        "source": {
+          "type": "object",
+          "properties": {
+            "geo": {
+              "type": "object",
+              "properties": {
+                "location": {
+                  "type": "geo_point"
+                }
+              }
+            },
+            "ip": {
+              "type": "ip"
+            }
+          }
+        }
+      }
+    }
+  },
+  "index_patterns": [
+    "bluecoat*",
+    "logs-bluecoat*"
+  ],
+  "composed_of": [
+    "ecs@mappings"
+  ],
+  "ignore_missing_component_templates": [],
+  "allow_auto_create": true
+}
