@@ -1,0 +1,199 @@
+{
+  "processors": [
+    {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "url",
+        "target_field": "abusech.malware.virustotal.link"
+      }
+    },
+    {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "signature",
+        "target_field": "abusech.malware.signature"
+      }
+    },
+    {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "expiration",
+        "target_field": "abusech.malware.ioc_expiration_duration"
+      }
+    },
+    {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "size",
+        "target_field": "threat.indicator.file.size"
+      }
+    },
+    {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "extension",
+        "target_field": "threat.indicator.file.type"
+      }
+    },
+    {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "filehashmd5",
+        "target_field": "threat.indicator.file.hash.md5"
+      }
+    },
+    {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "filehashsha256",
+        "target_field": "threat.indicator.file.hash.sha256"
+      }
+    },
+    {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "filename",
+        "target_field": "threat.indicator.name"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "event.category",
+        "value": "threat"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "event.dataset",
+        "value": "ti_abusech.malware"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "event.kind",
+        "value": "enrichment"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "event.module",
+        "value": "ti_abusech"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "event.type",
+        "value": "indicator"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "data_stream.type",
+        "value": "logs"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "data_stream.namespace",
+        "value": "default"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "data_stream.dataset",
+        "value": "ti_abusech.malware"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "threat.feed.name",
+        "value": "AbuseCH Malware"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "threat.indicator.type",
+        "value": "file"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "abusech.malware.virustotal.link",
+        "value": "https://www.virustotal.com/gui/file/{{abusech.malware.virustotal.link}}/detection"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "threat.indicator.file.hash.md5",
+        "value": "9850e40113081ebe639af61c572c89e5",
+        "if": "ctx.code == '666'"
+      }
+    },
+    {
+      "pipeline": {
+        "name": "timestamp-cleanup",
+        "ignore_missing_pipeline": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "threat.indicator.first_seen",
+        "value": "{{@timestamp}}"
+      }
+    },
+    {
+      "script": {
+        "ignore_failure": true,
+        "source": "          if (ctx.result2 != null && ctx.result2 != 0) {\r\n            ctx.percent = ((ctx.result1 != null ? ctx.result1 : 0) + 0.0) / (ctx.result2 + 0.0) * 100;\r\n          } else {\r\n            ctx.percent = null; // Avoid division by zero or nulls\r\n          }",
+        "lang": "painless"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "abusech.malware.virustotal.result",
+        "value": "{{result1}} / {{result2}}"
+      }
+    },
+    {
+      "remove": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": [
+          "result1",
+          "result2"
+        ]
+      }
+    },
+    {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "percent",
+        "target_field": "abusech.malware.virustotal.percent"
+      }
+    }
+  ]
+}
