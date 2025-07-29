@@ -1,0 +1,7 @@
+{
+  "match": {
+    "indices": "enrich-nginxv2",
+    "match_field": "code",
+    "enrich_fields": ["http.response.status_code", "event.category", "http.version", "event.kind", "log.file.path", "event.outcome", "event.type", "url.original", "http.request.method"]
+  }
+}
