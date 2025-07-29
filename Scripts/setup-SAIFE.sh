@@ -100,11 +100,11 @@ echo "Enrichment data loaded"
 echo
 
 # Create enrichment policies
-curl -X POST "http://localhost:30920/_enrich/policy/enrich-bluecoat" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" --data-binary @/root/SDGv2/Enrichment-Policies/enrich-bluecoat.json
-curl -X POST "http://localhost:30920/_enrich/policy/enrich-nginx" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" --data-binary @/root/SDGv2/Enrichment-Policies/enrich-nginx.json
-curl -X POST "http://localhost:30920/_enrich/policy/enrich-windows.sysmon_operational" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" --data-binary @/root/SDGv2/Enrichment-Policies/enrich-windows.sysmon_operational.json
-curl -X POST "http://localhost:30920/_enrich/policy/remote-ips" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" --data-binary @/root/SDGv2/Enrichment-Policies/remote-ips.json
-curl -X POST "http://localhost:30920/_enrich/policy/user-agents" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" --data-binary @/root/SDGv2/Enrichment-Policies/user-agents.json
+curl -X PUT "http://localhost:30920/_enrich/policy/enrich-bluecoat" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" --data-binary @/root/SDGv2/Enrichment-Policies/enrich-bluecoat.json
+curl -X PUT "http://localhost:30920/_enrich/policy/enrich-nginx" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" --data-binary @/root/SDGv2/Enrichment-Policies/enrich-nginx.json
+curl -X PUT "http://localhost:30920/_enrich/policy/enrich-windows.sysmon_operational" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" --data-binary @/root/SDGv2/Enrichment-Policies/enrich-windows.sysmon_operational.json
+curl -X PUT "http://localhost:30920/_enrich/policy/remote-ips" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" --data-binary @/root/SDGv2/Enrichment-Policies/remote-ips.json
+curl -X PUT "http://localhost:30920/_enrich/policy/user-agents" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" --data-binary @/root/SDGv2/Enrichment-Policies/user-agents.json
 
 echo
 echo "Enrichment policies loaded"
