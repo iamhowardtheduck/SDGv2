@@ -1,0 +1,25 @@
+{
+  "template": {
+    "settings": {
+      "index": {
+        "number_of_replicas": "0"
+      }
+    },
+    "mappings": {
+      "properties": {
+        "ripcodes": {
+          "type": "long"
+        },
+        "rip1": {
+          "type": "long"
+        }
+      }
+    }
+  },
+  "index_patterns": [
+    "enrich-rip*"
+  ],
+  "composed_of": [],
+  "ignore_missing_component_templates": [],
+  "allow_auto_create": true
+}
