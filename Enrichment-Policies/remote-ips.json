@@ -1,0 +1,7 @@
+{
+  "match": {
+    "indices": "enrich-rip",
+    "match_field": "ripcodes",
+    "enrich_fields": ["rip1"]
+  }
+}
