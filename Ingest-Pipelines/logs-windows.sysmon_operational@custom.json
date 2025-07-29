@@ -1,0 +1,288 @@
+{
+  "processors": [
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "host.os.type",
+        "value": "windows"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "data_stream.dataset",
+        "value": "system.security"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "event.module",
+        "value": "system"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "winlog.api",
+        "value": "wineventlog"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "winlog.channel",
+        "value": "Security"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "winlog.provider_name",
+        "value": "Microsoft-Windows-Security-Auditing"
+      }
+    },
+    {
+      "enrich": {
+        "ignore_failure": true,
+        "policy_name": "enrich-windows.sysmon_operational",
+        "ignore_missing": true,
+        "field": "wincode",
+        "target_field": "win"
+      }
+    },
+    {
+      "remove": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": [
+          "wincode",
+          "win.wincode"
+        ]
+      }
+    },
+    {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "win.message",
+        "target_field": "message"
+      }
+    },
+    {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "win.winlog.event_id",
+        "target_field": "winlog.event_id"
+      }
+    },
+    {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "eventcategory",
+        "target_field": "event.category"
+      }
+    },
+    {
+      "rename": {
+        "field": "eventtype",
+        "target_field": "event.type",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "event.type",
+        "value": "change",
+        "if": "ctx?.winlog?.event_id == '4907' || ctx?.winlog?.event_id == '4738' || ctx?.winlog?.event_id == '4616' || ctx?.winlog?.event_id == '4904'"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "event.type",
+        "value": "admin",
+        "if": "ctx?.winlog?.event_id == '4907' || ctx?.winlog?.event_id == '4672' || ctx?.winlog?.event_id == '4904' || ctx?.winlog?.event_id == '4905' || ctx?.winlog?.event_id == '4902'"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "event.type",
+        "value": "end",
+        "if": "ctx?.winlog?.event_id == '4634' || ctx?.winlog?.event_id == '4647' || ctx?.winlog?.event_id == '1100'"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "event.type",
+        "value": "start",
+        "if": "ctx?.winlog?.event_id == '4624' || ctx?.winlog?.event_id == '4648' || ctx?.winlog?.event_id == '4688' || ctx?.winlog?.event_id == '5033' || ctx?.winlog?.event_id == '5024' || ctx?.winlog?.event_id == '4625'"
+      }
+    },
+    {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "processname",
+        "target_field": "process.name"
+      }
+    },
+    {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "parentprocessname",
+        "target_field": "process.parent.name"
+      }
+    },
+    {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "processpename",
+        "target_field": "process.pe.original_file_name"
+      }
+    },
+    {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "processargs",
+        "target_field": "process.args"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "process.args",
+        "value": "/{{process.args}}:*"
+      }
+    },
+    {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "eventtype",
+        "target_field": "event.type"
+      }
+    },
+    {
+      "grok": {
+        "field": "process.parent.name",
+        "patterns": [
+          "[^.*]+\\/(?<process.parent.name>[^\\.]+)\\..*"
+        ]
+      }
+    },
+    {
+      "grok": {
+        "field": "process.name",
+        "patterns": [
+          "[^.*]+\\/(?<process.name>[^\\.]+)\\..*"
+        ]
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "parent.process.name",
+        "value": "{{process.parent.name}}.exe"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "process.name",
+        "value": "{{process.name}}.exe"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "host.ip",
+        "value": "{{2rip1}}.{{2rip2}}.{{2rip3}}.{{2rip4}}"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "registry.path",
+        "value": "HKLM\\\\Software\\\\Policies\\\\Microsoft\\\\Windows NT\\\\{{registry1}}\\\\{{registry2}}"
+      }
+    },
+    {
+      "remove": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": [
+          "2rip1",
+          "2rip2",
+          "2rip3",
+          "2rip4",
+          "registry1",
+          "registry2"
+        ]
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "process.name",
+        "value": "RdpSaUacHelper.exe",
+        "if": "ctx.event?.category == 'process' && ctx.event?.type == 'start'"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "process.parent.name",
+        "value": "svchost.exe",
+        "if": "ctx.event?.category == 'process' && ctx.event?.type == 'start'"
+      }
+    },
+    {
+      "set": {
+        "field": "host.ip",
+        "value": "10.49.110.17",
+        "if": "ctx.event?.category == 'process' && ctx.event?.type == 'start'"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "event.ingested",
+        "copy_from": "@timestamp"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "process.args",
+        "value": "/shadow:*",
+        "if": "ctx.host?.ip == '10.49.110.17'"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "process.pe.original_file_name",
+        "value": "mstsc.exe",
+        "if": "ctx.host?.ip == '10.49.110.17'"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "registry.path",
+        "value": "HKLM\\\\Software\\\\Policies\\\\Microsoft\\\\Windows NT\\\\Terminal Services\\\\Shadow",
+        "if": "ctx.host?.ip == '10.49.110.17'"
+      }
+    }
+  ]
+}
