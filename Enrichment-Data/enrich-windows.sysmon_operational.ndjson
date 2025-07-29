@@ -1,0 +1,844 @@
+{ "index": { "_id": "1", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The event logging service has shut down", "wincode": 1, "winlog":{"event_id": "1100"}}
+{ "index": { "_id": "2", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Audit events have been dropped by the transport.", "wincode": 2, "winlog":{"event_id": "1101"}}
+{ "index": { "_id": "3", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The audit log was cleared", "wincode": 3, "winlog":{"event_id": "1102"}}
+{ "index": { "_id": "4", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The security Log is now full", "wincode": 4, "winlog":{"event_id": "1104"}}
+{ "index": { "_id": "5", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Event log automatic backup", "wincode": 5, "winlog":{"event_id": "1105"}}
+{ "index": { "_id": "6", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The event logging service encountered an error", "wincode": 6, "winlog":{"event_id": "1108"}}
+{ "index": { "_id": "7", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Windows is starting up", "wincode": 7, "winlog":{"event_id": "4608"}}
+{ "index": { "_id": "8", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Windows is shutting down", "wincode": 8, "winlog":{"event_id": "4609"}}
+{ "index": { "_id": "9", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An authentication package has been loaded by the Local Security Authority", "wincode": 9, "winlog":{"event_id": "4610"}}
+{ "index": { "_id": "10", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A trusted logon process has been registered with the Local Security Authority", "wincode": 10, "winlog":{"event_id": "4611"}}
+{ "index": { "_id": "11", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Internal resources allocated for the queuing of audit messages have been exhausted, leading to the loss of some audits.", "wincode": 11, "winlog":{"event_id": "4612"}}
+{ "index": { "_id": "12", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A notification package has been loaded by the Security Account Manager.", "wincode": 12, "winlog":{"event_id": "4614"}}
+{ "index": { "_id": "13", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Invalid use of LPC port", "wincode": 13, "winlog":{"event_id": "4615"}}
+{ "index": { "_id": "14", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The system time was changed.", "wincode": 14, "winlog":{"event_id": "4616"}}
+{ "index": { "_id": "15", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A monitored security event pattern has occurred", "wincode": 15, "winlog":{"event_id": "4618"}}
+{ "index": { "_id": "16", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Administrator recovered system from CrashOnAuditFail", "wincode": 16, "winlog":{"event_id": "4621"}}
+{ "index": { "_id": "17", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A security package has been loaded by the Local Security Authority.", "wincode": 17, "winlog":{"event_id": "4622"}}
+{ "index": { "_id": "18", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An account was successfully logged on", "wincode": 18, "winlog":{"event_id": "4624"}}
+{ "index": { "_id": "19", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An account failed to log on", "wincode": 19, "winlog":{"event_id": "4625"}}
+{ "index": { "_id": "20", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "User/Device claims information", "wincode": 20, "winlog":{"event_id": "4626"}}
+{ "index": { "_id": "21", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Group membership information.", "wincode": 21, "winlog":{"event_id": "4627"}}
+{ "index": { "_id": "22", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An account was logged off", "wincode": 22, "winlog":{"event_id": "4634"}}
+{ "index": { "_id": "23", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "IKE DoS-prevention mode started", "wincode": 23, "winlog":{"event_id": "4646"}}
+{ "index": { "_id": "24", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "User initiated logoff", "wincode": 24, "winlog":{"event_id": "4647"}}
+{ "index": { "_id": "25", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A logon was attempted using explicit credentials", "wincode": 25, "winlog":{"event_id": "4648"}}
+{ "index": { "_id": "26", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A replay attack was detected", "wincode": 26, "winlog":{"event_id": "4649"}}
+{ "index": { "_id": "27", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An IPsec Main Mode security association was established", "wincode": 27, "winlog":{"event_id": "4650"}}
+{ "index": { "_id": "28", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An IPsec Main Mode security association was established", "wincode": 28, "winlog":{"event_id": "4651"}}
+{ "index": { "_id": "29", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An IPsec Main Mode negotiation failed", "wincode": 29, "winlog":{"event_id": "4652"}}
+{ "index": { "_id": "30", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An IPsec Main Mode negotiation failed", "wincode": 30, "winlog":{"event_id": "4653"}}
+{ "index": { "_id": "31", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An IPsec Quick Mode negotiation failed", "wincode": 31, "winlog":{"event_id": "4654"}}
+{ "index": { "_id": "32", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An IPsec Main Mode security association ended", "wincode": 32, "winlog":{"event_id": "4655"}}
+{ "index": { "_id": "33", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A handle to an object was requested", "wincode": 33, "winlog":{"event_id": "4656"}}
+{ "index": { "_id": "34", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A registry value was modified", "wincode": 34, "winlog":{"event_id": "4657"}}
+{ "index": { "_id": "35", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The handle to an object was closed", "wincode": 35, "winlog":{"event_id": "4658"}}
+{ "index": { "_id": "36", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A handle to an object was requested with intent to delete", "wincode": 36, "winlog":{"event_id": "4659"}}
+{ "index": { "_id": "37", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An object was deleted", "wincode": 37, "winlog":{"event_id": "4660"}}
+{ "index": { "_id": "38", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A handle to an object was requested", "wincode": 38, "winlog":{"event_id": "4661"}}
+{ "index": { "_id": "39", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An operation was performed on an object", "wincode": 39, "winlog":{"event_id": "4662"}}
+{ "index": { "_id": "40", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An attempt was made to access an object", "wincode": 40, "winlog":{"event_id": "4663"}}
+{ "index": { "_id": "41", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An attempt was made to create a hard link", "wincode": 41, "winlog":{"event_id": "4664"}}
+{ "index": { "_id": "42", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An attempt was made to create an application client context.", "wincode": 42, "winlog":{"event_id": "4665"}}
+{ "index": { "_id": "43", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An application attempted an operation", "wincode": 43, "winlog":{"event_id": "4666"}}
+{ "index": { "_id": "44", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An application client context was deleted", "wincode": 44, "winlog":{"event_id": "4667"}}
+{ "index": { "_id": "45", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An application was initialized", "wincode": 45, "winlog":{"event_id": "4668"}}
+{ "index": { "_id": "46", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Permissions on an object were changed", "wincode": 46, "winlog":{"event_id": "4670"}}
+{ "index": { "_id": "47", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An application attempted to access a blocked ordinal through the TBS", "wincode": 47, "winlog":{"event_id": "4671"}}
+{ "index": { "_id": "48", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Special privileges assigned to new logon", "wincode": 48, "winlog":{"event_id": "4672"}}
+{ "index": { "_id": "49", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A privileged service was called", "wincode": 49, "winlog":{"event_id": "4673"}}
+{ "index": { "_id": "50", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An operation was attempted on a privileged object", "wincode": 50, "winlog":{"event_id": "4674"}}
+{ "index": { "_id": "51", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "SIDs were filtered", "wincode": 51, "winlog":{"event_id": "4675"}}
+{ "index": { "_id": "52", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A new process has been created", "wincode": 52, "winlog":{"event_id": "4688"}}
+{ "index": { "_id": "53", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A process has exited", "wincode": 53, "winlog":{"event_id": "4689"}}
+{ "index": { "_id": "54", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An attempt was made to duplicate a handle to an object", "wincode": 54, "winlog":{"event_id": "4690"}}
+{ "index": { "_id": "55", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Indirect access to an object was requested", "wincode": 55, "winlog":{"event_id": "4691"}}
+{ "index": { "_id": "56", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Backup of data protection master key was attempted", "wincode": 56, "winlog":{"event_id": "4692"}}
+{ "index": { "_id": "57", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Recovery of data protection master key was attempted", "wincode": 57, "winlog":{"event_id": "4693"}}
+{ "index": { "_id": "58", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Protection of auditable protected data was attempted", "wincode": 58, "winlog":{"event_id": "4694"}}
+{ "index": { "_id": "59", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Unprotection of auditable protected data was attempted", "wincode": 59, "winlog":{"event_id": "4695"}}
+{ "index": { "_id": "60", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A primary token was assigned to process", "wincode": 60, "winlog":{"event_id": "4696"}}
+{ "index": { "_id": "61", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A service was installed in the system", "wincode": 61, "winlog":{"event_id": "4697"}}
+{ "index": { "_id": "62", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A scheduled task was created", "wincode": 62, "winlog":{"event_id": "4698"}}
+{ "index": { "_id": "63", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A scheduled task was deleted", "wincode": 63, "winlog":{"event_id": "4699"}}
+{ "index": { "_id": "64", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A scheduled task was enabled", "wincode": 64, "winlog":{"event_id": "4700"}}
+{ "index": { "_id": "65", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A scheduled task was disabled", "wincode": 65, "winlog":{"event_id": "4701"}}
+{ "index": { "_id": "66", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A scheduled task was updated", "wincode": 66, "winlog":{"event_id": "4702"}}
+{ "index": { "_id": "67", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A token right was adjusted", "wincode": 67, "winlog":{"event_id": "4703"}}
+{ "index": { "_id": "68", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A user right was assigned", "wincode": 68, "winlog":{"event_id": "4704"}}
+{ "index": { "_id": "69", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A user right was removed", "wincode": 69, "winlog":{"event_id": "4705"}}
+{ "index": { "_id": "70", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A new trust was created to a domain", "wincode": 70, "winlog":{"event_id": "4706"}}
+{ "index": { "_id": "71", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A trust to a domain was removed", "wincode": 71, "winlog":{"event_id": "4707"}}
+{ "index": { "_id": "72", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "IPsec Services was started", "wincode": 72, "winlog":{"event_id": "4709"}}
+{ "index": { "_id": "73", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "IPsec Services was disabled", "wincode": 73, "winlog":{"event_id": "4710"}}
+{ "index": { "_id": "74", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "PAStore Engine (1%)", "wincode": 74, "winlog":{"event_id": "4711"}}
+{ "index": { "_id": "75", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "IPsec Services encountered a potentially serious failure", "wincode": 75, "winlog":{"event_id": "4712"}}
+{ "index": { "_id": "76", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Kerberos policy was changed", "wincode": 76, "winlog":{"event_id": "4713"}}
+{ "index": { "_id": "77", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Encrypted data recovery policy was changed", "wincode": 77, "winlog":{"event_id": "4714"}}
+{ "index": { "_id": "78", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The audit policy (SACL) on an object was changed", "wincode": 78, "winlog":{"event_id": "4715"}}
+{ "index": { "_id": "79", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Trusted domain information was modified", "wincode": 79, "winlog":{"event_id": "4716"}}
+{ "index": { "_id": "80", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "System security access was granted to an account", "wincode": 80, "winlog":{"event_id": "4717"}}
+{ "index": { "_id": "81", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "System security access was removed from an account", "wincode": 81, "winlog":{"event_id": "4718"}}
+{ "index": { "_id": "82", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "System audit policy was changed", "wincode": 82, "winlog":{"event_id": "4719"}}
+{ "index": { "_id": "83", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A user account was created", "wincode": 83, "winlog":{"event_id": "4720"}}
+{ "index": { "_id": "84", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A user account was enabled", "wincode": 84, "winlog":{"event_id": "4722"}}
+{ "index": { "_id": "85", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An attempt was made to change an account's password", "wincode": 85, "winlog":{"event_id": "4723"}}
+{ "index": { "_id": "86", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An attempt was made to reset an accounts password", "wincode": 86, "winlog":{"event_id": "4724"}}
+{ "index": { "_id": "87", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A user account was disabled", "wincode": 87, "winlog":{"event_id": "4725"}}
+{ "index": { "_id": "88", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A user account was deleted", "wincode": 88, "winlog":{"event_id": "4726"}}
+{ "index": { "_id": "89", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A security-enabled global group was created", "wincode": 89, "winlog":{"event_id": "4727"}}
+{ "index": { "_id": "90", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A member was added to a security-enabled global group", "wincode": 90, "winlog":{"event_id": "4728"}}
+{ "index": { "_id": "91", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A member was removed from a security-enabled global group", "wincode": 91, "winlog":{"event_id": "4729"}}
+{ "index": { "_id": "92", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A security-enabled global group was deleted", "wincode": 92, "winlog":{"event_id": "4730"}}
+{ "index": { "_id": "93", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A security-enabled local group was created", "wincode": 93, "winlog":{"event_id": "4731"}}
+{ "index": { "_id": "94", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A member was added to a security-enabled local group", "wincode": 94, "winlog":{"event_id": "4732"}}
+{ "index": { "_id": "95", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A member was removed from a security-enabled local group", "wincode": 95, "winlog":{"event_id": "4733"}}
+{ "index": { "_id": "96", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A security-enabled local group was deleted", "wincode": 96, "winlog":{"event_id": "4734"}}
+{ "index": { "_id": "97", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A security-enabled local group was changed", "wincode": 97, "winlog":{"event_id": "4735"}}
+{ "index": { "_id": "98", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A security-enabled global group was changed", "wincode": 98, "winlog":{"event_id": "4737"}}
+{ "index": { "_id": "99", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A user account was changed", "wincode": 99, "winlog":{"event_id": "4738"}}
+{ "index": { "_id": "100", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Domain Policy was changed", "wincode": 100, "winlog":{"event_id": "4739"}}
+{ "index": { "_id": "101", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A user account was locked out", "wincode": 101, "winlog":{"event_id": "4740"}}
+{ "index": { "_id": "102", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A computer account was created", "wincode": 102, "winlog":{"event_id": "4741"}}
+{ "index": { "_id": "103", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A computer account was changed", "wincode": 103, "winlog":{"event_id": "4742"}}
+{ "index": { "_id": "104", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A computer account was deleted", "wincode": 104, "winlog":{"event_id": "4743"}}
+{ "index": { "_id": "105", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A security-disabled local group was created", "wincode": 105, "winlog":{"event_id": "4744"}}
+{ "index": { "_id": "106", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A security-disabled local group was changed", "wincode": 106, "winlog":{"event_id": "4745"}}
+{ "index": { "_id": "107", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A member was added to a security-disabled local group", "wincode": 107, "winlog":{"event_id": "4746"}}
+{ "index": { "_id": "108", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A member was removed from a security-disabled local group", "wincode": 108, "winlog":{"event_id": "4747"}}
+{ "index": { "_id": "109", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A security-disabled local group was deleted", "wincode": 109, "winlog":{"event_id": "4748"}}
+{ "index": { "_id": "110", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A security-disabled global group was created", "wincode": 110, "winlog":{"event_id": "4749"}}
+{ "index": { "_id": "111", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A security-disabled global group was changed", "wincode": 111, "winlog":{"event_id": "4750"}}
+{ "index": { "_id": "112", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A member was added to a security-disabled global group", "wincode": 112, "winlog":{"event_id": "4751"}}
+{ "index": { "_id": "113", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A member was removed from a security-disabled global group", "wincode": 113, "winlog":{"event_id": "4752"}}
+{ "index": { "_id": "114", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A security-disabled global group was deleted", "wincode": 114, "winlog":{"event_id": "4753"}}
+{ "index": { "_id": "115", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A security-enabled universal group was created", "wincode": 115, "winlog":{"event_id": "4754"}}
+{ "index": { "_id": "116", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A security-enabled universal group was changed", "wincode": 116, "winlog":{"event_id": "4755"}}
+{ "index": { "_id": "117", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A member was added to a security-enabled universal group", "wincode": 117, "winlog":{"event_id": "4756"}}
+{ "index": { "_id": "118", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A member was removed from a security-enabled universal group", "wincode": 118, "winlog":{"event_id": "4757"}}
+{ "index": { "_id": "119", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A security-enabled universal group was deleted", "wincode": 119, "winlog":{"event_id": "4758"}}
+{ "index": { "_id": "120", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A security-disabled universal group was created", "wincode": 120, "winlog":{"event_id": "4759"}}
+{ "index": { "_id": "121", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A security-disabled universal group was changed", "wincode": 121, "winlog":{"event_id": "4760"}}
+{ "index": { "_id": "122", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A member was added to a security-disabled universal group", "wincode": 122, "winlog":{"event_id": "4761"}}
+{ "index": { "_id": "123", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A member was removed from a security-disabled universal group", "wincode": 123, "winlog":{"event_id": "4762"}}
+{ "index": { "_id": "124", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A security-disabled universal group was deleted", "wincode": 124, "winlog":{"event_id": "4763"}}
+{ "index": { "_id": "125", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A groups type was changed", "wincode": 125, "winlog":{"event_id": "4764"}}
+{ "index": { "_id": "126", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "SID History was added to an account", "wincode": 126, "winlog":{"event_id": "4765"}}
+{ "index": { "_id": "127", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An attempt to add SID History to an account failed", "wincode": 127, "winlog":{"event_id": "4766"}}
+{ "index": { "_id": "128", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A user account was unlocked", "wincode": 128, "winlog":{"event_id": "4767"}}
+{ "index": { "_id": "129", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A Kerberos authentication ticket (TGT) was requested", "wincode": 129, "winlog":{"event_id": "4768"}}
+{ "index": { "_id": "130", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A Kerberos service ticket was requested", "wincode": 130, "winlog":{"event_id": "4769"}}
+{ "index": { "_id": "131", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A Kerberos service ticket was renewed", "wincode": 131, "winlog":{"event_id": "4770"}}
+{ "index": { "_id": "132", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Kerberos pre-authentication failed", "wincode": 132, "winlog":{"event_id": "4771"}}
+{ "index": { "_id": "133", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A Kerberos authentication ticket request failed", "wincode": 133, "winlog":{"event_id": "4772"}}
+{ "index": { "_id": "134", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A Kerberos service ticket request failed", "wincode": 134, "winlog":{"event_id": "4773"}}
+{ "index": { "_id": "135", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An account was mapped for logon", "wincode": 135, "winlog":{"event_id": "4774"}}
+{ "index": { "_id": "136", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An account could not be mapped for logon", "wincode": 136, "winlog":{"event_id": "4775"}}
+{ "index": { "_id": "137", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The domain controller attempted to validate the credentials for an account", "wincode": 137, "winlog":{"event_id": "4776"}}
+{ "index": { "_id": "138", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The domain controller failed to validate the credentials for an account", "wincode": 138, "winlog":{"event_id": "4777"}}
+{ "index": { "_id": "139", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A session was reconnected to a Window Station", "wincode": 139, "winlog":{"event_id": "4778"}}
+{ "index": { "_id": "140", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A session was disconnected from a Window Station", "wincode": 140, "winlog":{"event_id": "4779"}}
+{ "index": { "_id": "141", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The ACL was set on accounts which are members of administrators groups", "wincode": 141, "winlog":{"event_id": "4780"}}
+{ "index": { "_id": "142", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The name of an account was changed", "wincode": 142, "winlog":{"event_id": "4781"}}
+{ "index": { "_id": "143", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The password hash an account was accessed", "wincode": 143, "winlog":{"event_id": "4782"}}
+{ "index": { "_id": "144", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A basic application group was created", "wincode": 144, "winlog":{"event_id": "4783"}}
+{ "index": { "_id": "145", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A basic application group was changed", "wincode": 145, "winlog":{"event_id": "4784"}}
+{ "index": { "_id": "146", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A member was added to a basic application group", "wincode": 146, "winlog":{"event_id": "4785"}}
+{ "index": { "_id": "147", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A member was removed from a basic application group", "wincode": 147, "winlog":{"event_id": "4786"}}
+{ "index": { "_id": "148", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A non-member was added to a basic application group", "wincode": 148, "winlog":{"event_id": "4787"}}
+{ "index": { "_id": "149", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A non-member was removed from a basic application group..", "wincode": 149, "winlog":{"event_id": "4788"}}
+{ "index": { "_id": "150", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A basic application group was deleted", "wincode": 150, "winlog":{"event_id": "4789"}}
+{ "index": { "_id": "151", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An LDAP query group was created", "wincode": 151, "winlog":{"event_id": "4790"}}
+{ "index": { "_id": "152", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A basic application group was changed", "wincode": 152, "winlog":{"event_id": "4791"}}
+{ "index": { "_id": "153", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An LDAP query group was deleted", "wincode": 153, "winlog":{"event_id": "4792"}}
+{ "index": { "_id": "154", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The Password Policy Checking API was called", "wincode": 154, "winlog":{"event_id": "4793"}}
+{ "index": { "_id": "155", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An attempt was made to set the Directory Services Restore Mode administrator password", "wincode": 155, "winlog":{"event_id": "4794"}}
+{ "index": { "_id": "156", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An attempt was made to query the existence of a blank password for an account", "wincode": 156, "winlog":{"event_id": "4797"}}
+{ "index": { "_id": "157", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A user's local group membership was enumerated.", "wincode": 157, "winlog":{"event_id": "4798"}}
+{ "index": { "_id": "158", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A security-enabled local group membership was enumerated", "wincode": 158, "winlog":{"event_id": "4799"}}
+{ "index": { "_id": "159", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The workstation was locked", "wincode": 159, "winlog":{"event_id": "4800"}}
+{ "index": { "_id": "160", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The workstation was unlocked", "wincode": 160, "winlog":{"event_id": "4801"}}
+{ "index": { "_id": "161", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The screen saver was invoked", "wincode": 161, "winlog":{"event_id": "4802"}}
+{ "index": { "_id": "162", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The screen saver was dismissed", "wincode": 162, "winlog":{"event_id": "4803"}}
+{ "index": { "_id": "163", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "RPC detected an integrity violation while decrypting an incoming message", "wincode": 163, "winlog":{"event_id": "4816"}}
+{ "index": { "_id": "164", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Auditing settings on object were changed.", "wincode": 164, "winlog":{"event_id": "4817"}}
+{ "index": { "_id": "165", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Proposed Central Access Policy does not grant the same access permissions as the current Central Access Policy", "wincode": 165, "winlog":{"event_id": "4818"}}
+{ "index": { "_id": "166", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Central Access Policies on the machine have been changed", "wincode": 166, "winlog":{"event_id": "4819"}}
+{ "index": { "_id": "167", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A Kerberos Ticket-granting-ticket (TGT) was denied because the device does not meet the access control restrictions", "wincode": 167, "winlog":{"event_id": "4820"}}
+{ "index": { "_id": "168", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A Kerberos service ticket was denied because the user, device, or both does not meet the access control restrictions", "wincode": 168, "winlog":{"event_id": "4821"}}
+{ "index": { "_id": "169", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "NTLM authentication failed because the account was a member of the Protected User group", "wincode": 169, "winlog":{"event_id": "4822"}}
+{ "index": { "_id": "170", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "NTLM authentication failed because access control restrictions are required", "wincode": 170, "winlog":{"event_id": "4823"}}
+{ "index": { "_id": "171", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Kerberos preauthentication by using DES or RC4 failed because the account was a member of the Protected User group", "wincode": 171, "winlog":{"event_id": "4824"}}
+{ "index": { "_id": "172", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A user was denied the access to Remote Desktop. By default, users are allowed to connect only if they are members of the Remote Desktop Users group or Administrators group", "wincode": 172, "winlog":{"event_id": "4825"}}
+{ "index": { "_id": "173", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Boot Configuration Data loaded", "wincode": 173, "winlog":{"event_id": "4826"}}
+{ "index": { "_id": "174", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "SID History was removed from an account", "wincode": 174, "winlog":{"event_id": "4830"}}
+{ "index": { "_id": "175", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A namespace collision was detected", "wincode": 175, "winlog":{"event_id": "4864"}}
+{ "index": { "_id": "176", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A trusted forest information entry was added", "wincode": 176, "winlog":{"event_id": "4865"}}
+{ "index": { "_id": "177", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A trusted forest information entry was removed", "wincode": 177, "winlog":{"event_id": "4866"}}
+{ "index": { "_id": "178", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A trusted forest information entry was modified", "wincode": 178, "winlog":{"event_id": "4867"}}
+{ "index": { "_id": "179", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The certificate manager denied a pending certificate request", "wincode": 179, "winlog":{"event_id": "4868"}}
+{ "index": { "_id": "180", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Certificate Services received a resubmitted certificate request", "wincode": 180, "winlog":{"event_id": "4869"}}
+{ "index": { "_id": "181", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Certificate Services revoked a certificate", "wincode": 181, "winlog":{"event_id": "4870"}}
+{ "index": { "_id": "182", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Certificate Services received a request to publish the certificate revocation list (CRL)", "wincode": 182, "winlog":{"event_id": "4871"}}
+{ "index": { "_id": "183", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Certificate Services published the certificate revocation list (CRL)", "wincode": 183, "winlog":{"event_id": "4872"}}
+{ "index": { "_id": "184", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A certificate request extension changed", "wincode": 184, "winlog":{"event_id": "4873"}}
+{ "index": { "_id": "185", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "One or more certificate request attributes changed.", "wincode": 185, "winlog":{"event_id": "4874"}}
+{ "index": { "_id": "186", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Certificate Services received a request to shut down", "wincode": 186, "winlog":{"event_id": "4875"}}
+{ "index": { "_id": "187", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Certificate Services backup started", "wincode": 187, "winlog":{"event_id": "4876"}}
+{ "index": { "_id": "188", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Certificate Services backup completed", "wincode": 188, "winlog":{"event_id": "4877"}}
+{ "index": { "_id": "189", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Certificate Services restore started", "wincode": 189, "winlog":{"event_id": "4878"}}
+{ "index": { "_id": "190", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Certificate Services restore completed", "wincode": 190, "winlog":{"event_id": "4879"}}
+{ "index": { "_id": "191", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Certificate Services started", "wincode": 191, "winlog":{"event_id": "4880"}}
+{ "index": { "_id": "192", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Certificate Services stopped", "wincode": 192, "winlog":{"event_id": "4881"}}
+{ "index": { "_id": "193", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The security permissions for Certificate Services changed", "wincode": 193, "winlog":{"event_id": "4882"}}
+{ "index": { "_id": "194", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Certificate Services retrieved an archived key", "wincode": 194, "winlog":{"event_id": "4883"}}
+{ "index": { "_id": "195", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Certificate Services imported a certificate into its database", "wincode": 195, "winlog":{"event_id": "4884"}}
+{ "index": { "_id": "196", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The audit filter for Certificate Services changed", "wincode": 196, "winlog":{"event_id": "4885"}}
+{ "index": { "_id": "197", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Certificate Services received a certificate request", "wincode": 197, "winlog":{"event_id": "4886"}}
+{ "index": { "_id": "198", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Certificate Services approved a certificate request and issued a certificate", "wincode": 198, "winlog":{"event_id": "4887"}}
+{ "index": { "_id": "199", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Certificate Services denied a certificate request", "wincode": 199, "winlog":{"event_id": "4888"}}
+{ "index": { "_id": "200", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Certificate Services set the status of a certificate request to pending", "wincode": 200, "winlog":{"event_id": "4889"}}
+{ "index": { "_id": "201", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The certificate manager settings for Certificate Services changed.", "wincode": 201, "winlog":{"event_id": "4890"}}
+{ "index": { "_id": "202", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A configuration entry changed in Certificate Services", "wincode": 202, "winlog":{"event_id": "4891"}}
+{ "index": { "_id": "203", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A property of Certificate Services changed", "wincode": 203, "winlog":{"event_id": "4892"}}
+{ "index": { "_id": "204", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Certificate Services archived a key", "wincode": 204, "winlog":{"event_id": "4893"}}
+{ "index": { "_id": "205", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Certificate Services imported and archived a key", "wincode": 205, "winlog":{"event_id": "4894"}}
+{ "index": { "_id": "206", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Certificate Services published the CA certificate to Active Directory Domain Services", "wincode": 206, "winlog":{"event_id": "4895"}}
+{ "index": { "_id": "207", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "One or more rows have been deleted from the certificate database", "wincode": 207, "winlog":{"event_id": "4896"}}
+{ "index": { "_id": "208", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Role separation enabled", "wincode": 208, "winlog":{"event_id": "4897"}}
+{ "index": { "_id": "209", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Certificate Services loaded a template", "wincode": 209, "winlog":{"event_id": "4898"}}
+{ "index": { "_id": "210", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A Certificate Services template was updated", "wincode": 210, "winlog":{"event_id": "4899"}}
+{ "index": { "_id": "211", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Certificate Services template security was updated", "wincode": 211, "winlog":{"event_id": "4900"}}
+{ "index": { "_id": "212", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The Per-user audit policy table was created", "wincode": 212, "winlog":{"event_id": "4902"}}
+{ "index": { "_id": "213", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An attempt was made to register a security event source", "wincode": 213, "winlog":{"event_id": "4904"}}
+{ "index": { "_id": "214", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An attempt was made to unregister a security event source", "wincode": 214, "winlog":{"event_id": "4905"}}
+{ "index": { "_id": "215", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The CrashOnAuditFail value has changed", "wincode": 215, "winlog":{"event_id": "4906"}}
+{ "index": { "_id": "216", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Auditing settings on object were changed", "wincode": 216, "winlog":{"event_id": "4907"}}
+{ "index": { "_id": "217", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Special Groups Logon table modified", "wincode": 217, "winlog":{"event_id": "4908"}}
+{ "index": { "_id": "218", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The local policy settings for the TBS were changed", "wincode": 218, "winlog":{"event_id": "4909"}}
+{ "index": { "_id": "219", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The group policy settings for the TBS were changed", "wincode": 219, "winlog":{"event_id": "4910"}}
+{ "index": { "_id": "220", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Resource attributes of the object were changed", "wincode": 220, "winlog":{"event_id": "4911"}}
+{ "index": { "_id": "221", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Per User Audit Policy was changed", "wincode": 221, "winlog":{"event_id": "4912"}}
+{ "index": { "_id": "222", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Central Access Policy on the object was changed", "wincode": 222, "winlog":{"event_id": "4913"}}
+{ "index": { "_id": "223", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An Active Directory replica source naming context was established", "wincode": 223, "winlog":{"event_id": "4928"}}
+{ "index": { "_id": "224", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An Active Directory replica source naming context was removed", "wincode": 224, "winlog":{"event_id": "4929"}}
+{ "index": { "_id": "225", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An Active Directory replica source naming context was modified", "wincode": 225, "winlog":{"event_id": "4930"}}
+{ "index": { "_id": "226", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An Active Directory replica destination naming context was modified", "wincode": 226, "winlog":{"event_id": "4931"}}
+{ "index": { "_id": "227", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Synchronization of a replica of an Active Directory naming context has begun", "wincode": 227, "winlog":{"event_id": "4932"}}
+{ "index": { "_id": "228", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Synchronization of a replica of an Active Directory naming context has ended", "wincode": 228, "winlog":{"event_id": "4933"}}
+{ "index": { "_id": "229", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Attributes of an Active Directory object were replicated", "wincode": 229, "winlog":{"event_id": "4934"}}
+{ "index": { "_id": "230", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Replication failure begins", "wincode": 230, "winlog":{"event_id": "4935"}}
+{ "index": { "_id": "231", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Replication failure ends", "wincode": 231, "winlog":{"event_id": "4936"}}
+{ "index": { "_id": "232", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A lingering object was removed from a replica", "wincode": 232, "winlog":{"event_id": "4937"}}
+{ "index": { "_id": "233", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The following policy was active when the Windows Firewall started", "wincode": 233, "winlog":{"event_id": "4944"}}
+{ "index": { "_id": "234", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A rule was listed when the Windows Firewall started", "wincode": 234, "winlog":{"event_id": "4945"}}
+{ "index": { "_id": "235", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A change has been made to Windows Firewall exception list. A rule was added", "wincode": 235, "winlog":{"event_id": "4946"}}
+{ "index": { "_id": "236", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A change has been made to Windows Firewall exception list. A rule was modified", "wincode": 236, "winlog":{"event_id": "4947"}}
+{ "index": { "_id": "237", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A change has been made to Windows Firewall exception list. A rule was deleted", "wincode": 237, "winlog":{"event_id": "4948"}}
+{ "index": { "_id": "238", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Windows Firewall settings were restored to the default values", "wincode": 238, "winlog":{"event_id": "4949"}}
+{ "index": { "_id": "239", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A Windows Firewall setting has changed", "wincode": 239, "winlog":{"event_id": "4950"}}
+{ "index": { "_id": "240", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A rule has been ignored because its major version number was not recognized by Windows Firewall", "wincode": 240, "winlog":{"event_id": "4951"}}
+{ "index": { "_id": "241", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Parts of a rule have been ignored because its minor version number was not recognized by Windows Firewall", "wincode": 241, "winlog":{"event_id": "4952"}}
+{ "index": { "_id": "242", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A rule has been ignored by Windows Firewall because it could not parse the rule", "wincode": 242, "winlog":{"event_id": "4953"}}
+{ "index": { "_id": "243", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Windows Firewall Group Policy settings has changed. The new settings have been applied", "wincode": 243, "winlog":{"event_id": "4954"}}
+{ "index": { "_id": "244", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Windows Firewall has changed the active profile", "wincode": 244, "winlog":{"event_id": "4956"}}
+{ "index": { "_id": "245", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Windows Firewall did not apply the following rule", "wincode": 245, "winlog":{"event_id": "4957"}}
+{ "index": { "_id": "246", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Windows Firewall did not apply the following rule because the rule referred to items not configured on this computer", "wincode": 246, "winlog":{"event_id": "4958"}}
+{ "index": { "_id": "247", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "IPsec dropped an inbound packet that failed an integrity check", "wincode": 247, "winlog":{"event_id": "4960"}}
+{ "index": { "_id": "248", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "IPsec dropped an inbound packet that failed a replay check", "wincode": 248, "winlog":{"event_id": "4961"}}
+{ "index": { "_id": "249", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "IPsec dropped an inbound packet that failed a replay check", "wincode": 249, "winlog":{"event_id": "4962"}}
+{ "index": { "_id": "250", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "IPsec dropped an inbound clear text packet that should have been secured", "wincode": 250, "winlog":{"event_id": "4963"}}
+{ "index": { "_id": "251", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Special groups have been assigned to a new logon", "wincode": 251, "winlog":{"event_id": "4964"}}
+{ "index": { "_id": "252", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "IPsec received a packet from a remote computer with an incorrect Security Parameter Index (SPI).", "wincode": 252, "winlog":{"event_id": "4965"}}
+{ "index": { "_id": "253", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "During Main Mode negotiation, IPsec received an invalid negotiation packet.", "wincode": 253, "winlog":{"event_id": "4976"}}
+{ "index": { "_id": "254", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "During Quick Mode negotiation, IPsec received an invalid negotiation packet.", "wincode": 254, "winlog":{"event_id": "4977"}}
+{ "index": { "_id": "255", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "During Extended Mode negotiation, IPsec received an invalid negotiation packet.", "wincode": 255, "winlog":{"event_id": "4978"}}
+{ "index": { "_id": "256", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "IPsec Main Mode and Extended Mode security associations were established.", "wincode": 256, "winlog":{"event_id": "4979"}}
+{ "index": { "_id": "257", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "IPsec Main Mode and Extended Mode security associations were established", "wincode": 257, "winlog":{"event_id": "4980"}}
+{ "index": { "_id": "258", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "IPsec Main Mode and Extended Mode security associations were established", "wincode": 258, "winlog":{"event_id": "4981"}}
+{ "index": { "_id": "259", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "IPsec Main Mode and Extended Mode security associations were established", "wincode": 259, "winlog":{"event_id": "4982"}}
+{ "index": { "_id": "260", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An IPsec Extended Mode negotiation failed", "wincode": 260, "winlog":{"event_id": "4983"}}
+{ "index": { "_id": "261", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An IPsec Extended Mode negotiation failed", "wincode": 261, "winlog":{"event_id": "4984"}}
+{ "index": { "_id": "262", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The state of a transaction has changed", "wincode": 262, "winlog":{"event_id": "4985"}}
+{ "index": { "_id": "263", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The Windows Firewall Service has started successfully", "wincode": 263, "winlog":{"event_id": "5024"}}
+{ "index": { "_id": "264", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The Windows Firewall Service has been stopped", "wincode": 264, "winlog":{"event_id": "5025"}}
+{ "index": { "_id": "265", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The Windows Firewall Service was unable to retrieve the security policy from the local storage", "wincode": 265, "winlog":{"event_id": "5027"}}
+{ "index": { "_id": "266", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The Windows Firewall Service was unable to parse the new security policy.", "wincode": 266, "winlog":{"event_id": "5028"}}
+{ "index": { "_id": "267", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The Windows Firewall Service failed to initialize the driver", "wincode": 267, "winlog":{"event_id": "5029"}}
+{ "index": { "_id": "268", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The Windows Firewall Service failed to start", "wincode": 268, "winlog":{"event_id": "5030"}}
+{ "index": { "_id": "269", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The Windows Firewall Service blocked an application from accepting incoming connections on the network.", "wincode": 269, "winlog":{"event_id": "5031"}}
+{ "index": { "_id": "270", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Windows Firewall was unable to notify the user that it blocked an application from accepting incoming connections on the network", "wincode": 270, "winlog":{"event_id": "5032"}}
+{ "index": { "_id": "271", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The Windows Firewall Driver has started successfully", "wincode": 271, "winlog":{"event_id": "5033"}}
+{ "index": { "_id": "272", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The Windows Firewall Driver has been stopped", "wincode": 272, "winlog":{"event_id": "5034"}}
+{ "index": { "_id": "273", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The Windows Firewall Driver failed to start", "wincode": 273, "winlog":{"event_id": "5035"}}
+{ "index": { "_id": "274", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The Windows Firewall Driver detected critical runtime error. Terminating", "wincode": 274, "winlog":{"event_id": "5037"}}
+{ "index": { "_id": "275", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Code integrity determined that the image hash of a file is not valid", "wincode": 275, "winlog":{"event_id": "5038"}}
+{ "index": { "_id": "276", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A registry key was virtualized.", "wincode": 276, "winlog":{"event_id": "5039"}}
+{ "index": { "_id": "277", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A change has been made to IPsec settings. An Authentication Set was added.", "wincode": 277, "winlog":{"event_id": "5040"}}
+{ "index": { "_id": "278", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A change has been made to IPsec settings. An Authentication Set was modified", "wincode": 278, "winlog":{"event_id": "5041"}}
+{ "index": { "_id": "279", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A change has been made to IPsec settings. An Authentication Set was deleted", "wincode": 279, "winlog":{"event_id": "5042"}}
+{ "index": { "_id": "280", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A change has been made to IPsec settings. A Connection Security Rule was added", "wincode": 280, "winlog":{"event_id": "5043"}}
+{ "index": { "_id": "281", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A change has been made to IPsec settings. A Connection Security Rule was modified", "wincode": 281, "winlog":{"event_id": "5044"}}
+{ "index": { "_id": "282", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A change has been made to IPsec settings. A Connection Security Rule was deleted", "wincode": 282, "winlog":{"event_id": "5045"}}
+{ "index": { "_id": "283", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A change has been made to IPsec settings. A Crypto Set was added", "wincode": 283, "winlog":{"event_id": "5046"}}
+{ "index": { "_id": "284", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A change has been made to IPsec settings. A Crypto Set was modified", "wincode": 284, "winlog":{"event_id": "5047"}}
+{ "index": { "_id": "285", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A change has been made to IPsec settings. A Crypto Set was deleted", "wincode": 285, "winlog":{"event_id": "5048"}}
+{ "index": { "_id": "286", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An IPsec Security Association was deleted", "wincode": 286, "winlog":{"event_id": "5049"}}
+{ "index": { "_id": "287", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An attempt to programmatically disable the Windows Firewall using a call to INetFwProfile.FirewallEnabled(FALSE", "wincode": 287, "winlog":{"event_id": "5050"}}
+{ "index": { "_id": "288", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A file was virtualized", "wincode": 288, "winlog":{"event_id": "5051"}}
+{ "index": { "_id": "289", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A cryptographic self test was performed", "wincode": 289, "winlog":{"event_id": "5056"}}
+{ "index": { "_id": "290", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A cryptographic primitive operation failed", "wincode": 290, "winlog":{"event_id": "5057"}}
+{ "index": { "_id": "291", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Key file operation", "wincode": 291, "winlog":{"event_id": "5058"}}
+{ "index": { "_id": "292", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Key migration operation", "wincode": 292, "winlog":{"event_id": "5059"}}
+{ "index": { "_id": "293", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Verification operation failed", "wincode": 293, "winlog":{"event_id": "5060"}}
+{ "index": { "_id": "294", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Cryptographic operation", "wincode": 294, "winlog":{"event_id": "5061"}}
+{ "index": { "_id": "295", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A kernel-mode cryptographic self test was performed", "wincode": 295, "winlog":{"event_id": "5062"}}
+{ "index": { "_id": "296", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A cryptographic provider operation was attempted", "wincode": 296, "winlog":{"event_id": "5063"}}
+{ "index": { "_id": "297", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A cryptographic context operation was attempted", "wincode": 297, "winlog":{"event_id": "5064"}}
+{ "index": { "_id": "298", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A cryptographic context modification was attempted", "wincode": 298, "winlog":{"event_id": "5065"}}
+{ "index": { "_id": "299", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A cryptographic function operation was attempted", "wincode": 299, "winlog":{"event_id": "5066"}}
+{ "index": { "_id": "300", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A cryptographic function modification was attempted", "wincode": 300, "winlog":{"event_id": "5067"}}
+{ "index": { "_id": "301", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A cryptographic function provider operation was attempted", "wincode": 301, "winlog":{"event_id": "5068"}}
+{ "index": { "_id": "302", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A cryptographic function property operation was attempted", "wincode": 302, "winlog":{"event_id": "5069"}}
+{ "index": { "_id": "303", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A cryptographic function property operation was attempted", "wincode": 303, "winlog":{"event_id": "5070"}}
+{ "index": { "_id": "304", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Key access denied by Microsoft key distribution service", "wincode": 304, "winlog":{"event_id": "5071"}}
+{ "index": { "_id": "305", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "OCSP Responder Service Started", "wincode": 305, "winlog":{"event_id": "5120"}}
+{ "index": { "_id": "306", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "OCSP Responder Service Stopped", "wincode": 306, "winlog":{"event_id": "5121"}}
+{ "index": { "_id": "307", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A Configuration entry changed in the OCSP Responder Service", "wincode": 307, "winlog":{"event_id": "5122"}}
+{ "index": { "_id": "308", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A configuration entry changed in the OCSP Responder Service", "wincode": 308, "winlog":{"event_id": "5123"}}
+{ "index": { "_id": "309", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A security setting was updated on OCSP Responder Service", "wincode": 309, "winlog":{"event_id": "5124"}}
+{ "index": { "_id": "310", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A request was submitted to OCSP Responder Service", "wincode": 310, "winlog":{"event_id": "5125"}}
+{ "index": { "_id": "311", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Signing Certificate was automatically updated by the OCSP Responder Service", "wincode": 311, "winlog":{"event_id": "5126"}}
+{ "index": { "_id": "312", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The OCSP Revocation Provider successfully updated the revocation information", "wincode": 312, "winlog":{"event_id": "5127"}}
+{ "index": { "_id": "313", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A directory service object was modified", "wincode": 313, "winlog":{"event_id": "5136"}}
+{ "index": { "_id": "314", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A directory service object was created", "wincode": 314, "winlog":{"event_id": "5137"}}
+{ "index": { "_id": "315", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A directory service object was undeleted", "wincode": 315, "winlog":{"event_id": "5138"}}
+{ "index": { "_id": "316", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A directory service object was moved", "wincode": 316, "winlog":{"event_id": "5139"}}
+{ "index": { "_id": "317", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A network share object was accessed", "wincode": 317, "winlog":{"event_id": "5140"}}
+{ "index": { "_id": "318", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A directory service object was deleted", "wincode": 318, "winlog":{"event_id": "5141"}}
+{ "index": { "_id": "319", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A network share object was added.", "wincode": 319, "winlog":{"event_id": "5142"}}
+{ "index": { "_id": "320", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A network share object was modified", "wincode": 320, "winlog":{"event_id": "5143"}}
+{ "index": { "_id": "321", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A network share object was deleted.", "wincode": 321, "winlog":{"event_id": "5144"}}
+{ "index": { "_id": "322", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A network share object was checked to see whether client can be granted desired access", "wincode": 322, "winlog":{"event_id": "5145"}}
+{ "index": { "_id": "323", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The Windows Filtering Platform has blocked a packet", "wincode": 323, "winlog":{"event_id": "5146"}}
+{ "index": { "_id": "324", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A more restrictive Windows Filtering Platform filter has blocked a packet", "wincode": 324, "winlog":{"event_id": "5147"}}
+{ "index": { "_id": "325", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The Windows Filtering Platform has detected a DoS attack and entered a defensive mode; packets associated with this attack will be discarded.", "wincode": 325, "winlog":{"event_id": "5148"}}
+{ "index": { "_id": "326", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The DoS attack has subsided and normal processing is being resumed.", "wincode": 326, "winlog":{"event_id": "5149"}}
+{ "index": { "_id": "327", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The Windows Filtering Platform has blocked a packet.", "wincode": 327, "winlog":{"event_id": "5150"}}
+{ "index": { "_id": "328", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A more restrictive Windows Filtering Platform filter has blocked a packet.", "wincode": 328, "winlog":{"event_id": "5151"}}
+{ "index": { "_id": "329", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The Windows Filtering Platform blocked a packet", "wincode": 329, "winlog":{"event_id": "5152"}}
+{ "index": { "_id": "330", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A more restrictive Windows Filtering Platform filter has blocked a packet", "wincode": 330, "winlog":{"event_id": "5153"}}
+{ "index": { "_id": "331", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The Windows Filtering Platform has permitted an application or service to listen on a port for incoming connections", "wincode": 331, "winlog":{"event_id": "5154"}}
+{ "index": { "_id": "332", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The Windows Filtering Platform has blocked an application or service from listening on a port for incoming connections", "wincode": 332, "winlog":{"event_id": "5155"}}
+{ "index": { "_id": "333", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The Windows Filtering Platform has allowed a connection", "wincode": 333, "winlog":{"event_id": "5156"}}
+{ "index": { "_id": "334", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The Windows Filtering Platform has blocked a connection", "wincode": 334, "winlog":{"event_id": "5157"}}
+{ "index": { "_id": "335", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The Windows Filtering Platform has permitted a bind to a local port", "wincode": 335, "winlog":{"event_id": "5158"}}
+{ "index": { "_id": "336", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The Windows Filtering Platform has blocked a bind to a local port", "wincode": 336, "winlog":{"event_id": "5159"}}
+{ "index": { "_id": "337", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Spn check for SMB/SMB2 fails.", "wincode": 337, "winlog":{"event_id": "5168"}}
+{ "index": { "_id": "338", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A directory service object was modified", "wincode": 338, "winlog":{"event_id": "5169"}}
+{ "index": { "_id": "339", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A directory service object was modified during a background cleanup task", "wincode": 339, "winlog":{"event_id": "5170"}}
+{ "index": { "_id": "340", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Credential Manager credentials were backed up", "wincode": 340, "winlog":{"event_id": "5376"}}
+{ "index": { "_id": "341", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Credential Manager credentials were restored from a backup", "wincode": 341, "winlog":{"event_id": "5377"}}
+{ "index": { "_id": "342", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The requested credentials delegation was disallowed by policy", "wincode": 342, "winlog":{"event_id": "5378"}}
+{ "index": { "_id": "343", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Credential Manager credentials were read", "wincode": 343, "winlog":{"event_id": "5379"}}
+{ "index": { "_id": "344", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Vault Find Credential", "wincode": 344, "winlog":{"event_id": "5380"}}
+{ "index": { "_id": "345", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Vault credentials were read", "wincode": 345, "winlog":{"event_id": "5381"}}
+{ "index": { "_id": "346", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Vault credentials were read", "wincode": 346, "winlog":{"event_id": "5382"}}
+{ "index": { "_id": "347", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The following callout was present when the Windows Filtering Platform Base Filtering Engine started", "wincode": 347, "winlog":{"event_id": "5440"}}
+{ "index": { "_id": "348", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The following filter was present when the Windows Filtering Platform Base Filtering Engine started", "wincode": 348, "winlog":{"event_id": "5441"}}
+{ "index": { "_id": "349", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The following provider was present when the Windows Filtering Platform Base Filtering Engine started", "wincode": 349, "winlog":{"event_id": "5442"}}
+{ "index": { "_id": "350", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The following provider context was present when the Windows Filtering Platform Base Filtering Engine started", "wincode": 350, "winlog":{"event_id": "5443"}}
+{ "index": { "_id": "351", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The following sub-layer was present when the Windows Filtering Platform Base Filtering Engine started", "wincode": 351, "winlog":{"event_id": "5444"}}
+{ "index": { "_id": "352", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A Windows Filtering Platform callout has been changed", "wincode": 352, "winlog":{"event_id": "5446"}}
+{ "index": { "_id": "353", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A Windows Filtering Platform filter has been changed", "wincode": 353, "winlog":{"event_id": "5447"}}
+{ "index": { "_id": "354", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A Windows Filtering Platform provider has been changed", "wincode": 354, "winlog":{"event_id": "5448"}}
+{ "index": { "_id": "355", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A Windows Filtering Platform provider context has been changed", "wincode": 355, "winlog":{"event_id": "5449"}}
+{ "index": { "_id": "356", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A Windows Filtering Platform sub-layer has been changed", "wincode": 356, "winlog":{"event_id": "5450"}}
+{ "index": { "_id": "357", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An IPsec Quick Mode security association was established", "wincode": 357, "winlog":{"event_id": "5451"}}
+{ "index": { "_id": "358", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An IPsec Quick Mode security association ended", "wincode": 358, "winlog":{"event_id": "5452"}}
+{ "index": { "_id": "359", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An IPsec negotiation with a remote computer failed because the IKE and AuthIP IPsec Keying Modules (IKEEXT) service is not started", "wincode": 359, "winlog":{"event_id": "5453"}}
+{ "index": { "_id": "360", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "PAStore Engine applied Active Directory storage IPsec policy on the computer", "wincode": 360, "winlog":{"event_id": "5456"}}
+{ "index": { "_id": "361", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "PAStore Engine failed to apply Active Directory storage IPsec policy on the computer", "wincode": 361, "winlog":{"event_id": "5457"}}
+{ "index": { "_id": "362", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "PAStore Engine applied locally cached copy of Active Directory storage IPsec policy on the computer", "wincode": 362, "winlog":{"event_id": "5458"}}
+{ "index": { "_id": "363", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "PAStore Engine failed to apply locally cached copy of Active Directory storage IPsec policy on the computer", "wincode": 363, "winlog":{"event_id": "5459"}}
+{ "index": { "_id": "364", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "PAStore Engine applied local registry storage IPsec policy on the computer", "wincode": 364, "winlog":{"event_id": "5460"}}
+{ "index": { "_id": "365", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "PAStore Engine failed to apply local registry storage IPsec policy on the computer", "wincode": 365, "winlog":{"event_id": "5461"}}
+{ "index": { "_id": "366", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "PAStore Engine failed to apply some rules of the active IPsec policy on the computer", "wincode": 366, "winlog":{"event_id": "5462"}}
+{ "index": { "_id": "367", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "PAStore Engine polled for changes to the active IPsec policy and detected no changes", "wincode": 367, "winlog":{"event_id": "5463"}}
+{ "index": { "_id": "368", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "PAStore Engine polled for changes to the active IPsec policy, detected changes, and applied them to IPsec Services", "wincode": 368, "winlog":{"event_id": "5464"}}
+{ "index": { "_id": "369", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "PAStore Engine received a control for forced reloading of IPsec policy and processed the control successfully", "wincode": 369, "winlog":{"event_id": "5465"}}
+{ "index": { "_id": "370", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "PAStore Engine polled for changes to the Active Directory IPsec policy, determined that Active Directory cannot be reached, and will use the cached copy of the Active Directory IPsec policy instead", "wincode": 370, "winlog":{"event_id": "5466"}}
+{ "index": { "_id": "371", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "PAStore Engine polled for changes to the Active Directory IPsec policy, determined that Active Directory can be reached, and found no changes to the policy", "wincode": 371, "winlog":{"event_id": "5467"}}
+{ "index": { "_id": "372", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "PAStore Engine polled for changes to the Active Directory IPsec policy, determined that Active Directory can be reached, found changes to the policy, and applied those changes", "wincode": 372, "winlog":{"event_id": "5468"}}
+{ "index": { "_id": "373", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "PAStore Engine loaded local storage IPsec policy on the computer", "wincode": 373, "winlog":{"event_id": "5471"}}
+{ "index": { "_id": "374", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "PAStore Engine failed to load local storage IPsec policy on the computer", "wincode": 374, "winlog":{"event_id": "5472"}}
+{ "index": { "_id": "375", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "PAStore Engine loaded directory storage IPsec policy on the computer", "wincode": 375, "winlog":{"event_id": "5473"}}
+{ "index": { "_id": "376", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "PAStore Engine failed to load directory storage IPsec policy on the computer", "wincode": 376, "winlog":{"event_id": "5474"}}
+{ "index": { "_id": "377", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "PAStore Engine failed to add quick mode filter", "wincode": 377, "winlog":{"event_id": "5477"}}
+{ "index": { "_id": "378", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "IPsec Services has started successfully", "wincode": 378, "winlog":{"event_id": "5478"}}
+{ "index": { "_id": "379", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "IPsec Services has been shut down successfully", "wincode": 379, "winlog":{"event_id": "5479"}}
+{ "index": { "_id": "380", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "IPsec Services failed to get the complete list of network interfaces on the computer", "wincode": 380, "winlog":{"event_id": "5480"}}
+{ "index": { "_id": "381", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "IPsec Services failed to initialize RPC server. IPsec Services could not be started", "wincode": 381, "winlog":{"event_id": "5483"}}
+{ "index": { "_id": "382", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "IPsec Services has experienced a critical failure and has been shut down", "wincode": 382, "winlog":{"event_id": "5484"}}
+{ "index": { "_id": "383", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "IPsec Services failed to process some IPsec filters on a plug-and-play event for network interfaces", "wincode": 383, "winlog":{"event_id": "5485"}}
+{ "index": { "_id": "384", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A request was made to authenticate to a wireless network", "wincode": 384, "winlog":{"event_id": "5632"}}
+{ "index": { "_id": "385", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A request was made to authenticate to a wired network", "wincode": 385, "winlog":{"event_id": "5633"}}
+{ "index": { "_id": "386", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A Remote Procedure Call (RPC) was attempted", "wincode": 386, "winlog":{"event_id": "5712"}}
+{ "index": { "_id": "387", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An object in the COM+ Catalog was modified", "wincode": 387, "winlog":{"event_id": "5888"}}
+{ "index": { "_id": "388", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An object was deleted from the COM+ Catalog", "wincode": 388, "winlog":{"event_id": "5889"}}
+{ "index": { "_id": "389", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "An object was added to the COM+ Catalog", "wincode": 389, "winlog":{"event_id": "5890"}}
+{ "index": { "_id": "390", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Security policy in the group policy objects has been applied successfully", "wincode": 390, "winlog":{"event_id": "6144"}}
+{ "index": { "_id": "391", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "One or more errors occured while processing security policy in the group policy objects", "wincode": 391, "winlog":{"event_id": "6145"}}
+{ "index": { "_id": "392", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Network Policy Server granted access to a user", "wincode": 392, "winlog":{"event_id": "6272"}}
+{ "index": { "_id": "393", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Network Policy Server denied access to a user", "wincode": 393, "winlog":{"event_id": "6273"}}
+{ "index": { "_id": "394", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Network Policy Server discarded the request for a user", "wincode": 394, "winlog":{"event_id": "6274"}}
+{ "index": { "_id": "395", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Network Policy Server discarded the accounting request for a user", "wincode": 395, "winlog":{"event_id": "6275"}}
+{ "index": { "_id": "396", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Network Policy Server quarantined a user", "wincode": 396, "winlog":{"event_id": "6276"}}
+{ "index": { "_id": "397", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Network Policy Server granted access to a user but put it on probation because the host did not meet the defined health policy", "wincode": 397, "winlog":{"event_id": "6277"}}
+{ "index": { "_id": "398", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Network Policy Server granted full access to a user because the host met the defined health policy", "wincode": 398, "winlog":{"event_id": "6278"}}
+{ "index": { "_id": "399", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Network Policy Server locked the user account due to repeated failed authentication attempts", "wincode": 399, "winlog":{"event_id": "6279"}}
+{ "index": { "_id": "400", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Network Policy Server unlocked the user account", "wincode": 400, "winlog":{"event_id": "6280"}}
+{ "index": { "_id": "401", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Code Integrity determined that the page hashes of an image file are not valid...", "wincode": 401, "winlog":{"event_id": "6281"}}
+{ "index": { "_id": "402", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "BranchCache: Received an incorrectly formatted response while discovering availability of content.", "wincode": 402, "winlog":{"event_id": "6400"}}
+{ "index": { "_id": "403", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "BranchCache: Received invalid data from a peer. Data discarded.", "wincode": 403, "winlog":{"event_id": "6401"}}
+{ "index": { "_id": "404", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "BranchCache: The message to the hosted cache offering it data is incorrectly formatted.", "wincode": 404, "winlog":{"event_id": "6402"}}
+{ "index": { "_id": "405", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "BranchCache: The hosted cache sent an incorrectly formatted response to the client's message to offer it data.", "wincode": 405, "winlog":{"event_id": "6403"}}
+{ "index": { "_id": "406", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "BranchCache: Hosted cache could not be authenticated using the provisioned SSL certificate.", "wincode": 406, "winlog":{"event_id": "6404"}}
+{ "index": { "_id": "407", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "BranchCache: %2 instance(s) of event id %1 occurred.", "wincode": 407, "winlog":{"event_id": "6405"}}
+{ "index": { "_id": "408", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "%1 registered to Windows Firewall to control filtering for the following:", "wincode": 408, "winlog":{"event_id": "6406"}}
+{ "index": { "_id": "409", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "1%", "wincode": 409, "winlog":{"event_id": "6407"}}
+{ "index": { "_id": "410", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Registered product %1 failed and Windows Firewall is now controlling the filtering for %2.", "wincode": 410, "winlog":{"event_id": "6408"}}
+{ "index": { "_id": "411", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "BranchCache: A service connection point object could not be parsed", "wincode": 411, "winlog":{"event_id": "6409"}}
+{ "index": { "_id": "412", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Code integrity determined that a file does not meet the security requirements to load into a process. This could be due to the use of shared sections or other issues", "wincode": 412, "winlog":{"event_id": "6410"}}
+{ "index": { "_id": "413", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A new external device was recognized by the system.", "wincode": 413, "winlog":{"event_id": "6416"}}
+{ "index": { "_id": "414", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The FIPS mode crypto selftests succeeded", "wincode": 414, "winlog":{"event_id": "6417"}}
+{ "index": { "_id": "415", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The FIPS mode crypto selftests failed", "wincode": 415, "winlog":{"event_id": "6418"}}
+{ "index": { "_id": "416", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A request was made to disable a device", "wincode": 416, "winlog":{"event_id": "6419"}}
+{ "index": { "_id": "417", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A device was disabled", "wincode": 417, "winlog":{"event_id": "6420"}}
+{ "index": { "_id": "418", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A request was made to enable a device", "wincode": 418, "winlog":{"event_id": "6421"}}
+{ "index": { "_id": "419", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "A device was enabled", "wincode": 419, "winlog":{"event_id": "6422"}}
+{ "index": { "_id": "420", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The installation of this device is forbidden by system policy", "wincode": 420, "winlog":{"event_id": "6423"}}
+{ "index": { "_id": "421", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "The installation of this device was allowed, after having previously been forbidden by policy", "wincode": 421, "winlog":{"event_id": "6424"}}
+{ "index": { "_id": "422", "_index": "enrich-windows.sysmon_operational" } }
+{ "message": "Highest System-Defined Audit Message Value", "wincode": 422, "winlog":{"event_id": "8191"}}
