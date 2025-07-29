@@ -78,11 +78,11 @@ echo "Entity Asset list loaded"
 echo
 
 # Load index templates for enrichment data
-curl -X POST "http://localhost:30920/_index_template/enrich-user_agents" -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Index-Templates/Enrichment-Index-Templates/enrich-bluecoat.json
+curl -X POST "http://localhost:30920/_index_template/enrich-bluecoat" -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Index-Templates/Enrichment-Index-Templates/enrich-bluecoat.json
 curl -X POST "http://localhost:30920/_index_template/enrich-user_agents" -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Index-Templates/Enrichment-Index-Templates/enrich-nginx.json
-curl -X POST "http://localhost:30920/_index_template/enrich-user_agents" -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Index-Templates/Enrichment-Index-Templates/enrich-rip.josn
+curl -X POST "http://localhost:30920/_index_template/enrich-rip" -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Index-Templates/Enrichment-Index-Templates/enrich-rip.josn
 curl -X POST "http://localhost:30920/_index_template/enrich-user_agents" -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Index-Templates/Enrichment-Index-Templates/enrich-user_agents.json
-curl -X POST "http://localhost:30920/_index_template/enrich-user_agents" -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Index-Templates/Enrichment-Index-Templates/enrich-windows.sysmon_operational.json
+curl -X POST "http://localhost:30920/_index_template/enrich-windows.sysmon_operational" -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Index-Templates/Enrichment-Index-Templates/enrich-windows.sysmon_operational.json
 
 echo
 echo "Enrichment index templates loaded"
