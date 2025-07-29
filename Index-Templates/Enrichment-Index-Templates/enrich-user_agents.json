@@ -1,0 +1,33 @@
+{
+  "template": {
+    "settings": {
+      "index": {
+        "number_of_replicas": 0
+      }
+    },
+    "mappings": {
+      "properties": {
+        "code": {
+          "type": "long"
+        },
+        "user_agent": {
+          "type": "object",
+          "properties": {
+            "os": {
+              "type": "object",
+              "properties": {
+                "full": {
+                  "type": "keyword"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "index_patterns": [
+    "enrich-user_agents*"
+  ],
+  "allow_auto_create": true
+}
