@@ -1,0 +1,141 @@
+{
+  "template": {
+    "settings": {
+      "index": {
+        "number_of_replicas": "0",
+        "default_pipeline": "logs-windows.sysmon_operational"
+      }
+    },
+    "mappings": {
+      "properties": {
+        "data_stream": {
+          "type": "object",
+          "properties": {
+            "dataset": {
+              "type": "keyword"
+            },
+            "type": {
+              "type": "keyword"
+            }
+          }
+        },
+        "event": {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "keyword"
+            },
+            "dataset": {
+              "type": "keyword"
+            },
+            "ingested": {
+              "type": "date"
+            },
+            "module": {
+              "type": "keyword"
+            },
+            "type": {
+              "type": "keyword"
+            }
+          }
+        },
+        "host": {
+          "type": "object",
+          "properties": {
+            "ip": {
+              "type": "ip"
+            },
+            "os": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "keyword"
+                }
+              }
+            }
+          }
+        },
+        "message": {
+          "type": "text",
+          "index": true,
+          "index_options": "positions",
+          "eager_global_ordinals": false,
+          "index_phrases": false,
+          "norms": true,
+          "fielddata": false,
+          "store": false
+        },
+        "parent": {
+          "type": "object",
+          "properties": {
+            "process": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "keyword"
+                }
+              }
+            }
+          }
+        },
+        "process": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "keyword"
+            },
+            "parent": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "pe": {
+              "type": "object",
+              "properties": {
+                "original_file_name": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "args": {
+              "type": "keyword"
+            }
+          }
+        },
+        "winlog": {
+          "type": "object",
+          "properties": {
+            "api": {
+              "type": "keyword"
+            },
+            "channel": {
+              "type": "keyword"
+            },
+            "event_id": {
+              "type": "keyword"
+            },
+            "provider_name": {
+              "type": "keyword"
+            }
+          }
+        },
+        "registry": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "keyword"
+            }
+          }
+        }
+      }
+    }
+  },
+  "index_patterns": [
+    "winlogbeat*",
+    "logs-windows.sysmon_operational*"
+  ],
+  "allow_auto_create": true
+}
