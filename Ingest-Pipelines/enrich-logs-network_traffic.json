@@ -1,0 +1,48 @@
+{
+  "processors": [
+    {
+      "rename": {
+        "field": "datastreamdataset",
+        "target_field": "data_stream.dataset",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "set": {
+        "field": "event.dataset",
+        "ignore_failure": true,
+        "copy_from": "data_stream.dataset"
+      }
+    },
+    {
+      "set": {
+        "field": "agent.type",
+        "value": " packetbeat",
+        "ignore_failure": true
+      }
+    },
+    {
+      "set": {
+        "field": "data_stream.type",
+        "value": "logs",
+        "ignore_failure": true
+      }
+    },
+    {
+      "set": {
+        "field": "event.category",
+        "value": "network",
+        "ignore_failure": true
+      }
+    },
+    {
+      "pipeline": {
+        "name": "enrich-logs-network_traffic-dns",
+        "ignore_missing_pipeline": true,
+        "if": "ctx?.data_stream?.dataset == 'network_traffic.dns'",
+        "ignore_failure": true
+      }
+    }
+  ]
+}
