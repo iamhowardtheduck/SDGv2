@@ -1,0 +1,7 @@
+{
+  "match": {
+    "indices": "enrich-windows.sysmon_operational",
+    "match_field": "wincode",
+    "enrich_fields": ["winlog.event_id", "message"]
+  }
+}
