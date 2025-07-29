@@ -1,0 +1,262 @@
+{
+  "processors": [
+    {
+      "rename": {
+        "field": "direction",
+        "target_field": "email.direction",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "rename": {
+        "field": "eventaction",
+        "target_field": "event.action",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "rename": {
+        "field": "proxyresponsebytes",
+        "target_field": "email.attachments.file.size",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "rename": {
+        "field": "filehashmd5",
+        "target_field": "email.attachments.file.hash.md5",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "rename": {
+        "field": "filehashsha1",
+        "target_field": "email.attachments.file.hash.sha1",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "rename": {
+        "field": "filehashsha256",
+        "target_field": "email.attachments.file.hash.sha256",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "set": {
+        "field": "email.subject",
+        "value": "{{department}} {{filename}}",
+        "ignore_failure": true
+      }
+    },
+    {
+      "set": {
+        "field": "email.attachments.file.name",
+        "value": "{{filename}}.{{extension}}",
+        "ignore_failure": true
+      }
+    },
+    {
+      "set": {
+        "field": "email.from.address",
+        "value": "{{external}}",
+        "if": "ctx?.email?.direction == 'inbound'",
+        "ignore_failure": true,
+        "description": "If inbound sets from address"
+      }
+    },
+    {
+      "set": {
+        "field": "email.to.address",
+        "value": "{{fname}}.{{lname}}@omnicorp.com",
+        "if": "ctx?.email?.direction == 'inbound'",
+        "ignore_failure": true,
+        "description": "If inbound sets to address"
+      }
+    },
+    {
+      "set": {
+        "field": "email.from.address",
+        "value": "{{fname}}.{{lname}}@omnicorp.com",
+        "if": "ctx?.email?.direction == 'outbound'",
+        "ignore_failure": true,
+        "description": "If outbound sets from address"
+      }
+    },
+    {
+      "set": {
+        "field": "email.to.address",
+        "value": "{{external}}",
+        "if": "ctx?.email?.direction == 'outbound'",
+        "ignore_failure": true,
+        "description": "If outbound sets to address"
+      }
+    },
+    {
+      "set": {
+        "field": "email.from.address",
+        "value": "{{fname}}.{{lname}}@omnicorp.com",
+        "if": "ctx?.email?.direction == 'internal'",
+        "ignore_failure": true,
+        "description": "If internal sets from address"
+      }
+    },
+    {
+      "set": {
+        "field": "email.to.address",
+        "value": "{{fname2}}.{{lname2}}@omnicorp.com",
+        "if": "ctx?.email?.direction == 'internal'",
+        "ignore_failure": true,
+        "description": "If internal sets to address"
+      }
+    },
+    {
+      "rename": {
+        "field": "extension",
+        "target_field": "email.attachments.file.extension",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "rename": {
+        "field": "filename",
+        "target_field": "email.attachments.file.name",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "set": {
+        "field": "event.category",
+        "value": "email",
+        "ignore_failure": true
+      }
+    },
+    {
+      "set": {
+        "field": "event.module",
+        "value": "email",
+        "ignore_failure": true
+      }
+    },
+    {
+      "set": {
+        "field": "event.kind",
+        "value": "event",
+        "ignore_failure": true
+      }
+    },
+    {
+      "set": {
+        "field": "event.dataset",
+        "value": "email.filter",
+        "ignore_failure": true
+      }
+    },
+    {
+      "set": {
+        "field": "data_stream.dataset",
+        "value": "email.filter",
+        "ignore_failure": true
+      }
+    },
+    {
+      "set": {
+        "field": "source.ip",
+        "value": "{{ripcodes}}.{{rip2}}.{{rip3}}.{{rip4}}",
+        "if": "ctx.email?.direction == 'inbound'"
+      }
+    },
+    {
+      "set": {
+        "field": "destination.ip",
+        "value": "{{2rip1}}.{{2rip2}}.{{2rip3}}.{{2rip4}}",
+        "if": "ctx.email?.direction == 'inbound' "
+      }
+    },
+    {
+      "set": {
+        "field": "destination.ip",
+        "value": "{{ripcodes}}.{{rip2}}.{{rip3}}.{{rip4}}",
+        "if": "ctx.email?.direction == 'outbound'"
+      }
+    },
+    {
+      "set": {
+        "field": "source.ip",
+        "value": "{{2rip1}}.{{2rip2}}.{{2rip3}}.{{2rip4}}",
+        "if": "ctx.email?.direction == 'outbound' || ctx.email?.direction == 'internal'"
+      }
+    },
+    {
+      "set": {
+        "field": "destination.ip",
+        "value": "{{2rip1a}}.{{2rip2a}}.{{2rip3a}}.{{2rip4a}}",
+        "if": "ctx.email?.direction == 'internal'"
+      }
+    },
+    {
+      "geoip": {
+        "field": "source.ip",
+        "target_field": "source.geo",
+        "ignore_failure": true
+      }
+    },
+    {
+      "geoip": {
+        "field": "destination.ip",
+        "target_field": "destination.geo",
+        "ignore_failure": true
+      }
+    },
+    {
+      "remove": {
+        "field": [
+          "fname",
+          "lname",
+          "department",
+          "extension",
+          "fname2",
+          "lname2",
+          "external",
+          "filename",
+          "ripcodes",
+          "rip2",
+          "rip3",
+          "rip4",
+          "2rip1",
+          "2rip2",
+          "2rip3",
+          "2rip4",
+          "2rip1a",
+          "2rip2a",
+          "2rip3a",
+          "2rip4a"
+        ],
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "pipeline": {
+        "name": "email-filter-rules",
+        "ignore_missing_pipeline": true,
+        "ignore_failure": true
+      }
+    },
+        {
+      "pipeline": {
+        "name": "timestamp-cleanup",
+        "ignore_missing_pipeline": true,
+        "ignore_failure": true
+      }
+    }
+  ]
+}
