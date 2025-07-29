@@ -122,7 +122,7 @@ echo "Enrichment policies executed"
 echo
 
 # Creat ingest pipelines
-curl -X PUT "http://localhost:30920/_ingest/pipeline/logs-windows.sysmon_operational@custom" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" -d @/root/SDGv2/Ingest-Pipelines/logs-windows.sysmon_operational@custom.json
+curl -X PUT "http://localhost:30920/_ingest/pipeline/logs-windows.sysmon_operational" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" -d @/root/SDGv2/Ingest-Pipelines/logs-windows.sysmon_operational.json
 curl -X PUT "http://localhost:30920/_ingest/pipeline/logs-ti_abusech.malware@custom@custom" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" -d @/root/SDGv2/Ingest-Pipelines/logs-ti_abusech.malware@custom.json
 curl -X PUT "http://localhost:30920/_ingest/pipeline/email-filter-rules" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" -d @/root/SDGv2/Ingest-Pipelines/email-filter-rules.json
 curl -X PUT "http://localhost:30920/_ingest/pipeline/enrich-bluecoat" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" -d @/root/SDGv2/Ingest-Pipelines/enrich-bluecoat.json
@@ -138,4 +138,5 @@ echo
 echo "Custom Ingest Pipelines loaded"
 echo
 
-
+# Create dataviews
+curl -X POST "http://localhost:30002/api/data_views/data_view" --header "kbn-xsrf: true"  -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Dataviews/winlogbeat.json
