@@ -1,0 +1,12 @@
+{
+  "processors": [
+    {
+      "pipeline": {
+        "name": "logs-windows.sysmon_operational",
+        "ignore_missing_pipeline": true,
+        "if": "ctx.wincode != '' || ctx.wincode != null",
+        "ignore_failure": true
+      }
+    }
+  ]
+}
