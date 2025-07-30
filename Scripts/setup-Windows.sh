@@ -1,6 +1,6 @@
 # DELETE Pre-Configured Windows templates
-curl -X DELETE "http://localhost:30920/_component_template/logs-windows.sysmon_operational@package" -H "Content-Type: application/json" -u "sdg:changeme"
 curl -X DELETE "http://localhost:30920/_index_template/logs-windows.sysmon_operational" -H "Content-Type: application/json" -u "sdg:changeme"
+curl -X DELETE "http://localhost:30920/_component_template/logs-windows.sysmon_operational@package" -H "Content-Type: application/json" -u "sdg:changeme"
 
 
 # Recreate them in your image
