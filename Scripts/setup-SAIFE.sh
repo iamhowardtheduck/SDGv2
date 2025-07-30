@@ -139,7 +139,7 @@ echo "Custom Ingest Pipelines loaded"
 echo
 
 # Load index templates for data generation
-curl -X PUT "http://localhost:30920/_index_template/winlogbeat" -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Index-Templates/winlogbeat.json
+#curl -X PUT "http://localhost:30920/_index_template/winlogbeat" -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Index-Templates/winlogbeat.json
 
 # Create dataviews
-curl -X POST "http://localhost:30002/api/data_views/data_view" --header "kbn-xsrf: true"  -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Dataviews/Winlogbeat.json
+#curl -X POST "http://localhost:30002/api/data_views/data_view" --header "kbn-xsrf: true"  -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Dataviews/Winlogbeat.json
