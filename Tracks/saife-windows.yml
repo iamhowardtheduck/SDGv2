@@ -7,7 +7,8 @@ workloads:
   - workloadName: logs-windows.sysmon_operational-default
     workloadThreads: 4
     workloadSleep: 5
-    indexName: winlogbeat-default
+    #indexName: winlogbeat-default
+    indexName: logs-windows.sysmon_operational-default
     fields:
       - name: eventcategory
         type: random_string_from_list
