@@ -10,7 +10,7 @@
     },
     {
       "pipeline": {
-        "name": "logs-windows.sysmon_operational",
+        "name": "/enrich-logs-network_traffic",
         "ignore_missing_pipeline": true,
         "if": "ctx.dnsoptudpsize != '' || ctx.dnsoptudpsize != null",
         "ignore_failure": true
@@ -18,8 +18,3 @@
     }
   ]
 }
-
-
-
-
-dnsoptudpsize
