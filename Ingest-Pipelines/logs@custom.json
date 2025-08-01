@@ -10,7 +10,7 @@
     },
     {
       "pipeline": {
-        "name": "/enrich-logs-network_traffic",
+        "name": "enrich-logs-network_traffic",
         "ignore_missing_pipeline": true,
         "if": "ctx.dnsoptudpsize != '' || ctx.dnsoptudpsize != null",
         "ignore_failure": true
