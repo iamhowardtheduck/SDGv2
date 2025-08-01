@@ -1,0 +1,149 @@
+elasticsearchScheme: http
+elasticsearchHost: localhost
+elasticsearchPort: 30920
+elasticsearchUser: sdg
+elasticsearchPassword: changeme
+workloads:
+  - workloadName: network-dns
+    workloadThreads: 8
+    workloadSleep: 10
+    indexName: logs-network_traffic.dns-default
+    fields:
+      - name: clientbytes
+        type: int
+        range: 0,16684
+
+      - name: serverbytes
+        type: int
+        range: 0,16684
+
+      - name: eventduration
+        type: int
+        range: 100000,5000000
+
+      - name: dnsoptudpsize
+        type: int
+        range: 0,62299
+
+      - name: datastreamdataset
+        type: random_string_from_list
+        custom_list: network_traffic.dns
+
+      - name: dnsquestionregistereddomain
+        type: domain
+
+      - name: dnsquestiontype
+        type: random_string_from_list
+        custom_list: AAAA,AAAA,AAAA,AAAA,AAAA,AAAA,AAAA,A,A,A,PTR,TXT,MX
+
+      - name: dnsanswertype
+        type: random_string_from_list
+        custom_list: A,A,CNAME
+
+      - name: mlisdgamaliciousprediction
+        type: random_string_from_list
+        custom_list: 0
+
+      - name: ripcodes
+        type: int
+        range: 1,251
+
+      - name: rip2
+        type: int
+        range: 0,255
+
+      - name: rip3
+        type: int
+        range: 0,255
+
+      - name: rip4
+        type: int
+        range: 0,255
+
+      - name: 2rip1
+        type: int
+        range: 10,10
+
+      - name: 2rip2
+        type: int
+        range: 10,10
+
+      - name: 2rip3
+        type: int
+        range: 10,10
+
+      - name: 2rip4
+        type: int
+        range: 0,5
+
+  - workloadName: network-dns-sunburst
+    workloadThreads: 1
+    workloadSleep: 100
+    indexName: logs-network_traffic.dns-default
+    fields:
+      - name: clientbytes
+        type: int
+        range: 0,16684
+
+      - name: serverbytes
+        type: int
+        range: 0,16684
+
+      - name: eventduration
+        type: int
+        range: 100000,5000000
+
+      - name: dnsoptudpsize
+        type: int
+        range: 0,62299
+
+      - name: datastreamdataset
+        type: random_string_from_list
+        custom_list: network_traffic.dns
+
+      - name: dnsquestionregistereddomain
+        type: domain
+
+      - name: dnsquestiontype
+        type: random_string_from_list
+        custom_list: AAAA,AAAA,AAAA,AAAA,AAAA,AAAA,AAAA,A,A,A,PTR,TXT,MX
+
+      - name: dnsanswertype
+        type: random_string_from_list
+        custom_list: A,A,CNAME
+
+      - name: mlisdgamaliciousprediction
+        type: random_string_from_list
+        custom_list: 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+
+      - name: ripcodes
+        type: int
+        range: 1,251
+
+      - name: rip2
+        type: int
+        range: 0,255
+
+      - name: rip3
+        type: int
+        range: 0,255
+
+      - name: rip4
+        type: int
+        range: 0,255
+
+      - name: 2rip1
+        type: int
+        range: 10,10
+
+      - name: 2rip2
+        type: int
+        range: 10,10
+
+      - name: 2rip3
+        type: int
+        range: 10,10
+
+      - name: 2rip4
+        type: int
+        range: 0,5
