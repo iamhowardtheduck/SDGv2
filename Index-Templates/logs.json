@@ -1,0 +1,33 @@
+{
+  "version": 16,
+  "priority": 100,
+  "template": {
+    "settings": {
+      "index": {
+        "mode": "logsdb"
+      }
+    }
+  },
+  "index_patterns": [
+    "logs-*-*"
+  ],
+  "data_stream": {
+    "hidden": false,
+    "allow_custom_routing": false
+  },
+  "composed_of": [
+    "logs@mappings",
+    "logs@settings",
+    "ecs@mappings",
+    "logs@custom"
+  ],
+  "ignore_missing_component_templates": [
+    "logs@custom"
+  ],
+  "allow_auto_create": true,
+  "_meta": {
+    "description": "default logs template installed by x-pack",
+    "managed": true
+  },
+  "deprecated": false
+}
