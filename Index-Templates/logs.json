@@ -5,7 +5,8 @@
     "settings": {
       "index": {
         "mode": "logsdb"
-      }
+      },
+      "number_of_replicas": "1",
     }
   },
   "index_patterns": [
