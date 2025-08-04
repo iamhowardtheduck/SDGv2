@@ -11,6 +11,9 @@ curl -X PUT "http://localhost:30920/_ingest/pipeline/logs@custom" -H "Content-Ty
 # Recreate them in your image
 curl -X PUT "http://localhost:30920/_component_template/logs-windows.sysmon_operational@package" -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Component-Templates/logs-windows.sysmon-operational.json
 curl -X PUT "http://localhost:30920/_index_template/logs-windows.sysmon_operational" -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Index-Templates/logs-windows.sysmon_operational.json
+curl -X PUT "http://localhost:30920/_component_template/logs@settings" -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Component-Templates/logs@settings.json
+curl -X PUT "http://localhost:30920/_index_template/logs" -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Index-Templates/logs.json
+
 
 # Rollover existing index in order to inherit new settings without any garbage data
 #curl -X POST "http://localhost:30920/logs-windows.sysmon_operation-default/_rollover" -u "sdg:changeme"
