@@ -1,5 +1,6 @@
 {
-  "template": {
+ "priority": 200,
+   "template": {
     "settings": {
       "index": {
         "default_pipeline": "enrich-email",
