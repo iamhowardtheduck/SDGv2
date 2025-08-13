@@ -3,6 +3,7 @@
   "template": {
     "settings": {
       "index": {
+        "mode": "logsdb",
         "number_of_replicas": "0",
         "default_pipeline": "logs-windows.sysmon_operational"
       }
