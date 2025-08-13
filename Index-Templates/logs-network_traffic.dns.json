@@ -1,0 +1,49 @@
+{
+  "priority": 200,
+  "template": {
+    "settings": {
+      "index": {
+        "mode": "logsdb",
+        "number_of_replicas": "0",
+        "default_pipeline": "enrich-logs-network_traffic"
+      }
+    },
+    "mappings": {
+      "_meta": {
+        "package": {
+          "name": "network_traffic"
+        },
+        "managed_by": "fleet",
+        "managed": true
+      }
+    }
+  },
+  "index_patterns": [
+    "logs-network_traffic.dns-*"
+  ],
+  "data_stream": {
+    "hidden": false,
+    "allow_custom_routing": false
+  },
+  "composed_of": [
+    "logs@mappings",
+    "logs@settings",
+    "logs-network_traffic.dns@package",
+    "logs@custom",
+    "logs-network_traffic.dns@custom",
+    "ecs@mappings",
+    ".fleet_globals-1",
+    ".fleet_agent_id_verification-1"
+  ],
+  "ignore_missing_component_templates": [
+    "logs@custom",
+    "logs-network_traffic.dns@custom"
+  ],
+  "_meta": {
+    "package": {
+      "name": "network_traffic"
+    },
+    "managed_by": "fleet",
+    "managed": true
+  }
+}
