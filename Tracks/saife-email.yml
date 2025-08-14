@@ -1,0 +1,195 @@
+elasticsearchScheme: http
+elasticsearchHost: localhost
+elasticsearchPort: 30920
+elasticsearchUser: sdg
+elasticsearchPassword: changeme
+workloads:
+  - workloadName: email
+    workloadThreads: 3
+    workloadSleep: 100
+    indexName: logs-email.filter
+    fields:
+
+      - name: external
+        type: email
+
+      - name: fname
+        type: first_name
+
+      - name: lname
+        type: last_name
+
+      - name: fname2
+        type: first_name
+
+      - name: lname2
+        type: last_name
+
+      - name: department
+        type: group
+
+      - name: proxyresponsebytes
+        type: int
+        range: 0,62299
+
+      - name: filehashmd5
+        type: hash
+
+      - name: filehashsha1
+        type: hash
+
+      - name: filehashsha256
+        type: hash
+
+
+      - name: filename
+        type: random_string_from_list
+        custom_list: Annual_Report_2023,Meeting_Minutes_March2024,Project_Proposal_v1,Client_Agreement_Signed,Employee_Handbook_2023,Product_Description,Research_Notes,Financial_Statement,Sales_Data_Q4_2023,Budget_Plan_2024,Customer_Feedback_Responses,Inventory_List_Summer2023,Task_List_January2024,Marketing_Strategy_Presentation,Company_Overview_2023,Training_Session_Slides,Sales_Pitch_Template,Vendor_Contract_Template,Team_Meeting_Notes_2023,Weekly_Update_Newsletter,Company_Logo,Product_Shot_1,Event_Photos_2023,Team_Photo_2024,Blueprint_Diagram,Marketing_Poster_Design,Product_Catalog_Cover,Website_Banner,Infographic_2023,Client_Testimonials_Image,Office_Floor_Plan,Event_Poster,Profile_Picture_JohnDoe,Brochure_Layout,Social_Media_Ad,Quarterly_Review_Slides,Product_Launch_Deck,Training_Module_1,Workshop_Material,Company_Milesto>
+
+      - name: extension
+        type: random_string_from_list
+        custom_list: txt,pdf,doc,mp3,csv,xls,docx,rtf,wps,xlsx,xlsm,ppt,pptx,mdb,accdb,sqlite,db,sql,zip,rar,7z,tar.gz,jpg,jpeg,png,gif,bmp,xml,html
+
+      - name: direction
+        type: random_string_from_list
+        custom_list: inbound,inbound,outbound,outbound,outbound,internal,internal,internal,internal,internal
+
+      - name: eventaction
+        type: random_string_from_list
+        custom_list: PASS
+
+      - name: ripcodes
+        type: int
+        range: 1,251
+
+      - name: rip2
+        type: int
+        range: 0,255
+
+      - name: rip3
+        type: int
+        range: 0,255
+
+      - name: rip4
+        type: int
+        range: 0,255
+
+      - name: 2rip1
+        type: int
+        range: 10,10
+
+      - name: 2rip2
+        type: int
+        range: 0,255
+
+      - name: 2rip3
+        type: int
+        range: 0,255
+
+      - name: 2rip4
+        type: int
+        range: 0,254
+
+      - name: 2rip1a
+        type: int
+        range: 10,10
+
+      - name: 2rip2a
+        type: int
+        range: 0,255
+
+      - name: 2rip3a
+        type: int
+        range: 0,255
+
+      - name: 2rip4a
+        type: int
+        range: 0,254
+
+
+  - workloadName: abusech
+    workloadThreads: 3
+    workloadSleep: 100
+    indexName: logs-ti_abusech.malware
+    fields:
+      - name: extension
+        type: random_string_from_list
+        custom_list: elf,pdf,doc,mp3,csv,xls,docx,rtf,wps,xlsx,xlsm,ppt,pptx,mdb,accdb,mp4,db,sql,zip,rar,7z,tar.gz,jpg,jpeg,png,gif,bmp,xml,html
+
+      - name: filehashmd5
+        type: hash
+
+      - name: filehashsha256
+        type: hash
+
+      - name: size
+        type: int
+        range: 0,200000
+
+      - name: signature
+        type: random_string_from_list
+        custom_list: Mozi,Mirai,Hajime,Socks5Systemz,Amadey,Stealc,Healer,CredentialFlusher,LummaStealer,CoinMinder,Gafgyt,RedLineStealer,Blackmoon,LummaStealer,CryptBot,Vidar,RemcosRAT,AsyncRAT
+
+      - name: filename
+        type: hash
+
+      - name: expiration
+        type: random_string_from_list
+        custom_list: 30d,60d,90d,180d,90d,90d,90d
+
+      - name: url
+        type: hash
+
+      - name: result1
+        type: int
+        range: 0,49
+
+      - name: result2
+        type: int
+        range: 50,69
+
+
+
+  - workloadName: abusech-malware
+    workloadThreads: 1
+    workloadSleep: 1000000000
+    indexName: logs-ti_abusech.malware
+    fields:
+      - name: extension
+        type: random_string_from_list
+        custom_list: exe
+
+      - name: filehashmd5
+        type: random_string_from_list
+        custom_list: 9850e40113081ebe639af61c572c89e5
+
+      - name: filehashsha256
+        type: random_string_from_list
+        custom_list: 8aa4945b71a16b0d6dcbe9c5169f0e21470d010be70368d334f34974bd7761e4
+
+      - name: size
+        type: int
+        range: 781408,781408
+
+      - name: signature
+        type: random_string_from_list
+        custom_list: UACModuleSmokeLoader
+
+      - name: filename
+        type: hash
+
+      - name: expiration
+        type: random_string_from_list
+        custom_list: 90d
+
+      - name: url
+        type: random_string_from_list
+        custom_list: 8aa4945b71a16b0d6dcbe9c5169f0e21470d010be70368d334f34974bd7761e4
+
+      - name: result1
+        type: int
+        range: 55,55
+
+      - name: result2
+        type: int
+        range: 68,68
