@@ -137,7 +137,7 @@
     }
   },
   "index_patterns": [
-    "logs-email*"
+    "logs-email.filter*"
   ],
   "composed_of": [
     "logs-network_traffic.dns@package"
