@@ -3,6 +3,7 @@
    "template": {
     "settings": {
       "index": {
+		"mode": "logsdb",  
         "default_pipeline": "enrich-email",
         "number_of_replicas": 0
       }
