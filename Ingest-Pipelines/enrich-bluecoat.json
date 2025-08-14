@@ -13,7 +13,7 @@
       "rename": {
         "ignore_failure": true,
         "ignore_missing": true,
-        "field": "bc.event-action",
+        "field": "bc.event.action",
         "target_field": "event.action"
       }
     },
@@ -21,7 +21,7 @@
       "rename": {
         "ignore_failure": true,
         "ignore_missing": true,
-        "field": "bc.event-category",
+        "field": "bc.event.category",
         "target_field": "event.category"
       }
     },
@@ -29,7 +29,7 @@
       "rename": {
         "ignore_failure": true,
         "ignore_missing": true,
-        "field": "bc.event-dataset",
+        "field": "bc.event.dataset",
         "target_field": "event.dataset"
       }
     },
@@ -37,7 +37,7 @@
       "rename": {
         "ignore_failure": true,
         "ignore_missing": true,
-        "field": "bc.event-kind",
+        "field": "bc.event.kind",
         "target_field": "event.kind"
       }
     },
@@ -45,7 +45,7 @@
       "rename": {
         "ignore_failure": true,
         "ignore_missing": true,
-        "field": "bc.event-module",
+        "field": "bc.event.module",
         "target_field": "event.module"
       }
     },
@@ -53,7 +53,7 @@
       "rename": {
         "ignore_failure": true,
         "ignore_missing": true,
-        "field": "bc.event-outcome",
+        "field": "bc.event.outcome",
         "target_field": "event.outcome"
       }
     },
@@ -61,7 +61,7 @@
       "rename": {
         "ignore_failure": true,
         "ignore_missing": true,
-        "field": "bc.event-type",
+        "field": "bc.event.type",
         "target_field": "event.type"
       }
     },
@@ -69,7 +69,7 @@
       "rename": {
         "ignore_failure": true,
         "ignore_missing": true,
-        "field": "bc.proxy-category",
+        "field": "bc.proxy.category",
         "target_field": "proxy.category"
       }
     },
