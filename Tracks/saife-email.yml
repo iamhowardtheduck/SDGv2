@@ -7,7 +7,7 @@ workloads:
   - workloadName: email
     workloadThreads: 3
     workloadSleep: 100
-    indexName: logs-email.filter
+    indexName: logs-email.filter-default
     fields:
 
       - name: external
@@ -110,7 +110,7 @@ workloads:
   - workloadName: abusech
     workloadThreads: 3
     workloadSleep: 100
-    indexName: logs-ti_abusech.malware
+    indexName: logs-ti_abusech.malware-default
     fields:
       - name: extension
         type: random_string_from_list
@@ -153,7 +153,7 @@ workloads:
   - workloadName: abusech-malware
     workloadThreads: 1
     workloadSleep: 1000000000
-    indexName: logs-ti_abusech.malware
+    indexName: logs-ti_abusech.malware-default
     fields:
       - name: extension
         type: random_string_from_list
