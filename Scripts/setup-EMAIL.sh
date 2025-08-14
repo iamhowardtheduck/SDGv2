@@ -1,6 +1,8 @@
 # DELETE Pre-Configured logs-ti_abusech.malware templates
 curl -X DELETE "http://localhost:30920/_index_template/logs-ti_abusech.malware" -H "Content-Type: application/json" -u "sdg:changeme"
+curl -X DELETE "http://localhost:30920/_index_template/logs-ti_abusech.malwarebazaar" -H "Content-Type: application/json" -u "sdg:changeme"
 curl -X DELETE "http://localhost:30920/_component_template/logs-ti_abusech.malware@package" -H "Content-Type: application/json" -u "sdg:changeme"
+curl -X DELETE "http://localhost:30920/_component_template/logs-ti_abusech.malwarebazaar@package" -H "Content-Type: application/json" -u "sdg:changeme"
 
 # Recreate them in your image
 curl -X PUT "http://localhost:30920/_component_template/logs-ti_abusech.malware@package" -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Component-Templates/logs-ti_abusech.malware.json
