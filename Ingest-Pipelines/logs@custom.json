@@ -15,6 +15,30 @@
         "if": "ctx.dnsoptudpsize != '' || ctx.dnsoptudpsize != null",
         "ignore_failure": true
       }
+    },
+    {
+      "pipeline": {
+        "name": "enrich-bluecoat",
+        "ignore_missing_pipeline": true,
+        "if": "ctx.proxyresponsebytes != '' || ctx.proxyresponsebytes != null",
+        "ignore_failure": true
+      }
+    },
+    {
+      "pipeline": {
+        "name": "enrich-email",
+        "ignore_missing_pipeline": true,
+        "if": "ctx.fname != '' || ctx.fname != null",
+        "ignore_failure": true
+      }
+    },
+    {
+      "pipeline": {
+        "name": "logs-ti_abusech.malware@custom",
+        "ignore_missing_pipeline": true,
+        "if": "ctx.extension != '' || ctx.extension != null",
+        "ignore_failure": true
+      }
     }
   ]
 }
