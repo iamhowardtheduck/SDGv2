@@ -1,0 +1,109 @@
+elasticsearchScheme: http
+elasticsearchHost: localhost
+elasticsearchPort: 30920
+elasticsearchUser: sdg
+elasticsearchPassword: changeme
+workloads:
+  - workloadName: bluecoat-proxy
+    workloadThreads: 6
+    workloadSleep: 100
+    indexName: logs-bluecoat.proxy
+    fields:
+      - name: proxcode
+        type: int
+        range: 1,82
+
+      - name: ripcodes
+        type: int
+        range: 1,251
+
+      - name: rip2
+        type: int
+        range: 0,255
+
+      - name: rip3
+        type: int
+        range: 0,255
+
+      - name: rip4
+        type: int
+        range: 0,255
+
+      - name: 2rip1
+        type: int
+        range: 10,10
+
+      - name: 2rip2
+        type: int
+        range: 0,255
+
+      - name: 2rip3
+        type: int
+        range: 0,255
+
+      - name: 2rip4
+        type: int
+        range: 0,254
+
+      - name: proxyrequestbytes
+        type: int
+        range: 0,9229
+
+      - name: proxyresponsebytes
+        type: int
+        range: 0,622996
+
+      - name: proxyrequesturl
+        type: url
+
+  - workloadName: bluecoat-proxy-malware
+    workloadThreads: 1
+    workloadSleep: 10000
+    indexName: logs-bluecoat.proxy
+    fields:
+      - name: proxcode
+        type: int
+        range: 69,87
+
+      - name: ripcodes
+        type: int
+        range: 1,251
+
+      - name: rip2
+        type: int
+        range: 0,255
+
+      - name: rip3
+        type: int
+        range: 0,255
+
+      - name: rip4
+        type: int
+        range: 0,255
+
+      - name: 2rip1
+        type: int
+        range: 10,10
+
+      - name: 2rip2
+        type: int
+        range: 0,255
+
+      - name: 2rip3
+        type: int
+        range: 0,255
+
+      - name: 2rip4
+        type: int
+        range: 0,254
+
+      - name: proxyrequestbytes
+        type: int
+        range: 0,32761
+
+      - name: proxyresponsebytes
+        type: int
+        range: 0,622996
+
+      - name: proxyrequesturl
+        type: url
