@@ -165,6 +165,14 @@
         "field": "source.ip",
         "value": "{{2rip1}}.{{2rip2}}.{{2rip3}}.{{2rip4}}"
       }
+    },  
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "source.ip",
+        "value": "10.49.110.17",
+        "if": "ctx?.ml_is_dga?.malicious_prediction == '1'"
+      }
     },
     {
       "geoip": {
