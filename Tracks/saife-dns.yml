@@ -66,15 +66,15 @@ workloads:
 
       - name: 2rip2
         type: int
-        range: 10,10
+        range: 0,255
 
       - name: 2rip3
         type: int
-        range: 10,10
+        range: 0,255
 
       - name: 2rip4
         type: int
-        range: 0,5
+        range: 0,254
 
   - workloadName: network-dns-sunburst
     workloadThreads: 1
@@ -138,12 +138,12 @@ workloads:
 
       - name: 2rip2
         type: int
-        range: 10,10
+        range: 0,255
 
       - name: 2rip3
         type: int
-        range: 10,10
+        range: 0,255
 
       - name: 2rip4
         type: int
-        range: 0,5
+        range: 0,254
