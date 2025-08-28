@@ -1,0 +1,50 @@
+{
+  "priority": 200,
+  "template": {
+    "settings": {
+      "index": {
+        "mode": "logsdb",
+        "number_of_replicas": "0"
+      }
+    },
+    "mappings": {
+      "_meta": {
+        "package": {
+          "name": "proxysg"
+        },
+        "managed_by": "fleet",
+        "managed": true
+      }
+    }
+  },
+  "index_patterns": [
+    "logs-proxysg.log-*"
+  ],
+  "data_stream": {
+    "hidden": false,
+    "allow_custom_routing": false
+  },
+  "composed_of": [
+    "logs@mappings",
+    "logs@settings",
+    "logs-proxysg.log@package",
+    "logs@custom",
+    "proxysg@custom",
+    "logs-proxysg.log@custom",
+    "ecs@mappings",
+    ".fleet_globals-1",
+    ".fleet_agent_id_verification-1"
+  ],
+  "ignore_missing_component_templates": [
+    "logs@custom",
+    "proxysg@custom",
+    "logs-proxysg.log@custom"
+  ],
+  "_meta": {
+    "package": {
+      "name": "proxysg"
+    },
+    "managed_by": "fleet",
+    "managed": true
+  }
+}
