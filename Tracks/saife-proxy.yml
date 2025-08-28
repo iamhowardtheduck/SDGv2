@@ -7,7 +7,7 @@ workloads:
   - workloadName: bluecoat-proxy
     workloadThreads: 6
     workloadSleep: 100
-    indexName: logs-bluecoat.proxy
+    indexName: logs-proxysg.log-default
     fields:
       - name: proxcode
         type: int
@@ -63,7 +63,7 @@ workloads:
   - workloadName: bluecoat-proxy-malware
     workloadThreads: 1
     workloadSleep: 10000
-    indexName: logs-bluecoat.proxy
+    indexName: logs-proxysg.log-default
     fields:
       - name: proxcode
         type: int
