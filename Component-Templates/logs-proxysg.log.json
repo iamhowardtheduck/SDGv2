@@ -80,8 +80,7 @@
                   "type": "keyword"
                 },
                 "bytes": {
-                  "ignore_above": 1024,
-                  "type": "keyword"
+                  "type": "long"
                 },
                 "status": {
                   "ignore_above": 1024,
@@ -348,8 +347,7 @@
                   "type": "keyword"
                 },
                 "bytes": {
-                  "ignore_above": 1024,
-                  "type": "keyword"
+                  "type": "long"
                 },
                 "uri_port": {
                   "type": "long"
