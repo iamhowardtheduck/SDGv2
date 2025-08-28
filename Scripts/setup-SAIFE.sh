@@ -138,6 +138,9 @@ echo
 echo "Custom Ingest Pipelines loaded"
 echo
 
+# Enable beta integrations
+curl -u "sdg:changeme" -X PUT http://localhost:30002/api/fleet/settings -H "kbn-xsrf: true" -H "Content-Type: application/json" -d '{"prerelease_integrations_enabled": true}'
+
 # Load index templates for data generation
 #curl -X PUT "http://localhost:30920/_index_template/winlogbeat" -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Index-Templates/winlogbeat.json
 
