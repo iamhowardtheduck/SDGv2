@@ -76,6 +76,9 @@ workloads:
         type: int
         range: 0,254
 
+      - name: hostname
+        type: hostname
+
   - workloadName: network-dns-sunburst
     workloadThreads: 1
     workloadSleep: 100
@@ -147,3 +150,6 @@ workloads:
       - name: 2rip4
         type: int
         range: 0,254
+
+      - name: hostname
+        type: hostname
