@@ -134,7 +134,7 @@
         "ignore_failure": true,
         "ignore_missing": true,
         "field": "server.ip",
-        "target_field": "destination.geo"
+        "target_field": "server.geo"
       }
     },
     {
