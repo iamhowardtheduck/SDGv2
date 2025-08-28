@@ -91,6 +91,14 @@
       }
     },
     {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "bc.proxy.code",
+        "target_field": "proxysg.server_to_client.status"
+      }
+    },    
+    {
       "set": {
         "ignore_failure": true,
         "field": "data_stream.dataset",
@@ -182,7 +190,7 @@
         "ignore_failure": true,
         "ignore_missing": true,
         "field": "proxyrequesturl",
-        "target_field": "proxy.request.url"
+        "target_field": "proxysg.client_to_server.host"
       }
     },
     {
@@ -199,6 +207,13 @@
         "if": "(ctx.proxysg?.client_to_server?.categories == 'Proxy Avoidance' || ctx.proxysg?.client_to_server?.categories == 'Dynamic DNS Host' || ctx.proxysg?.client_to_server?.categories == 'Chat/Instant Messaging' || ctx.proxysg?.client_to_server?.categories == 'Malicious Outbound Data/Botnets' || ctx.proxysg?.client_to_server?.categories == 'Malicious Sources') && ctx.proxysg?.server?.action == 'TCP_TUNNEL'"
       }
     },
+    {
+      "set": {
+        "field": "proxysg.server_to_client.status",
+        "value": "200",
+        "if": "(ctx.proxysg?.client_to_server?.categories == 'Proxy Avoidance' || ctx.proxysg?.client_to_server?.categories == 'Dynamic DNS Host' || ctx.proxysg?.client_to_server?.categories == 'Chat/Instant Messaging' || ctx.proxysg?.client_to_server?.categories == 'Malicious Outbound Data/Botnets' || ctx.proxysg?.client_to_server?.categories == 'Malicious Sources') && ctx.proxysg?.server?.action == 'TCP_TUNNEL'"
+      }
+    },    
     {
       "set": {
         "field": "observer.vendor",
