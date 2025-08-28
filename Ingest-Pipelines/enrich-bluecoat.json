@@ -176,6 +176,18 @@
         "value": "10.49.110.17",
         "if": "(ctx.proxy?.category == 'Proxy Avoidance' || ctx.proxy?.category == 'Dynamic DNS Host' || ctx.proxy?.category == 'Chat/Instant Messaging' || ctx.proxy?.category == 'Malicious Outbound Data/Botnets' || ctx.proxy?.category == 'Malicious Sources') && ctx.event?.action == 'TCP_TUNNEL'"
       }
+    },
+    {
+      "set": {
+        "field": "observer.vendor",
+        "value": "Broadcom"
+      }
+    },
+    {
+      "set": {
+        "field": "observer.product",
+        "value": "ProxySG"
+      }
     }
   ]
 }
