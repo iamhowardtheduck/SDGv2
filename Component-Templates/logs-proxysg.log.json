@@ -1,0 +1,530 @@
+{
+  "template": {
+    "settings": {
+      "index": {
+        "lifecycle": {
+          "name": "logs"
+        },
+        "default_pipeline": "logs-proxysg.log",
+        "mapping": {
+          "total_fields": {
+            "limit": "1000"
+          }
+        }
+      }
+    },
+    "mappings": {
+      "properties": {
+        "input": {
+          "properties": {
+            "type": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            }
+          }
+        },
+        "@timestamp": {
+          "ignore_malformed": false,
+          "type": "date"
+        },
+        "proxysg": {
+          "properties": {
+            "server": {
+              "properties": {
+                "supplier_country": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "ip": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "hierarchy": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "sitename": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "action": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "supplier_ip": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "supplier_name": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "supplier_failures": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                }
+              }
+            },
+            "x_rs_certificate_hostname_threat_risk": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "x_cs_client_ip_country": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "server_to_client": {
+              "properties": {
+                "filter_result": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "bytes": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "status": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                }
+              }
+            },
+            "x_client_device_type": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "x_rs_certificate_validate_status": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "x_client_agent_sw": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "x_client_agent_type": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "x_cs_connection_negotiated_cipher": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "x_rs_ocsp_error": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "remote": {
+              "properties": {
+                "supplier_country": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "ip": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                }
+              }
+            },
+            "x_cs_connection_negotiated_ssl_version": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "x_rs_connection_negotiated_cipher_size": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "x_rs_certificate_observed_errors": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "x_client_device_id": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "x_client_security_posture_risk_score": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "x_rs_certificate_hostname_categories": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "x_client_security_posture_details": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "x_cs_certificate_subject": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "client": {
+              "properties": {
+                "ip": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                }
+              }
+            },
+            "remote_to_server": {
+              "properties": {
+                "connection_negotiated_ssl_version": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "certificate_hostname_category": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "icap_error_details": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "certificate_observed_errors": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "connection_negotiated_cipher_size": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "certificate_hostname": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "threat_id": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "connection_negotiated_cipher_strength": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "icap_status": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "ocsp_error": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "certificate_hostection_negotnamecategory": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "threat_source": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "certificate_validate_status": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "content_type": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "certificate_hostection_negotname": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "certificate_hostname_threat_risk": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "connection_negotiated_cipher": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                }
+              }
+            },
+            "x_rs_certificate_signature_algorithm": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "x_cs_connection_negotiated_cipher_size": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "x_data_leak_detected": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "x_cloud_rs": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "client_to_server": {
+              "properties": {
+                "auth_group": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "connection_negotiated_ssl_version": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "referer": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "x_requested_with": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "threat_id": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "icap_status": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "uri_path": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "host": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "categories": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "user_agent": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "connection_negotiated_cipher": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "certificate_subject": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "icap_error_details": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "method": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "connection_negotiated_cipher_size": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "uri_extension": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "auth_groups": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "ocsp_error": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "uri_scheme": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "threat_risk": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "threat_source": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "uri_query": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "rs_content_type": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "bytes": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "uri_port": {
+                  "type": "long"
+                },
+                "userdn": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "username": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                }
+              }
+            },
+            "x_rs_certificate_hostname": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "x_client_os": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "x_client_device_name": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "x_bluecoat": {
+              "properties": {
+                "access_type": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "access_security_policy_reason": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "reference_id": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "access_security_policy_action": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "application_groups": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "transaction_uuid": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "application_operation": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "location_id": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "appliance_name": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "location_name": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "application_name": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "request_tenant_id": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "placeholder": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                }
+              }
+            },
+            "x_exception_id": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "x_rs_connection_negotiated_ssl_version": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "time_taken": {
+              "type": "long"
+            },
+            "x_icap_respmod_header_x_icap_metadata": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "x_sc_connection_issuer_keyring": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "x_cs_ocsp_error": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "x_sc_connection_issuer_keyring_alias": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "x_icap_reqmod_header_x_icap_metadata": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "x_random_ipv6": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "x_virus_id": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            },
+            "x_rs_connection_negotiated_cipher": {
+              "ignore_above": 1024,
+              "type": "keyword"
+            }
+          }
+        },
+        "log": {
+          "properties": {
+            "file": {
+              "properties": {
+                "inode": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                },
+                "device_id": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                }
+              }
+            },
+            "offset": {
+              "type": "long"
+            },
+            "source": {
+              "properties": {
+                "address": {
+                  "ignore_above": 1024,
+                  "type": "keyword"
+                }
+              }
+            }
+          }
+        },
+        "data_stream": {
+          "properties": {
+            "namespace": {
+              "type": "constant_keyword"
+            },
+            "type": {
+              "type": "constant_keyword"
+            },
+            "dataset": {
+              "type": "constant_keyword"
+            }
+          }
+        }
+      }
+    }
+  },
+  "_meta": {
+    "package": {
+      "name": "proxysg"
+    },
+    "managed_by": "fleet",
+    "managed": true
+  }
+}
