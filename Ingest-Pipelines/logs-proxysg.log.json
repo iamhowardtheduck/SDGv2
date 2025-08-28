@@ -9,7 +9,6 @@
         "target_field": "bc"
       }
     },
-
     {
       "enrich": {
         "ignore_failure": true,
@@ -18,13 +17,13 @@
         "field": "uacode",
         "target_field": "bc"
       }
-    },    
+    },
     {
       "rename": {
-        "ignore_failure": true,
+        "field": "bc.user_agent.os.full",
+        "target_field": "proxysg.client_to_server.user_agent",
         "ignore_missing": true,
-        "field": "bc.user-agents",
-        "target_field": "proxysg.client_to_server.user_agent"
+        "ignore_failure": true
       }
     },
     {
@@ -139,8 +138,6 @@
     },
     {
       "remove": {
-        "ignore_failure": true,
-        "ignore_missing": true,
         "field": [
           "rips.ripcodes",
           "ripcodes",
@@ -155,8 +152,11 @@
           "2rip2",
           "2rip1",
           "uacode",
-          "bc.user-agents"
-        ]
+          "bc.user-agents",
+          "bc.code"
+        ],
+        "ignore_missing": true,
+        "ignore_failure": true
       }
     },
     {
@@ -183,7 +183,7 @@
         "target_field": "proxy.request.url"
       }
     },
-   {
+    {
       "pipeline": {
         "name": "timestamp-cleanup",
         "ignore_missing_pipeline": true,
@@ -207,6 +207,14 @@
       "set": {
         "field": "observer.product",
         "value": "ProxySG"
+      }
+    },
+    {
+      "user_agent": {
+        "field": "proxysg.client_to_server.user_agent",
+        "extract_device_type": true,
+        "ignore_missing": true,
+        "ignore_failure": true
       }
     }
   ]
