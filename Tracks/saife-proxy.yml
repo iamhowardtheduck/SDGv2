@@ -56,6 +56,10 @@ workloads:
       - name: proxyrequesturl
         type: url
 
+      - name: uacode
+        type: int
+        range: 1,1035
+
   - workloadName: bluecoat-proxy-malware
     workloadThreads: 1
     workloadSleep: 10000
@@ -107,3 +111,7 @@ workloads:
 
       - name: proxyrequesturl
         type: url
+
+      - name: uacode
+        type: int
+        range: 1,1035        
