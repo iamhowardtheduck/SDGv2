@@ -39,7 +39,7 @@
         "ignore_failure": true,
         "ignore_missing": true,
         "field": "bc.event.category",
-        "target_field": "proxysg.client_to_server.categories"
+        "target_field": "event.category"
       }
     },
     {
