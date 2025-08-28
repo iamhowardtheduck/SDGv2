@@ -15,12 +15,12 @@
         "policy_name": "user-agents",
         "ignore_missing": true,
         "field": "uacode",
-        "target_field": "bc"
+        "target_field": "ua"
       }
     },
     {
       "rename": {
-        "field": "bc.user_agent.os.full",
+        "field": "ua.user_agent.os.full",
         "target_field": "proxysg.client_to_server.user_agent",
         "ignore_missing": true,
         "ignore_failure": true
@@ -153,7 +153,9 @@
           "2rip1",
           "uacode",
           "bc.user-agents",
-          "bc.code"
+          "bc.code",
+          "ua.user_agent.os.full",
+          "ua"
         ],
         "ignore_missing": true,
         "ignore_failure": true
