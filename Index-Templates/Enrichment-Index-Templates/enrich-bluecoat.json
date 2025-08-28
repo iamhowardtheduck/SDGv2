@@ -40,6 +40,9 @@
         "properties": {
           "category": {
             "type": "keyword"
+          },
+          "code": {
+            "type": "keyword"
           }
         }
       }
