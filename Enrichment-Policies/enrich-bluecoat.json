@@ -2,6 +2,6 @@
   "match": {
     "indices": "enrich-bluecoat",
     "match_field": "proxcode",
-    "enrich_fields": ["event.action", "event.category", "event.dataset", "event.kind", "event.module", "event.outcome", "event.type", "proxy.category"]
+    "enrich_fields": ["event.action", "event.category", "event.dataset", "event.kind", "event.module", "event.outcome", "event.type", "proxy.category", "proxy.code"]
   }
 }
