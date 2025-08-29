@@ -202,7 +202,7 @@
     },
     {
       "set": {
-        "field": "source.ip",
+        "field": "client.ip",
         "value": "10.49.110.17",
         "if": "(ctx.proxysg?.client_to_server?.categories == 'Proxy Avoidance' || ctx.proxysg?.client_to_server?.categories == 'Dynamic DNS Host' || ctx.proxysg?.client_to_server?.categories == 'Chat/Instant Messaging' || ctx.proxysg?.client_to_server?.categories == 'Malicious Outbound Data/Botnets' || ctx.proxysg?.client_to_server?.categories == 'Malicious Sources') && ctx.proxysg?.server?.action == 'TCP_TUNNEL'"
       }
