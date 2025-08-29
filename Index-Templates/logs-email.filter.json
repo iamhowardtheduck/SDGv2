@@ -14,8 +14,7 @@
           "type": "object",
           "properties": {
             "attachments": {
-              "type": "nested",
-			  "dynamic": true,
+              "type": "object",
               "properties": {
                 "file": {
                   "type": "object",
