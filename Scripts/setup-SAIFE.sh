@@ -144,3 +144,8 @@ curl -u "sdg:changeme" -X PUT http://localhost:30002/api/fleet/settings -H "kbn-
 
 # Load pre-built Elastic Security rules
 curl -X PUT "http://localhost:30001/api/detection_engine/rules/prepackaged" -u "sdg:changme"  --header "kbn-xsrf: true" -H "Content-Type: application/json"  -d '{}'
+
+echo
+echo "Elastic pre-built Security rules loaded, but not activated."
+echo
+echo "You are now ready to begin the assignment."
