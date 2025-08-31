@@ -165,7 +165,14 @@
         "field": "source.ip",
         "value": "{{2rip1}}.{{2rip2}}.{{2rip3}}.{{2rip4}}"
       }
-    },  
+    },
+    {
+      "set": {
+        "field": "host.name",
+        "value": "host-{{2rip1}}-{{2rip2}}-{{2rip3}}-{{2rip4}}",
+        "ignore_failure": true
+      }
+    },
     {
       "set": {
         "ignore_failure": true,
@@ -175,19 +182,27 @@
       }
     },
     {
+      "set": {
+        "field": "host.name",
+        "value": "host-10-49-110-17",
+        "if": "ctx?.ml_is_dga?.malicious_prediction == '1'",
+        "ignore_failure": true
+      }
+    },
+    {
       "geoip": {
         "ignore_failure": true,
         "field": "destination.ip",
         "target_field": "destination.geo"
       }
     },
-     {
+    {
       "geoip": {
         "ignore_failure": true,
         "field": "source.ip",
         "target_field": "source.geo"
       }
-    }, 
+    },
     {
       "pipeline": {
         "name": "logs-network_traffic-cleanup",
