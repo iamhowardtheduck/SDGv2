@@ -9,14 +9,6 @@
       }
     },
     {
-    "rename": {
-      "field": "hostname",
-      "target_field": "host.name",
-      "ignore_missing": true,
-      "ignore_failure": true
-    }
-    },
-    {
       "set": {
         "field": "event.dataset",
         "ignore_failure": true,
