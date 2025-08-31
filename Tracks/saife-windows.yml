@@ -34,11 +34,11 @@ workloads:
 
       - name: 2rip2
         type: int
-        range: 0,255
+        range: 30,50
 
       - name: 2rip3
         type: int
-        range: 0,255
+        range: 100,200
 
       - name: 2rip4
         type: int
