@@ -93,7 +93,7 @@
     {
       "set": {
         "field": "email.attachments.file.size",
-        "value": "781408",
+        "value": 781408,
         "if": "ctx?.email?.direction == 'inbound' && ctx.destination?.ip == '10.49.110.17'",
         "ignore_failure": true,
         "description": "Specify the file size"
@@ -115,6 +115,22 @@
         "if": "ctx?.email?.direction == 'inbound' && ctx.destination?.ip == '10.49.110.17'",
         "ignore_failure": true,
         "description": "Specify the file sha256"
+      }
+    },
+    {
+      "set": {
+        "field": "host.name",
+        "value": "host-10-49-110-17",
+        "if": "ctx.destination?.ip == '10.49.110.17'",
+        "ignore_failure": true
+      }
+    },
+    {
+      "set": {
+        "field": "email.to.address",
+        "value": "Mortimer.Stoltenberg@omnicorp.com",
+        "if": "ctx.destination?.ip == '10.49.110.17'",
+        "ignore_failure": true
       }
     }
   ]
