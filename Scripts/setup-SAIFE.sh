@@ -72,6 +72,26 @@ echo
 
 # Create Entity Asset lists
 curl -X POST "http://localhost:30002/api/asset_criticality/bulk" --header "kbn-xsrf: true"  -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Entity-Asset-List/entities-v1.json
+curl -X POST "http://localhost:30002/api/asset_criticality/bulk" --header "kbn-xsrf: true"  -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Entity-Asset-List/hostnames_transformed_part0001.json
+curl -X POST "http://localhost:30002/api/asset_criticality/bulk" --header "kbn-xsrf: true"  -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Entity-Asset-List/hostnames_transformed_part0002.json
+curl -X POST "http://localhost:30002/api/asset_criticality/bulk" --header "kbn-xsrf: true"  -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Entity-Asset-List/hostnames_transformed_part0003.json
+curl -X POST "http://localhost:30002/api/asset_criticality/bulk" --header "kbn-xsrf: true"  -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Entity-Asset-List/hostnames_transformed_part0004.json
+curl -X POST "http://localhost:30002/api/asset_criticality/bulk" --header "kbn-xsrf: true"  -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Entity-Asset-List/hostnames_transformed_part0005.json
+curl -X POST "http://localhost:30002/api/asset_criticality/bulk" --header "kbn-xsrf: true"  -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Entity-Asset-List/hostnames_transformed_part0006.json
+curl -X POST "http://localhost:30002/api/asset_criticality/bulk" --header "kbn-xsrf: true"  -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Entity-Asset-List/hostnames_transformed_part0007.json
+curl -X POST "http://localhost:30002/api/asset_criticality/bulk" --header "kbn-xsrf: true"  -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Entity-Asset-List/hostnames_transformed_part0008.json
+curl -X POST "http://localhost:30002/api/asset_criticality/bulk" --header "kbn-xsrf: true"  -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Entity-Asset-List/hostnames_transformed_part0009.json
+curl -X POST "http://localhost:30002/api/asset_criticality/bulk" --header "kbn-xsrf: true"  -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Entity-Asset-List/hostnames_transformed_part0010.json
+curl -X POST "http://localhost:30002/api/asset_criticality/bulk" --header "kbn-xsrf: true"  -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Entity-Asset-List/hostnames_transformed_part0011.json
+curl -X POST "http://localhost:30002/api/asset_criticality/bulk" --header "kbn-xsrf: true"  -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Entity-Asset-List/hostnames_transformed_part0012.json
+curl -X POST "http://localhost:30002/api/asset_criticality/bulk" --header "kbn-xsrf: true"  -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Entity-Asset-List/hostnames_transformed_part0013.json
+curl -X POST "http://localhost:30002/api/asset_criticality/bulk" --header "kbn-xsrf: true"  -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Entity-Asset-List/hostnames_transformed_part0014.json
+curl -X POST "http://localhost:30002/api/asset_criticality/bulk" --header "kbn-xsrf: true"  -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Entity-Asset-List/hostnames_transformed_part0015.json
+curl -X POST "http://localhost:30002/api/asset_criticality/bulk" --header "kbn-xsrf: true"  -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Entity-Asset-List/hostnames_transformed_part0016.json
+curl -X POST "http://localhost:30002/api/asset_criticality/bulk" --header "kbn-xsrf: true"  -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Entity-Asset-List/hostnames_transformed_part0017.json
+curl -X POST "http://localhost:30002/api/asset_criticality/bulk" --header "kbn-xsrf: true"  -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Entity-Asset-List/hostnames_transformed_part0018.json
+curl -X POST "http://localhost:30002/api/asset_criticality/bulk" --header "kbn-xsrf: true"  -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Entity-Asset-List/hostnames_transformed_part0019.json
+curl -X POST "http://localhost:30002/api/asset_criticality/bulk" --header "kbn-xsrf: true"  -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Entity-Asset-List/hostnames_transformed_part0020.json
 
 echo
 echo "Entity Asset list loaded"
