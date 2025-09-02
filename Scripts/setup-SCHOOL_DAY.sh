@@ -49,17 +49,17 @@ echo "Simple Data Generator installed"
 echo
 
 # Install LLM Connector
-bash /opt/workshops/elastic-llm.sh -k false -m anthropic -k true -d true -e true
+bash /opt/workshops/elastic-llm.sh -k false -m anthropic -d true -e true
 
 echo
-echo "AWS Sonnet AI Assistant Connector configured as OpenAI"
+echo "AWS Bedrock AI Assistant Connector configured as OpenAI"
 echo
 
 # Use Security view
 bash /opt/workshops/elastic-view.sh -v classic
 
 echo
-echo "Security centric Kibana view applied"
+echo "Default Kibana view applied"
 echo
 
 # Create Elastic-Agent policies
@@ -142,5 +142,12 @@ echo
 # Enable beta integrations
 curl -u "sdg:changeme" -X PUT http://localhost:30002/api/fleet/settings -H "kbn-xsrf: true" -H "Content-Type: application/json" -d '{"prerelease_integrations_enabled": true}'
 
-# Load pre-built Elastic Security rules
-curl -X PUT "http://localhost:30001/api/detection_engine/rules/prepackaged" -u "sdg:changme"  --header "kbn-xsrf: true" -H "Content-Type: application/json"  -d '{}'
+# Load pre-built Elastic Security rules (not required for this lab)
+#curl -X PUT "http://localhost:30001/api/detection_engine/rules/prepackaged" -u "sdg:changme"  --header "kbn-xsrf: true" -H "Content-Type: application/json"  -d '{}'
+
+clear
+
+echo
+echo
+echo
+echo "You are now ready to begin the assignment."
