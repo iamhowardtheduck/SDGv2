@@ -271,6 +271,12 @@
         "ignore_missing_pipeline": true,
         "ignore_failure": true
       }
+    },
+    {
+      "set": {
+        "field": "agent.name",
+        "value": "Spam-Assassin"
+      }
     }
   ]
 }
