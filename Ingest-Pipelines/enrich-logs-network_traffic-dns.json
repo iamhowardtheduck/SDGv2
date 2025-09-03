@@ -34,18 +34,32 @@
     },
     {
       "rename": {
-        "ignore_failure": true,
-        "ignore_missing": true,
         "field": "clientbytes",
-        "target_field": "destination.bytes"
+        "target_field": "source.bytes",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "client.bytes",
+        "copy_from": "source.bytes"
       }
     },
     {
       "rename": {
-        "ignore_failure": true,
-        "ignore_missing": true,
         "field": "serverbytes",
-        "target_field": "source.bytes"
+        "target_field": "destination.bytes",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "server.bytes",
+        "copy_from": "destination.bytes"
       }
     },
     {
@@ -175,6 +189,13 @@
     },
     {
       "set": {
+        "field": "agent.name",
+        "value": "host-{{2rip1}}-{{2rip2}}-{{2rip3}}-{{2rip4}}",
+        "ignore_failure": true
+      }
+    },
+    {
+      "set": {
         "ignore_failure": true,
         "field": "source.ip",
         "value": "10.49.110.17",
@@ -190,6 +211,14 @@
       }
     },
     {
+      "set": {
+        "field": "agent.name",
+        "value": "host-10-49-110-17",
+        "if": "ctx?.ml_is_dga?.malicious_prediction == '1'",
+        "ignore_failure": true
+      }
+    },
+    {
       "geoip": {
         "ignore_failure": true,
         "field": "destination.ip",
@@ -197,10 +226,24 @@
       }
     },
     {
+      "set": {
+        "field": "server.ip",
+        "ignore_failure": true,
+        "copy_from": "destination.ip"
+      }
+    },
+    {
       "geoip": {
         "ignore_failure": true,
         "field": "source.ip",
         "target_field": "source.geo"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "client.ip",
+        "copy_from": "source.ip"
       }
     },
     {
