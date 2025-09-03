@@ -314,6 +314,6 @@
         "if": "ctx.host?.ip == '10.49.110.17'",
         "ignore_failure": true
       }
-    },
+    }
   ]
 }
