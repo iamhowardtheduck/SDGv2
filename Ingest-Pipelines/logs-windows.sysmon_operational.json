@@ -218,6 +218,13 @@
     },
     {
       "set": {
+        "field": "agent.name",
+        "value": "host-{{2rip1}}-{{2rip2}}-{{2rip3}}-{{2rip4}}",
+        "ignore_failure": true
+      }
+    },
+    {
+      "set": {
         "ignore_failure": true,
         "field": "registry.path",
         "value": "HKLM\\\\Software\\\\Policies\\\\Microsoft\\\\Windows NT\\\\{{registry1}}\\\\{{registry2}}"
@@ -299,6 +306,14 @@
         "value": "HKLM\\\\Software\\\\Policies\\\\Microsoft\\\\Windows NT\\\\Terminal Services\\\\Shadow",
         "if": "ctx.host?.ip == '10.49.110.17'"
       }
-    }
+    },
+      {
+      "set": {
+        "field": "agent.name",
+        "value": "host-10-49-110-17",
+        "if": "ctx.host?.ip == '10.49.110.17'",
+        "ignore_failure": true
+      }
+    },
   ]
 }
