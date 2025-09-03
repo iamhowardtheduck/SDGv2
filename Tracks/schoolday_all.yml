@@ -425,19 +425,19 @@ workloads:
 
       - name: 2rip2
         type: int
-        range: 30,50
+        range: 33,33
 
       - name: 2rip3
         type: int
-        range: 100,200
+        range: 107,107
 
       - name: 2rip4
         type: int
-        range: 0,254
+        range: 25,25
 
       - name: proxyrequestbytes
         type: int
-        range: 51200,106229
+        range: 106195,106229
 
       - name: proxyresponsebytes
         type: int
