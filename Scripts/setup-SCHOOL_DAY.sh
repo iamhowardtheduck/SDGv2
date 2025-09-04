@@ -52,7 +52,7 @@ echo
 bash /opt/workshops/elastic-llm.sh -k false -m anthropic -e true
 
 echo
-echo "AWS Bedrock AI Assistant Connector configured as OpenAI"
+echo "AI Assistant Connector configured as OpenAI"
 echo
 
 # Use Security view
