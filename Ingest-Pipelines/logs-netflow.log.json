@@ -1,0 +1,237 @@
+{
+  "processors": [
+    {
+      "set": {
+        "field": "ecs.version",
+        "value": "8.17.0"
+      }
+    },
+    {
+      "set": {
+        "field": "agent.type",
+        "value": "filebeat"
+      }
+    },
+    {
+      "set": {
+        "field": "destination.locality",
+        "value": "external"
+      }
+    },
+    {
+      "set": {
+        "field": "agent.version",
+        "value": "9.1.3"
+      }
+    },
+    {
+      "set": {
+        "field": "data_stream.dataset",
+        "value": "netflow.log"
+      }
+    },
+    {
+      "set": {
+        "field": "data_stream.namespace",
+        "value": "default"
+      }
+    },
+    {
+      "set": {
+        "field": "data_stream.type",
+        "value": "logs"
+      }
+    },
+    {
+      "enrich": {
+        "ignore_failure": true,
+        "policy_name": "remote-ips",
+        "ignore_missing": true,
+        "field": "ripcodes",
+        "target_field": "rips"
+      }
+    },
+    {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "rips.rip1",
+        "target_field": "rip1"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "destination.ip",
+        "value": "{{rip1}}.{{rip2}}.{{rip3}}.{{rip4}}"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "host.ip",
+        "value": "{{2rip1}}.{{2rip2}}.{{2rip3}}.{{2rip4}}"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "host.name",
+        "value": "host-{{2rip1}}-{{2rip2}}-{{2rip3}}-{{2rip4}}"
+      }
+    },
+    
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "observer.ip",
+        "value": "{{2rip1}}.{{2rip2}}.{{2rip3}}.{{2rip4}}"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "agent.name",
+        "value": "host-10-30-100-2"
+      }
+    },
+      {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "sourceip",
+        "target_field": "source.ip"
+      }
+    },
+    {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "destinationbytes",
+        "target_field": "destination.bytes"
+      }
+    },
+    {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "destinationpackets",
+        "target_field": "destination.packets"
+      }
+    },
+    {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "destinationport",
+        "target_field": "destination.port"
+      }
+    },
+    {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "ingressinterface",
+        "target_field": "netflow.ingress_interface"
+      }
+    },
+    {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "egressinterface",
+        "target_field": "netflow.egress_interface"
+      }
+    },
+      {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "sourcebytes",
+        "target_field": "source.bytes"
+      }
+    },
+    {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "sourcepackets",
+        "target_field": "source.packets"
+      }
+    },
+    {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "sourceport",
+        "target_field": "source.port"
+      }
+    },
+      {
+      "set": {
+        "field": "event.action",
+        "value": "netflow_flow"
+      }
+    },
+    {
+      "set": {
+        "field": "event.category",
+        "value": "network"
+      }
+    },
+    {
+      "set": {
+        "field": "event.dataset",
+        "value": "netflow.log"
+      }
+    },
+    {
+      "set": {
+        "field": "event.kind",
+        "value": "event"
+      }
+    },
+    {
+      "set": {
+        "field": "event.module",
+        "value": "netflow"
+      }
+    },
+    {
+      "set": {
+        "field": "event.type",
+        "value": "connection"
+      }
+    },
+    {
+      "set": {
+        "field": "flow.locality",
+        "value": "external"
+      }
+    },
+    {
+      "set": {
+        "field": "input.type",
+        "value": "netflow"
+      }
+    },
+    {
+      "set": {
+        "field": "netflow.exporter.address",
+        "value": "10.30.100.0:36807"
+      }
+    },
+    {
+      "set": {
+        "field": "netflow.destination_ipv4_address",
+        "value": "{{destination.ip}}"
+      }
+    },
+    {
+      "set": {
+        "field": "netflow.source_ipv4_address",
+        "value": "{{source.ip}}"
+      }
+    }
+  ]
+}
