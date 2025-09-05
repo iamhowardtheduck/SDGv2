@@ -80,7 +80,6 @@
         "value": "host-{{2rip1}}-{{2rip2}}-{{2rip3}}-{{2rip4}}"
       }
     },
-    
     {
       "set": {
         "ignore_failure": true,
@@ -95,7 +94,7 @@
         "value": "host-10-30-100-2"
       }
     },
-      {
+    {
       "rename": {
         "ignore_failure": true,
         "ignore_missing": true,
@@ -143,7 +142,7 @@
         "target_field": "netflow.egress_interface"
       }
     },
-      {
+    {
       "rename": {
         "ignore_failure": true,
         "ignore_missing": true,
@@ -167,7 +166,7 @@
         "target_field": "source.port"
       }
     },
-      {
+    {
       "set": {
         "field": "event.action",
         "value": "netflow_flow"
@@ -231,6 +230,72 @@
       "set": {
         "field": "netflow.source_ipv4_address",
         "value": "{{source.ip}}"
+      }
+    },
+    {
+      "pipeline": {
+        "name": "logs-network_traffic-cleanup",
+        "ignore_missing_pipeline": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "geoip": {
+        "field": "destination.ip",
+        "target_field": "destination.geo",
+        "ignore_failure": true
+      }
+    },
+    {
+      "geoip": {
+        "field": "destination.ip",
+        "target_field": "destination.asn",
+        "database_file": "GeoLite2-ASN.mmdb",
+        "ignore_failure": true
+      }
+    },
+    {
+      "geoip": {
+        "field": "source.ip",
+        "target_field": "source.geo",
+        "ignore_failure": true
+      }
+    },
+    {
+      "rename": {
+        "field": "destination.as.asn",
+        "target_field": "destination.as.number",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "rename": {
+        "field": "destination.as.organization_name",
+        "target_field": "destination.as.organization.name",
+        "ignore_missing": true,
+        "ignore_failure": true
+      }
+    },
+    {
+      "registered_domain": {
+        "field": "destination.ip",
+        "target_field": "destination.hostname",
+        "ignore_failure": true
+      }
+    },
+    {
+      "set": {
+        "field": "netflow.flow_end_milliseconds",
+        "ignore_failure": true,
+        "copy_from": "@timestamp"
+      }
+    },
+    {
+      "script": {
+        "lang": "painless",
+        "source": "if (ctx.netflow != null && ctx.netflow.flow_end_milliseconds != null) {\r\n            // Parse the original timestamp\r\n            def originalDate = ZonedDateTime.parse(ctx.netflow.flow_end_milliseconds);\r\n\r\n            // Generate random number of milliseconds between 0 and 30,000 (30 seconds)\r\n            long randomMillis = (long) Math.floor(Math.random() * 30001);\r\n\r\n            // Convert milliseconds to nanoseconds\r\n            long randomNanos = randomMillis * 1000000L;\r\n\r\n            // Subtract the random duration\r\n            def newDate = originalDate.minusNanos(randomNanos);\r\n\r\n            // Write the result to flow_start_milliseconds\r\n            ctx.netflow.flow_start_milliseconds = newDate.toString();\r\n          }",
+        "ignore_failure": true
       }
     }
   ]
