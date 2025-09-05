@@ -1237,6 +1237,12 @@
             "as": {
               "type": "object",
               "properties": {
+                "network": {
+                  "type": "ip_range",
+                  "index": true,
+                  "coerce": true,
+                  "store": false
+                },
                 "number": {
                   "type": "long"
                 },
@@ -1253,9 +1259,6 @@
                       }
                     }
                   }
-                },
-                "network": {
-                  "type": "ip_range"
                 }
               }
             },
