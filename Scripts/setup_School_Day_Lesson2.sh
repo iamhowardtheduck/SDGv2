@@ -9,6 +9,8 @@ curl -X DELETE "http://localhost:30920/_index_template/logs-ti_abusech.malware" 
 curl -X DELETE "http://localhost:30920/_index_template/logs-ti_abusech.malwarebazaar" -H "Content-Type: application/json" -u "sdg:changeme"
 curl -X DELETE "http://localhost:30920/_component_template/logs-ti_abusech.malware@package" -H "Content-Type: application/json" -u "sdg:changeme"
 curl -X DELETE "http://localhost:30920/_component_template/logs-ti_abusech.malwarebazaar@package" -H "Content-Type: application/json" -u "sdg:changeme"
+curl -X DELETE "http://localhost:30920/_index_template/logs-netflow.log" -H "Content-Type: application/json" -u "sdg:changeme"
+curl -X DELETE "http://localhost:30920/_component_template/logs-netflow.log@package" -H "Content-Type: application/json" -u "sdg:changeme"
 
 
 # Create an updated ingest pipeline for the custom logs
@@ -26,6 +28,8 @@ curl -X PUT "http://localhost:30920/_index_template/logs-proxysg.log" -H "Conten
 curl -X PUT "http://localhost:30920/_component_template/logs-ti_abusech.malware@package" -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Component-Templates/logs-ti_abusech.malware.json
 curl -X PUT "http://localhost:30920/_index_template/logs-ti_abusech.malware" -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Index-Templates/logs-ti_abusech.malware.json
 curl -X PUT "http://localhost:30920/_index_template/logs-email.filter" -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Index-Templates/logs-email.filter.json
+curl -X PUT "http://localhost:30920/_index_template/logs-netflow.log" -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Index-Templates/logs-netflow.log.json
+curl -X PUT "http://localhost:30920/_component_template/logs-netflow.log@package" -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Component-Templates/logs-netflow.log.json
 
 
 # Begin data generation
