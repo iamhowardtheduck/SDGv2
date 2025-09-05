@@ -1,0 +1,51 @@
+{
+  "priority": 200,
+  "template": {
+    "settings": {
+      "index": {
+        "mode": "logsdb",
+        "number_of_replicas": "0",
+        "default_pipeline": "logs-netflow.log"
+      }
+    },
+    "mappings": {
+      "_meta": {
+        "package": {
+          "name": "netflow"
+        },
+        "managed_by": "fleet",
+        "managed": true
+      }
+    }
+  },
+  "index_patterns": [
+    "logs-netflow.log-*"
+  ],
+  "data_stream": {
+    "hidden": false,
+    "allow_custom_routing": false
+  },
+  "composed_of": [
+    "logs@mappings",
+    "logs@settings",
+    "logs-netflow.log@package",
+    "logs@custom",
+    "netflow@custom",
+    "logs-netflow.log@custom",
+    "ecs@mappings",
+    ".fleet_globals-1",
+    ".fleet_agent_id_verification-1"
+  ],
+  "ignore_missing_component_templates": [
+    "logs@custom",
+    "netflow@custom",
+    "logs-netflow.log@custom"
+  ],
+  "_meta": {
+    "package": {
+      "name": "netflow"
+    },
+    "managed_by": "fleet",
+    "managed": true
+  }
+}
