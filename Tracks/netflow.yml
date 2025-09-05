@@ -5,7 +5,7 @@ elasticsearchUser: sdg
 elasticsearchPassword: changeme
 workloads:
   - workloadName: netflow-outbound
-    workloadThreads: 10
+    workloadThreads: 4
     workloadSleep: 10
     indexName: logs-netflow.log-default
     fields:
@@ -19,97 +19,19 @@ workloads:
 
       - name: destinationport
         type: random_string_from_list
-        custom_list: 80,443,8080,443,443,443,443,80,80,53,53,53,53,53,443,443,443,25,25,25      
+        custom_list: 2443,1443,3443,4443,5443,10153,10253,10353,10453,10553,6443,7443,8443
 
       - name: ripcodes
-        type: int
-        range: 1,251
+        type: random_string_from_list
+        custom_list: 94,95,173
 
       - name: rip2
-        type: int
-        range: 0,255
+        type: random_string_from_list
+        custom_list: 45,181
 
       - name: rip3
         type: int
-        range: 0,255
-
-      - name: rip4
-        type: int
-        range: 0,255
-
-      - name: ingressinterface
-        type: int
-        range: 0,15
-
-      - name: egressinterface
-        type: int
-        range: 0,7
-
-      - name: sourcebytes
-        type: int
-        range: 0,16684
-
-      - name: sourcepackets
-        type: int
-        range: 1,128
-
-      - name: sourceport
-        type: int
-        range: 1024,65536
-
-      - name: sourceip
-        type: random_string_from_list
-        custom_list: 68.173.32.10      
-      
-      - name: 2rip1
-        type: int
-        range: 10,10
-
-      - name: 2rip2
-        type: int
-        range: 30,50
-
-      - name: 2rip3
-        type: int
-        range: 100,200
-
-      - name: 2rip4
-        type: int
-        range: 0,254
-
-      - name: networkdirection
-        type: random_string_from_list
-        custom_list: external
-
-
-  - workloadName: netflow-outbound-malware
-    workloadThreads: 3
-    workloadSleep: 10
-    indexName: logs-netflow.log-default
-    fields:
-      - name: destinationbytes
-        type: int
-        range: 0,16684045
-
-      - name: destinationpackets
-        type: int
-        range: 0,1024
-
-      - name: destinationport
-        type: random_string_from_list
-        custom_list: 2443,1443,3443,4443,5443,10153,10253,10353,10453,10553,6443,7443,8443      
-
-      - name: ripcodes
-        type: int
-        range: 95,95
-
-      - name: rip2
-        type: int
-        range: 181,181
-
-      - name: rip3
-        type: int
-        range: 181,181
+        range: 179,181
 
       - name: rip4
         type: int
@@ -131,14 +53,15 @@ workloads:
         type: int
         range: 1,128
 
+
       - name: sourceport
         type: int
         range: 3389,3389,3389,3389,22,22,22,23,23,23,23,23,3389
 
       - name: sourceip
         type: random_string_from_list
-        custom_list: 68.173.32.10      
-      
+        custom_list: 68.173.32.10,72.95.137.39
+
       - name: 2rip1
         type: int
         range: 10,10
@@ -154,84 +77,6 @@ workloads:
       - name: 2rip4
         type: int
         range: 17,17
-
-      - name: networkdirection
-        type: random_string_from_list
-        custom_list: external        
-
-  - workloadName: netflow-inbound
-    workloadThreads: 10
-    workloadSleep: 100
-    indexName: logs-netflow.log-default
-    fields:
-
-      - name: sourcebytes
-        type: int
-        range: 0,16684045
-
-      - name: sourcepackets
-        type: int
-        range: 0,1024
-
-      - name: sourceport
-        type: random_string_from_list
-        custom_list: 80,443,8080,443,443,443,443,80,80,53,53,53,53,53,443,443,443,25,25,25      
-
-      - name: ripcodes
-        type: int
-        range: 1,251
-
-      - name: rip2
-        type: int
-        range: 0,255
-
-      - name: rip3
-        type: int
-        range: 0,255
-
-      - name: rip4
-        type: int
-        range: 0,255
-
-      - name: ingressinterface
-        type: int
-        range: 0,15
-
-      - name: egressinterface
-        type: int
-        range: 0,7
-
-      - name: destinationbytes
-        type: int
-        range: 0,16684
-
-      - name: destinationpackets
-        type: int
-        range: 1,128
-
-      - name: destinationport
-        type: int
-        range: 1024,65536
-
-      - name: destinationip
-        type: random_string_from_list
-        custom_list: 68.173.32.10      
-      
-      - name: 2rip1
-        type: int
-        range: 10,10
-
-      - name: 2rip2
-        type: int
-        range: 30,50
-
-      - name: 2rip3
-        type: int
-        range: 100,200
-
-      - name: 2rip4
-        type: int
-        range: 0,254
 
       - name: networkdirection
         type: random_string_from_list
