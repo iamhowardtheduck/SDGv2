@@ -18,6 +18,14 @@
     },
     {
       "pipeline": {
+        "name": "logs-netflow.log",
+        "ignore_missing_pipeline": true,
+        "if": "ctx.networkdirection != '' || ctx.networkdirection != null",
+        "ignore_failure": true
+      }
+    },
+    {
+      "pipeline": {
         "name": "enrich-bluecoat",
         "ignore_missing_pipeline": true,
         "if": "ctx.proxyresponsebytes != '' || ctx.proxyresponsebytes != null",
