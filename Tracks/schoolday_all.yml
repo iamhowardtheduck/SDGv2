@@ -481,15 +481,15 @@ workloads:
 
       - name: 2rip2
         type: int
-        range: 30,50
+        range: 49,49
 
       - name: 2rip3
         type: int
-        range: 100,200
+        range: 110,110
 
       - name: 2rip4
         type: int
-        range: 0,254
+        range: 0,140
 
       - name: processpename
         type: path        
