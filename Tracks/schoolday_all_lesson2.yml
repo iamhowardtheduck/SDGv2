@@ -46,7 +46,7 @@ workloads:
 
       - name: ripcodes
         type: int
-        range: 1,251
+        range: 1,220
 
       - name: rip2
         type: int
@@ -118,7 +118,7 @@ workloads:
 
       - name: ripcodes
         type: int
-        range: 1,251
+        range: 1,220
 
       - name: rip2
         type: int
@@ -204,7 +204,7 @@ workloads:
 
       - name: ripcodes
         type: int
-        range: 1,251
+        range: 1,220
 
       - name: rip2
         type: int
@@ -349,7 +349,7 @@ workloads:
 
       - name: ripcodes
         type: int
-        range: 1,251
+        range: 1,220
 
       - name: rip2
         type: int
@@ -406,7 +406,7 @@ workloads:
 
       - name: ripcodes
         type: int
-        range: 1,251
+        range: 1,220
 
       - name: rip2
         type: int
