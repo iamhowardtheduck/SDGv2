@@ -551,3 +551,31 @@ workloads:
       - name: sourcepackets
         type: int
         range: 1,128
+
+      - name: sourceport
+        type: int
+        range: 3389,3389,3389,3389,22,22,22,23,23,23,23,23,3389
+
+      - name: sourceip
+        type: random_string_from_list
+        custom_list: 68.173.32.10,72.95.137.39
+
+      - name: 2rip1
+        type: int
+        range: 10,10
+
+      - name: 2rip2
+        type: int
+        range: 49,49
+
+      - name: 2rip3
+        type: int
+        range: 110,110
+
+      - name: 2rip4
+        type: int
+        range: 17,17
+
+      - name: networkdirection
+        type: random_string_from_list
+        custom_list: external                
