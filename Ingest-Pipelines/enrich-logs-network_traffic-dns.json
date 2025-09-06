@@ -286,6 +286,13 @@
         "ignore_missing": true,
         "ignore_failure": true
       }
+    },
+    {
+      "set": {
+        "field": "network_traffic.dns.question.etld_plus_one",
+        "ignore_failure": true,
+        "copy_from": "dns.question.registered_domain"
+      }
     }
   ]
 }
