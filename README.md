@@ -81,7 +81,7 @@ workloads:
         type: int
    ...
 ```
-Documentation on the different types: https://github.com/ajpahl1008/simple-data-generator/blob/master/docs/supported_fields.md 
+Documentation on the different types: https://github.com/iamhowardtheduck/simple-data-generator/blob/master/docs/supported_fields.md 
 
 ## Step 3 Compile project
 ```
