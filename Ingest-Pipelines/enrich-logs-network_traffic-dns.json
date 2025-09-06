@@ -247,6 +247,13 @@
     },
     {
       "set": {
+        "field": "network_traffic.dns.question.etld_plus_one",
+        "ignore_failure": true,
+        "copy_from": "dns.question.registered_domain"
+      }
+    },
+    {
+      "set": {
         "ignore_failure": true,
         "field": "event.ingested",
         "copy_from": "@timestamp"
@@ -285,13 +292,6 @@
         "field": "dnshash",
         "ignore_missing": true,
         "ignore_failure": true
-      }
-    },
-    {
-      "set": {
-        "field": "network_traffic.dns.question.etld_plus_one",
-        "ignore_failure": true,
-        "copy_from": "dns.question.registered_domain"
       }
     }
   ]
