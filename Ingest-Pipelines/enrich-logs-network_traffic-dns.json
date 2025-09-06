@@ -105,14 +105,6 @@
     {
       "set": {
         "ignore_failure": true,
-        "field": "dns.question.type",
-        "value": "PTR",
-        "if": "ctx?.dns?.answer?.type == 'PTR'"
-      }
-    },
-    {
-      "set": {
-        "ignore_failure": true,
         "field": "dns.op_code",
         "value": "QUERY",
         "if": "ctx?.dns?.question?.type == 'A' || ctx?.dns?.question?.type == 'AAAA' "
@@ -258,6 +250,41 @@
         "ignore_failure": true,
         "field": "event.ingested",
         "copy_from": "@timestamp"
+      }
+    },
+    {
+      "fingerprint": {
+        "fields": [
+          "@timestamp"
+        ],
+        "target_field": "dnshash",
+        "method": "MD5",
+        "ignore_missing": true,
+        "if": "ctx?.ml_is_dga?.malicious_prediction == '1'",
+        "ignore_failure": true
+      }
+    },
+    {
+      "set": {
+        "field": "dns.question.name",
+        "value": "{{dnshash}}.{{dns.opt.udp_size}}_{{dns.answer.type}}-{{destination.bytes}}.{{dns.question.name}}",
+        "if": "ctx?.ml_is_dga?.malicious_prediction == '1'",
+        "ignore_failure": true
+      }
+    },
+    {
+      "set": {
+        "field": "dns.question.name",
+        "value": "{{dns.opt.udp_size}}_{{dns.answer.type}}-{{destination.bytes}}.{{dns.question.name}}",
+        "if": "ctx?.ml_is_dga?.malicious_prediction == '0'",
+        "ignore_failure": true
+      }
+    },
+    {
+      "remove": {
+        "field": "dnshash",
+        "ignore_missing": true,
+        "ignore_failure": true
       }
     }
   ]
