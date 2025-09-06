@@ -46,7 +46,7 @@ workloads:
 
       - name: ripcodes
         type: int
-        range: 1,251
+        range: 1,220
 
       - name: rip2
         type: int
@@ -118,7 +118,7 @@ workloads:
 
       - name: ripcodes
         type: int
-        range: 1,251
+        range: 1,220
 
       - name: rip2
         type: int
@@ -204,7 +204,7 @@ workloads:
 
       - name: ripcodes
         type: int
-        range: 1,251
+        range: 1,220
 
       - name: rip2
         type: int
@@ -349,7 +349,7 @@ workloads:
 
       - name: ripcodes
         type: int
-        range: 1,251
+        range: 1,220
 
       - name: rip2
         type: int
@@ -406,7 +406,7 @@ workloads:
 
       - name: ripcodes
         type: int
-        range: 1,251
+        range: 1,220
 
       - name: rip2
         type: int
@@ -503,6 +503,74 @@ workloads:
       - name: registry2
         type: appname        
 
+  - workloadName: logs-windows.sysmon_operational-malware
+    workloadThreads: 1
+    workloadSleep: 100
+    #indexName: winlogbeat-default
+    indexName: logs-windows.sysmon_operational-default
+    fields:
+      - name: eventcategory
+        type: random_string_from_list
+        custom_list: iam,authentication,authentication,authentication,process,configuration,process,configuration,driver,registry,registry
+
+      - name: wincode
+        type: int
+        range: 18,24
+
+      - name: processname
+        type: path
+
+      - name: parentprocessname
+        type: path
+
+      - name: eventtype
+        type: random_string_from_list
+        custom_list: access,change,connection,end,start
+
+      - name: 2rip1
+        type: int
+        range: 10,10
+
+      - name: 2rip2
+        type: int
+        range: 49,49
+
+      - name: 2rip3
+        type: int
+        range: 110,110
+
+      - name: 2rip4
+        type: int
+        range: 0,100
+
+      - name: processpename
+        type: path        
+
+      - name: processargs
+        type: appname
+
+      - name: registry1
+        type: appname
+
+      - name: registry2
+        type: appname
+
+      - name: ripcodes
+        type: int
+        range: 1,220
+
+      - name: rip2
+        type: int
+        range: 0,255
+
+      - name: rip3
+        type: int
+        range: 0,255
+
+      - name: rip4
+        type: int
+        range: 0,255
+        
   - workloadName: netflow-outbound
     workloadThreads: 1
     workloadSleep: 1000
