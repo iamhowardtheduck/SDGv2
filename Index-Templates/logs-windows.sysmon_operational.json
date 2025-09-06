@@ -139,5 +139,8 @@
     "winlogbeat*",
     "logs-windows.sysmon_operational*"
   ],
+    "composed_of": [
+    "logs-netflow.log@package"
+  ],
   "allow_auto_create": true
 }
