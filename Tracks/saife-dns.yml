@@ -76,7 +76,7 @@ workloads:
         type: int
         range: 0,254
 
-  - workloadName: network-dns-sunburst
+  - workloadName: network-dns-malware
     workloadThreads: 1
     workloadSleep: 100
     indexName: logs-network_traffic.dns-default
@@ -115,6 +115,10 @@ workloads:
       - name: mlisdgamaliciousprediction
         type: random_string_from_list
         custom_list: 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+
+      - name: domainchoice
+        type: int
+        range: 1,2       
 
       - name: ripcodes
         type: int
