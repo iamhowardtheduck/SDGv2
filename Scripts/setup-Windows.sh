@@ -1,4 +1,6 @@
 # DELETE Pre-Configured Windows templates
+curl -X DELETE "http://localhost:30920/_index_template/logs-netflow.log" -H "Content-Type: application/json" -u "sdg:changeme"
+curl -X DELETE "http://localhost:30920/_component_template/logs-netflow.log@package" -H "Content-Type: application/json" -u "sdg:changeme"
 curl -X DELETE "http://localhost:30920/_index_template/logs-windows.sysmon_operational" -H "Content-Type: application/json" -u "sdg:changeme"
 curl -X DELETE "http://localhost:30920/_component_template/logs-windows.sysmon_operational@package" -H "Content-Type: application/json" -u "sdg:changeme"
 
@@ -9,6 +11,8 @@ curl -X DELETE "http://localhost:30920/_component_template/logs-windows.sysmon_o
 curl -X PUT "http://localhost:30920/_ingest/pipeline/logs@custom" -H "Content-Type: application/x-ndjson" -u "sdg:changeme" -d @/root/SDGv2/Ingest-Pipelines/logs@custom.json
 
 # Recreate them in your image
+curl -X PUT "http://localhost:30920/_component_template/logs-netflow.log@package" -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Component-Templates/logs-netflow.log.json
+curl -X PUT "http://localhost:30920/_index_template/logs-netflow.log" -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Index-Templates/logs-netflow.log.json
 curl -X PUT "http://localhost:30920/_component_template/logs-windows.sysmon_operational@package" -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Component-Templates/logs-windows.sysmon-operational.json
 curl -X PUT "http://localhost:30920/_index_template/logs-windows.sysmon_operational" -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Index-Templates/logs-windows.sysmon_operational.json
 curl -X PUT "http://localhost:30920/_component_template/logs@settings" -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Component-Templates/logs@settings.json
