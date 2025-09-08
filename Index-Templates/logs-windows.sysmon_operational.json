@@ -139,6 +139,10 @@
     "winlogbeat*",
     "logs-windows.sysmon_operational*"
   ],
+    "data_stream": {
+    "hidden": false,
+    "allow_custom_routing": false
+  },
     "composed_of": [
     "logs-netflow.log@package"
   ],
