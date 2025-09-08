@@ -82,7 +82,15 @@
       "set": {
         "field": "dns.question.registered_domain",
         "value": "tanki.su",
-        "if": "ctx?.ml_is_dga?.malicious_prediction == '1'",
+        "if": "ctx?.domainchoice == '1'",
+        "ignore_failure": true
+      }
+    },
+    {
+      "set": {
+        "field": "dns.question.registered_domain",
+        "value": "avsvmcloud.com",
+        "if": "ctx?.domainchoice == '2'",
         "ignore_failure": true
       }
     },
@@ -297,7 +305,10 @@
     },
     {
       "remove": {
-        "field": "dnshash",
+        "field": [
+          "dnshash",
+          "domainchoice"
+        ],
         "ignore_missing": true,
         "ignore_failure": true
       }
