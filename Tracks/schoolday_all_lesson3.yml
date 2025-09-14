@@ -120,6 +120,10 @@ workloads:
         type: random_string_from_list
         custom_list: 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
 
+      - name: domainchoice
+        type: random_string_from_list
+        custom_list: 1,1
+
       - name: ripcodes
         type: int
         range: 1,220
