@@ -38,7 +38,7 @@ workloads:
 
       - name: domainchoice
         type: random_string_from_list
-        custom_list: 1,2
+        custom_list: 2,2
         
       - name: dnsanswertype
         type: random_string_from_list
