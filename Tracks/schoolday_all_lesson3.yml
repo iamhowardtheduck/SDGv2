@@ -36,6 +36,10 @@ workloads:
         type: random_string_from_list
         custom_list: AAAA,AAAA,AAAA,AAAA,AAAA,AAAA,AAAA,A,A,A,PTR,TXT,MX
 
+      - name: domainchoice
+        type: random_string_from_list
+        custom_list: 1,2
+        
       - name: dnsanswertype
         type: random_string_from_list
         custom_list: A,A,CNAME
