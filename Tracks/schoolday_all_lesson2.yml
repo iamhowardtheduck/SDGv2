@@ -116,6 +116,10 @@ workloads:
         type: random_string_from_list
         custom_list: 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
 
+      - name: domainchoice
+        type: random_string_from_list
+        custom_list: 1,2      
+
       - name: ripcodes
         type: int
         range: 1,220
@@ -184,8 +188,7 @@ workloads:
 
       - name: filehashsha256
         type: hash
-
-
+        
       - name: filename
         type: random_string_from_list
         custom_list: Annual_Report_2023,Meeting_Minutes_March2024,Project_Proposal_v1,Client_Agreement_Signed,Employee_Handbook_2023,Product_Description,Research_Notes,Financial_Statement,Sales_Data_Q4_2023,Budget_Plan_2024,Customer_Feedback_Responses,Inventory_List_Summer2023,Task_List_January2024,Marketing_Strategy_Presentation,Company_Overview_2023,Training_Session_Slides,Sales_Pitch_Template,Vendor_Contract_Template,Team_Meeting_Notes_2023,Weekly_Update_Newsletter,Company_Logo,Product_Shot_1,Event_Photos_2023,Team_Photo_2024,Blueprint_Diagram,Marketing_Poster_Design,Product_Catalog_Cover,Website_Banner,Infographic_2023,Client_Testimonials_Image,Office_Floor_Plan,Event_Poster,Profile_Picture_JohnDoe,Brochure_Layout,Social_Media_Ad,Quarterly_Review_Slides,Product_Launch_Deck,Training_Module_1,Workshop_Material,Company_Milesto>
