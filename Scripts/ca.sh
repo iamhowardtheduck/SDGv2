@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Run setup-GDI.sh first
+bash SDGv2/Scripts/setup-GDI.sh
+
 # Variables
 #SRC_CERT="/etc/ssl/certs/nginx-selfsined.crt"
 #DEST_CERT="/usr/local/share/ca-certificates/ca.crt"
