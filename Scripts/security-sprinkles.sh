@@ -7,7 +7,6 @@ fi
 
 # Kick off Elastic Rule Loading
 echo "Loading Elastic Rules"
-curl -X PUT "http://localhost:30001/api/detection_engine/rules/prepackaged" -u "elastic:changme"  --header "kbn-xsrf: true" -H "Content-Type: application/json"  -d '{}'
 curl -X POST "http://localhost:30001/api/detection_engine/rules/_bulk_create" -u "elastic:changeme" --header "kbn-xsrf: true" -H "Content-Type: application/json" -d @/SDGv2/Detection-Rules/getting-data-ingested-security-sprinkles.json
 echo
 echo
