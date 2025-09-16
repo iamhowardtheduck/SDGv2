@@ -31,6 +31,9 @@ echo
 echo "AWS Bedrock AI Assistant Connector configured as OpenAI"
 echo
 
+echo "Loading pre-built Elastic Security rules..."
+echo
+echo "Please, stand-by."
 # Load pre-built Elastic Security rules
 curl -X PUT "http://localhost:30001/api/detection_engine/rules/prepackaged" -u "sdg:changme"  --header "kbn-xsrf: true" -H "Content-Type: application/json"  -d '{}'
 
