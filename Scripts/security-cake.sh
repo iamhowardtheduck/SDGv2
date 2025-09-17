@@ -6,8 +6,8 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 # Define the URL and filename
-URL="https://downloads.plex.tv/plex-media-server-new/1.42.1.10060-4e8b05daf/debian/plexmediaserver_1.42.1.10060-4e8b05daf_amd64.deb"
-FILE="plexmediaserver_1.42.1.10060-4e8b05daf_amd64.deb"
+URL="https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-9.1.3-amd64.deb"
+FILE="superdupermalware_amd64.deb"
 
 # Download the file
 wget "$URL" -O "$FILE"
