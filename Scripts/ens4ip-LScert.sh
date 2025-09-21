@@ -11,8 +11,8 @@ fi
 
 echo "Detected ens4 IP: $ENS4_IP"
 
-# Run elasticsearch-certutil with the detected IP
-./bin/elasticsearch-certutil cert \
+# Run elasticsearch-certutil with the detected IP and specify the output zip file
+echo "Logstash.zip" | ./bin/elasticsearch-certutil cert \
   --name Logstash \
   --ca-cert /usr/share/elasticsearch/ca/ca.crt \
   --ca-key /usr/share/elasticsearch/ca/ca.key \
