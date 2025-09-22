@@ -20,3 +20,24 @@ echo "Logstash.zip" | ./bin/elasticsearch-certutil cert \
   --dns host-1 \
   --ip "$ENS4_IP" \
   --pem
+
+  cat <<EOF
+
+====================================================================
+Logstash Certificate Creation Complete!
+====================================================================
+
+You have just creat your Logstash certificate and keys.
+
+The Logstash.crt, Logstash.key & Logstash.pkcs8.key are all located here:
+
+/usr/share/elasticsearch/Logstash
+
+✅ You may proceed to step G.
+
+====================================================================
+
+EOF
+
+# Wait for user confirmation before exiting, but leave the info on screen
+read -rp "Press ENTER to finish and leave this information visible on your screen..."
