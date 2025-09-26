@@ -1,5 +1,4 @@
 {
-  "priority": 200,
   "template": {
     "settings": {
       "index": {
@@ -127,7 +126,18 @@
         "registry": {
           "type": "object",
           "properties": {
+            "data": {
+              "type": "object",
+              "properties": {
+                "strings": {
+                  "type": "keyword"
+                }
+              }
+            },
             "path": {
+              "type": "keyword"
+            },
+            "value": {
               "type": "keyword"
             }
           }
@@ -138,13 +148,6 @@
   "index_patterns": [
     "winlogbeat*",
     "logs-windows.sysmon_operational*"
-  ],
-    "data_stream": {
-    "hidden": false,
-    "allow_custom_routing": false
-  },
-    "composed_of": [
-    "logs-netflow.log@package"
   ],
   "allow_auto_create": true
 }
