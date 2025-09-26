@@ -230,6 +230,20 @@
         "value": "HKLM\\\\Software\\\\Policies\\\\Microsoft\\\\Windows NT\\\\{{registry1}}\\\\{{registry2}}"
       }
     },
+      {
+      "set": {
+        "field": "registry.value",
+        "value": "{{registry1}}",
+        "ignore_failure": true
+      }
+    },
+    {
+      "set": {
+        "field": "registry.data.strings",
+        "value": "{{registry2}}",
+        "ignore_failure": true
+      }
+    },
     {
       "remove": {
         "ignore_failure": true,
