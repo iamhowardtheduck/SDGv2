@@ -230,7 +230,7 @@
         "value": "HKLM\\\\Software\\\\Policies\\\\Microsoft\\\\Windows NT\\\\{{registry1}}\\\\{{registry2}}"
       }
     },
-      {
+    {
       "set": {
         "field": "registry.value",
         "value": "{{registry1}}",
@@ -321,11 +321,20 @@
         "if": "ctx.host?.ip == '10.49.110.17'"
       }
     },
-      {
+    {
       "set": {
         "field": "agent.name",
         "value": "host-10-49-110-17",
         "if": "ctx.host?.ip == '10.49.110.17'",
+        "ignore_failure": true
+      }
+    }
+  ],
+  "on_failure": [
+    {
+      "set": {
+        "field": "error.message",
+        "value": "this failed",
         "ignore_failure": true
       }
     }
