@@ -18,6 +18,9 @@ curl -X PUT "http://localhost:30920/_index_template/logs-windows.sysmon_operatio
 curl -X PUT "http://localhost:30920/_component_template/logs@settings" -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Component-Templates/logs@settings.json
 curl -X PUT "http://localhost:30920/_index_template/logs" -H "Content-Type: application/json" -u "sdg:changeme" -d @/root/SDGv2/Index-Templates/logs.json
 
+# Create Datastream:
+curl -X PUT "http://localhost:30920/_data_stream/logs-windows.sysmon_operational-default" -H "Content-Type: application/json" -u "sdg:changeme"
+curl -X PUT "http://localhost:30920/_data_stream/logs-netflow.log-default" -H "Content-Type: application/json" -u "sdg:changeme"
 
 # Rollover existing index in order to inherit new settings without any garbage data
 #curl -X POST "http://localhost:30920/logs-windows.sysmon_operation-default/_rollover" -u "sdg:changeme"
