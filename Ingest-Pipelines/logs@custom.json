@@ -4,7 +4,7 @@
       "pipeline": {
         "name": "logs-windows.sysmon_operational",
         "ignore_missing_pipeline": true,
-        "if": "ctx.wincode != '' || ctx.wincode != null",
+        "if": "ctx.containsKey('wincode') && ctx.wincode != null && ctx.wincode != ''",
         "ignore_failure": true
       }
     },
@@ -12,7 +12,7 @@
       "pipeline": {
         "name": "enrich-logs-network_traffic",
         "ignore_missing_pipeline": true,
-        "if": "ctx.dnsoptudpsize != '' || ctx.dnsoptudpsize != null",
+        "if": "ctx.containsKey('dnsoptudpsize') && ctx.dnsoptudpsize != null && ctx.dnsoptudpsize != ''",
         "ignore_failure": true
       }
     },
@@ -20,7 +20,7 @@
       "pipeline": {
         "name": "logs-netflow.log",
         "ignore_missing_pipeline": true,
-        "if": "ctx.networkdirection != '' || ctx.networkdirection != null",
+        "if": "ctx.containsKey('networkdirection') && ctx.networkdirection != null && ctx.networkdirection != ''",
         "ignore_failure": true
       }
     },
@@ -28,7 +28,7 @@
       "pipeline": {
         "name": "enrich-bluecoat",
         "ignore_missing_pipeline": true,
-        "if": "ctx.proxyresponsebytes != '' || ctx.proxyresponsebytes != null",
+        "if": "ctx.containsKey('proxyresponsebytes') && ctx.proxyresponsebytes != null && ctx.proxyresponsebytes != ''",
         "ignore_failure": true
       }
     },
@@ -36,7 +36,7 @@
       "pipeline": {
         "name": "enrich-email",
         "ignore_missing_pipeline": true,
-        "if": "ctx.fname != '' || ctx.fname != null",
+        "if": "ctx.containsKey('fname') && ctx.fname != null && ctx.fname != ''",
         "ignore_failure": true
       }
     },
@@ -44,7 +44,7 @@
       "pipeline": {
         "name": "logs-ti_abusech.malware@custom",
         "ignore_missing_pipeline": true,
-        "if": "ctx.extension != '' || ctx.extension != null",
+        "if": "ctx.containsKey('extension') && ctx.extension != null && ctx.extension != ''",
         "ignore_failure": true
       }
     }
