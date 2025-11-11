@@ -1,0 +1,76 @@
+elasticsearchScheme: http
+elasticsearchHost: localhost
+elasticsearchPort: 30920
+elasticsearchUser: sdg
+elasticsearchPassword: changeme
+workloads:
+  - workloadName: financial_smurfing_good
+    workloadThreads: 12
+    workloadSleep: 1
+    indexName: financial_smurfing
+    fields:
+      - name: amount_cents
+        type: int
+        range: 0,99
+
+      - name: amount_dollars
+        type: int
+        range: 100,9999
+
+      - name: transaction_type
+        type: random_string_from_list
+        custom_list: eft,card,mobile,online,international
+
+      - name: transaction_direction
+        type: random_string_from_list
+        custom_list: inbound,outbound
+
+      - name: number
+        type: int
+        range: 1,34995
+
+      - name: year
+        type: int
+        range: 2025,2025
+
+      - name: month
+        type: int
+        range: 10,10
+
+      - name: day
+        type: int
+        range: 1,31
+
+  - workloadName: financial_smurfing_bad
+    workloadThreads: 4
+    workloadSleep: 10
+    indexName: financial_smurfing
+    fields:
+      - name: amount_cents
+        type: int
+        range: 0,99
+
+      - name: amount_dollars
+        type: int
+        range: 100,7500
+
+      - name: transaction_type
+        type: random_string_from_list
+        custom_list: eft,card,mobile,online,international
+
+      - name: number
+        type: int
+        range: 34996,35000
+
+      - name: year
+        type: int
+        range: 2025,2025
+
+      - name: month
+        type: int
+        range: 10,10
+
+      - name: day
+        type: int
+        range: 1,31
+        
