@@ -1,0 +1,137 @@
+{
+  "description": "Set transaction_direction for inbound transactions and normalize amount_cents formatting",
+  "processors": [
+    {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "type",
+        "target_field": "transaction_type"
+      }
+    },
+    {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "direction",
+        "target_field": "transaction_direction"
+      }
+    },
+    {
+      "set": {
+        "description": "Set transaction_direction to outbound for specific number and transaction_type conditions",
+        "override": true,
+        "field": "transaction_direction",
+        "value": "outbound",
+        "if": "ctx.number != null && ctx.number instanceof Number && ctx.number >= 34996 && ctx.number <= 35000 && ctx.transaction_type != null && ['cash','international','eft'].contains(ctx.transaction_type)"
+      }
+    },
+    {
+      "set": {
+        "field": "transaction_direction",
+        "value": "inbound",
+        "if": "ctx.number != null && ctx.number instanceof Number && ctx.number >= 34996 && ctx.number <= 35000 && ctx.transaction_type != null && ['card','mobile','online'].contains(ctx.transaction_type)",
+        "description": "Set transaction_direction to inbound for specific number and transaction_type conditions"
+      }
+    },
+    {
+      "script": {
+        "description": "Zero-pad amount_cents if between 0 and 9 for days",
+        "source": "if (ctx.containsKey('day') && ctx.day != null) { def raw = ctx.day; int n = -1; if (raw instanceof Number) { n = ((Number)raw).intValue(); } else if (raw instanceof String) { try { n = Integer.parseInt(raw); } catch (Exception e) { n = -1; } } if (n >= 0 && n <= 9) { ctx.day = '0' + n; } }"
+      }
+    },
+    {
+      "script": {
+        "description": "Zero-pad amount_cents if between 0 and 9 for cents",
+        "source": "if (ctx.containsKey('cents') && ctx.cents != null) { def raw = ctx.cents; int n = -1; if (raw instanceof Number) { n = ((Number)raw).intValue(); } else if (raw instanceof String) { try { n = Integer.parseInt(raw); } catch (Exception e) { n = -1; } } if (n >= 0 && n <= 9) { ctx.cents = '0' + n; } }"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "transaction_date",
+        "value": "{{year}}-{{month}}-{{day}}"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "amount",
+        "value": "{{dollars}}.{{cents}}"
+      }
+    },
+    {
+      "enrich": {
+        "ignore_failure": true,
+        "policy_name": "enrich-checking",
+        "ignore_missing": true,
+        "field": "number",
+        "target_field": "enrich"
+      }
+    },
+    {
+      "remove": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": [
+          "dollars",
+          "cents",
+          "year",
+          "month",
+          "day",
+          "number",
+          "enrich.number"
+        ]
+      }
+    },
+    {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "enrich.Account_Opened_Date",
+        "target_field": "Account_Opened_Date"
+      }
+    },
+    {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "enrich.AccountNumber",
+        "target_field": "AccountNumber"
+      }
+    },
+    {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "enrich.Address",
+        "target_field": "Address"
+      }
+    },
+    {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "enrich.Name",
+        "target_field": "Name"
+      }
+    },
+    {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "enrich.Telephone_Number",
+        "target_field": "Telephone_Number"
+      }
+    }
+  ],
+  "on_failure": [
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "error.meesage",
+        "value": "failure"
+      }
+    }
+  ]
+}
