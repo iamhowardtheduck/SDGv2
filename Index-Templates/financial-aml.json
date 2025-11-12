@@ -1,0 +1,60 @@
+{
+  "template": {
+    "mappings": {
+      "_source": {
+        "mode": "synthetic"
+      },
+      "properties": {
+        "AccountNumber": {
+          "type": "keyword"
+        },
+        "Account_Opened_Date": {
+          "format": "strict_date_optional_time||epoch_millis||YYYY-MM-dd",
+          "index": true,
+          "ignore_malformed": false,
+          "store": false,
+          "type": "date",
+          "doc_values": true
+        },
+        "Address": {
+          "type": "keyword"
+        },
+        "Name": {
+          "type": "keyword"
+        },
+        "Telephone_Number": {
+          "type": "keyword"
+        },
+        "amount": {
+          "type": "half_float"
+        },
+        "transaction_date": {
+          "format": "strict_date_optional_time||epoch_millis||YYYY-MM-dd||YYYY-MM-d||YYYY-M-dd||YYYY-M-d",
+          "index": true,
+          "ignore_malformed": false,
+          "store": false,
+          "type": "date",
+          "doc_values": true
+        },
+        "transaction_direction": {
+          "type": "keyword"
+        },
+        "transaction_type": {
+          "type": "keyword"
+        }
+      }
+    },
+    "settings": {
+      "index": {
+        "default_pipeline": "aml"
+      }
+    }
+  },
+  "index_patterns": [
+    "financial-smurfing*",
+    "financial_smurfing*"
+  ],
+  "composed_of": [],
+  "ignore_missing_component_templates": [],
+  "allow_auto_create": true
+}
