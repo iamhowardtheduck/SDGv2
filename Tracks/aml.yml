@@ -4,24 +4,24 @@ elasticsearchPort: 30920
 elasticsearchUser: sdg
 elasticsearchPassword: changeme
 workloads:
-  - workloadName: financial_smurfing_good
-    workloadThreads: 12
+  - workloadName: financial-smurfing-good
+    workloadThreads: 14
     workloadSleep: 1
-    indexName: financial_smurfing
+    indexName: financial-smurfing
     fields:
-      - name: amount_cents
+      - name: cents
         type: int
         range: 0,99
 
-      - name: amount_dollars
+      - name: dollars
         type: int
-        range: 100,9999
+        range: 100,9000
 
-      - name: transaction_type
+      - name: type
         type: random_string_from_list
         custom_list: eft,card,mobile,online,international
 
-      - name: transaction_direction
+      - name: direction
         type: random_string_from_list
         custom_list: inbound,outbound
 
@@ -41,20 +41,20 @@ workloads:
         type: int
         range: 1,31
 
-  - workloadName: financial_smurfing_bad
-    workloadThreads: 4
+  - workloadName: financial-smurfing-bad
+    workloadThreads: 1
     workloadSleep: 10
-    indexName: financial_smurfing
+    indexName: financial-smurfing
     fields:
-      - name: amount_cents
+      - name: cents
         type: int
         range: 0,99
 
-      - name: amount_dollars
+      - name: dollars
         type: int
-        range: 100,7500
+        range: 9000,9999
 
-      - name: transaction_type
+      - name: type
         type: random_string_from_list
         custom_list: eft,card,mobile,online,international
 
@@ -73,4 +73,3 @@ workloads:
       - name: day
         type: int
         range: 1,31
-        
