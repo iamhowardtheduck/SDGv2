@@ -1,0 +1,7 @@
+{
+  "match": {
+    "indices": "enrich-checking",
+    "match_field": "number",
+    "enrich_fields": ["AccountNumber", "Account_Opened_Date", "Address", "Name", "Telephone_Number", "number"]
+  }
+}
