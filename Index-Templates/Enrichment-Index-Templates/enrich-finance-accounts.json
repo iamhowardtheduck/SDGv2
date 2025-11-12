@@ -1,0 +1,42 @@
+{
+  "template": {
+    "mappings": {
+      "properties": {
+        "Telephone_Number": {
+          "type": "keyword"
+        },
+        "number": {
+          "type": "keyword"
+        },
+        "Address": {
+          "type": "keyword"
+        },
+        "Account_Opened_Date": {
+          "format": "strict_date_optional_time||epoch_millis||YYYY-MM-dd",
+          "index": true,
+          "ignore_malformed": false,
+          "store": false,
+          "type": "date",
+          "doc_values": true
+        },
+        "AccountNumber": {
+          "type": "keyword"
+        },
+        "Name": {
+          "type": "keyword"
+        }
+      }
+    },
+    "settings": {
+      "index": {
+        "mode": "lookup"
+      }
+    }
+  },
+  "index_patterns": [
+    "enrich-finance-*"
+  ],
+  "composed_of": [],
+  "ignore_missing_component_templates": [],
+  "allow_auto_create": true
+}
