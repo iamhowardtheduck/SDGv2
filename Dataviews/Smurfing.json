@@ -1,0 +1,7 @@
+{
+  "data_view": {
+    "title": "financial-smurfing*",
+    "name": "financial-smurfing",
+    "timeFieldName": "transaction_date"
+  }
+}
