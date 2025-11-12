@@ -19,7 +19,7 @@ workloads:
 
       - name: type
         type: random_string_from_list
-        custom_list: eft,card,mobile,online,international
+        custom_list: eft,card,mobile,online,international,cash
 
       - name: direction
         type: random_string_from_list
@@ -56,7 +56,7 @@ workloads:
 
       - name: type
         type: random_string_from_list
-        custom_list: eft,card,mobile,online,international
+        custom_list: eft,card,mobile,online,international,cash
 
       - name: number
         type: int
