@@ -1,7 +1,7 @@
 {
   "match": {
     "indices": "enrich-austin-banksrtnswft",
-    "match_field": "bankId",
+    "match_field": "txbankId",
     "enrich_fields": ["Name", "Routing_Number", "SWIFT"]
   }
 }
