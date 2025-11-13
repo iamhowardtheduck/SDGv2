@@ -2,6 +2,6 @@
   "match": {
     "indices": "enrich-austinbank-addresses",
     "match_field": "addressId",
-    "enrich_fields": ["Name", "Routing_Number", "SWIFT", "Address"]
+    "enrich_fields": ["Address"]
   }
 }
