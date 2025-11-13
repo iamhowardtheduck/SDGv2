@@ -1,0 +1,7 @@
+{
+  "match": {
+    "indices": "enrich-oconus-banks",
+    "match_field": "bankId",
+    "enrich_fields": ["ach_routing_number", "bank_name", "country", "country_code", "ip_address", "swift_bic"]
+  }
+}
