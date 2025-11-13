@@ -1,0 +1,39 @@
+{
+  "template": {
+    "mappings": {
+      "properties": {
+        "ach_routing_number": {
+          "type": "keyword"
+        },
+        "bankId": {
+          "type": "keyword"
+        },
+        "bank_name": {
+          "type": "keyword"
+        },
+        "country": {
+          "type": "keyword"
+        },
+        "country_code": {
+          "type": "keyword"
+        },
+        "ip_address": {
+          "type": "ip"
+        },
+        "swift_bic": {
+          "type": "keyword"
+        }
+      }
+    },
+    "settings": {
+      "index": {
+        "mode": "lookup"
+      }
+    }
+  },
+  "index_patterns": [
+    "enrich-oconus-banks*"
+  ],
+  "data_stream": {},
+  "allow_auto_create": true
+}
