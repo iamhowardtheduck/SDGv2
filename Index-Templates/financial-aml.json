@@ -5,65 +5,107 @@
         "mode": "synthetic"
       },
       "properties": {
-        "transaction_date": {
-          "format": "strict_date_optional_time||epoch_millis||YYYY-MM-dd||YYYY-MM-d||YYYY-M-dd||YYYY-M-d",
+        "AccountNumber": {
+          "type": "keyword"
+        },
+        "Account_Opened_Date": {
+          "format": "strict_date_optional_time||epoch_millis||YYYY-MM-dd",
           "index": true,
           "ignore_malformed": false,
           "store": false,
           "type": "date",
           "doc_values": true
         },
-        "source.geo.continent.code": {
-          "path": "source.geo.continent_code",
-          "type": "alias"
+        "Address": {
+          "type": "keyword"
+        },
+        "Card_Renewed": {
+          "type": "long"
+        },
+        "Date_Renewed_1": {
+          "type": "date",
+          "index": true,
+          "ignore_malformed": false,
+          "doc_values": true,
+          "store": false,
+          "format": "strict_date_optional_time||epoch_millis||YYYY-MM-dd"
+        },
+        "Date_Renewed_2": {
+          "type": "date",
+          "index": true,
+          "ignore_malformed": false,
+          "doc_values": true,
+          "store": false,
+          "format": "strict_date_optional_time||epoch_millis||YYYY-MM-dd"
+        },
+        "Date_Renewed_3": {
+          "type": "date",
+          "index": true,
+          "ignore_malformed": false,
+          "doc_values": true,
+          "store": false,
+          "format": "strict_date_optional_time||epoch_millis||YYYY-MM-dd"
+        },
+        "Date_Renewed_4": {
+          "type": "date",
+          "index": true,
+          "ignore_malformed": false,
+          "doc_values": true,
+          "store": false,
+          "format": "strict_date_optional_time||epoch_millis||YYYY-MM-dd"
+        },
+        "Date_Renewed_5": {
+          "type": "date",
+          "index": true,
+          "ignore_malformed": false,
+          "doc_values": true,
+          "store": false,
+          "format": "strict_date_optional_time||epoch_millis||YYYY-MM-dd"
+        },
+        "Date_Renewed_6": {
+          "type": "date",
+          "index": true,
+          "ignore_malformed": false,
+          "doc_values": true,
+          "store": false,
+          "format": "strict_date_optional_time||epoch_millis||YYYY-MM-dd"
+        },
+        "Date_Renewed_7": {
+          "type": "date",
+          "index": true,
+          "ignore_malformed": false,
+          "doc_values": true,
+          "store": false,
+          "format": "strict_date_optional_time||epoch_millis||YYYY-MM-dd"
+        },
+        "Date_Renewed_8": {
+          "type": "date",
+          "index": true,
+          "ignore_malformed": false,
+          "doc_values": true,
+          "store": false,
+          "format": "strict_date_optional_time||epoch_millis||YYYY-MM-dd"
+        },
+        "Date_Renewed_9": {
+          "type": "date",
+          "index": true,
+          "ignore_malformed": false,
+          "doc_values": true,
+          "store": false,
+          "format": "strict_date_optional_time||epoch_millis||YYYY-MM-dd"
+        },
+        "Name": {
+          "type": "keyword"
+        },
+        "Telephone_Number": {
+          "type": "keyword"
         },
         "amount": {
           "type": "half_float"
         },
-        "Address": {
-          "type": "keyword"
-        },
-        "transaction_direction": {
-          "type": "keyword"
-        },
         "source": {
           "type": "object",
           "properties": {
-            "geo": {
-              "type": "object",
-              "properties": {
-                "continent_name": {
-                  "type": "keyword"
-                },
-                "region_iso_code": {
-                  "type": "keyword"
-                },
-                "city_name": {
-                  "type": "keyword"
-                },
-                "country_iso_code": {
-                  "type": "keyword"
-                },
-                "timezone": {
-                  "type": "keyword"
-                },
-                "country_name": {
-                  "type": "keyword"
-                },
-                "continent_code": {
-                  "type": "keyword"
-                },
-                "location": {
-                  "type": "geo_point"
-                },
-                "region_name": {
-                  "type": "keyword"
-                },
-                "postal_code": {
-                  "type": "keyword"
-                }
-              }
-            },
             "as": {
               "type": "object",
               "properties": {
@@ -80,42 +122,75 @@
                 }
               }
             },
+            "geo": {
+              "type": "object",
+              "properties": {
+                "city_name": {
+                  "type": "keyword"
+                },
+                "continent_code": {
+                  "type": "keyword"
+                },
+                "continent_name": {
+                  "type": "keyword"
+                },
+                "country_iso_code": {
+                  "type": "keyword"
+                },
+                "country_name": {
+                  "type": "keyword"
+                },
+                "location": {
+                  "type": "geo_point"
+                },
+                "postal_code": {
+                  "type": "keyword"
+                },
+                "region_iso_code": {
+                  "type": "keyword"
+                },
+                "region_name": {
+                  "type": "keyword"
+                },
+                "timezone": {
+                  "type": "keyword"
+                }
+              }
+            },
             "ip": {
               "type": "ip"
             }
           }
         },
-        "source.geo.locality.name": {
-          "path": "source.geo.city_name",
+        "source.geo.continent.code": {
+          "path": "source.geo.continent_code",
           "type": "alias"
-        },
-        "transaction_type": {
-          "type": "keyword"
-        },
-        "AccountNumber": {
-          "type": "keyword"
-        },
-        "Name": {
-          "type": "keyword"
-        },
-        "Telephone_Number": {
-          "type": "keyword"
         },
         "source.geo.country.iso_code": {
           "path": "source.geo.country_iso_code",
+          "type": "alias"
+        },
+        "source.geo.locality.name": {
+          "path": "source.geo.city_name",
           "type": "alias"
         },
         "source.geo.region.iso_code": {
           "path": "source.geo.region_iso_code",
           "type": "alias"
         },
-        "Account_Opened_Date": {
-          "format": "strict_date_optional_time||epoch_millis||YYYY-MM-dd",
+        "transaction_date": {
+          "format": "strict_date_optional_time||epoch_millis||YYYY-MM-dd||YYYY-MM-d||YYYY-M-dd||YYYY-M-d",
           "index": true,
           "ignore_malformed": false,
           "store": false,
           "type": "date",
           "doc_values": true
+        },
+        "transaction_direction": {
+          "type": "keyword"
+        },
+        "transaction_type": {
+          "type": "keyword"
         }
       }
     },
