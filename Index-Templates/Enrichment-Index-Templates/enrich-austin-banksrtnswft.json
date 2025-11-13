@@ -1,0 +1,30 @@
+{
+  "template": {
+    "mappings": {
+      "properties": {
+        "Name": {
+          "type": "keyword"
+        },
+        "Routing_Number": {
+          "type": "keyword"
+        },
+        "SWIFT": {
+          "type": "keyword"
+        },
+        "bankId": {
+          "type": "keyword"
+        }
+      }
+    },
+    "settings": {
+      "index": {
+        "mode": "lookup"
+      }
+    }
+  },
+  "index_patterns": [
+    "enrich-austin-banksrtnswft*"
+  ],
+  "data_stream": {},
+  "allow_auto_create": true
+}
