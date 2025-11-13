@@ -1,0 +1,35 @@
+{
+  "template": {
+    "mappings": {
+      "properties": {
+        "Address": {
+          "type": "keyword"
+        },
+        "addressId": {
+          "type": "keyword"
+        },
+        "bankId": {
+          "type": "keyword"
+        },
+        "Name": {
+          "type": "keyword"
+        },
+        "Routing_Number": {
+          "type": "keyword"
+        },
+        "SWIFT": {
+          "type": "keyword"
+        }
+      }
+    },
+    "settings": {
+      "index": {
+        "mode": "lookup"
+      }
+    }
+  },
+  "index_patterns": [
+    "enrich-austinbank-addresses*"
+  ],
+  "data_stream": {}
+}
