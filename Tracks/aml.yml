@@ -41,6 +41,22 @@ workloads:
         type: int
         range: 1,31
 
+      - name: ripcodes
+        type: int
+        range: 1,220
+
+      - name: rip2
+        type: int
+        range: 0,255
+
+      - name: rip3
+        type: int
+        range: 0,255
+
+      - name: rip4
+        type: int
+        range: 0,255
+
   - workloadName: financial-smurfing-bad
     workloadThreads: 1
     workloadSleep: 10
@@ -73,3 +89,18 @@ workloads:
       - name: day
         type: int
         range: 1,31
+
+      - name: ripcodes
+        type: int
+        range: 1,220
+      - name: rip2
+        type: int
+        range: 0,255
+
+      - name: rip3
+        type: int
+        range: 0,255
+
+      - name: rip4
+        type: int
+        range: 0,255
