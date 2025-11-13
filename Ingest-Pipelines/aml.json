@@ -28,10 +28,10 @@
     },
     {
       "set": {
+        "description": "Set transaction_direction to inbound for specific number and transaction_type conditions",
         "field": "transaction_direction",
         "value": "inbound",
-        "if": "ctx.number != null && ctx.number instanceof Number && ctx.number >= 34996 && ctx.number <= 35000 && ctx.transaction_type != null && ['card','mobile','online'].contains(ctx.transaction_type)",
-        "description": "Set transaction_direction to inbound for specific number and transaction_type conditions"
+        "if": "ctx.number != null && ctx.number instanceof Number && ctx.number >= 34996 && ctx.number <= 35000 && ctx.transaction_type != null && ['card','mobile','online'].contains(ctx.transaction_type)"
       }
     },
     {
@@ -122,6 +122,26 @@
         "ignore_missing": true,
         "field": "enrich.Telephone_Number",
         "target_field": "Telephone_Number"
+      }
+    },
+    {
+      "pipeline": {
+        "name": "enrich-remote-ips",
+        "ignore_missing_pipeline": true,
+        "ignore_failure": true,
+        "if": "ctx.containsKey('transaction_type') && ['online','international','eft','mobile'].contains(ctx.transaction_type)"
+      }
+    },
+    {
+      "remove": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": [
+          "ripcodes",
+          "rip2",
+          "rip3",
+          "rip4"
+        ]
       }
     }
   ],
