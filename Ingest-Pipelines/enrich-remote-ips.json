@@ -1,0 +1,61 @@
+{
+  "processors": [
+    {
+      "enrich": {
+        "ignore_failure": true,
+        "policy_name": "remote-ips",
+        "ignore_missing": true,
+        "field": "ripcodes",
+        "target_field": "rips"
+      }
+    },
+    {
+      "rename": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": "rips.rip1",
+        "target_field": "rip1"
+      }
+    },
+    {
+      "set": {
+        "ignore_failure": true,
+        "field": "source.ip",
+        "value": "{{rip1}}.{{rip2}}.{{rip3}}.{{rip4}}"
+      }
+    },
+    {
+      "geoip": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "description": "Adds geo data",
+        "field": "source.ip",
+        "target_field": "source.geo"
+      }
+    },
+    {
+      "geoip": {
+        "ignore_failure": true,
+        "field": "source.ip",
+        "target_field": "source.as",
+        "database_file": "GeoLite2-ASN.mmdb",
+        "ignore_missing": true,
+        "description": "Adds ASN data"
+      }
+    },
+    {
+      "remove": {
+        "ignore_failure": true,
+        "ignore_missing": true,
+        "field": [
+          "rips.ripcodes",
+          "ripcodes",
+          "rip1",
+          "rip2",
+          "rip3",
+          "rip4"
+        ]
+      }
+    }
+  ]
+}
