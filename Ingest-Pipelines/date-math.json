@@ -1,0 +1,16 @@
+{
+  "processors": [
+    {
+      "script": {
+        "ignore_failure": true,
+        "source": "// Only run if both dates exist\r\n      if (ctx.Account_Opened_Date != null && ctx.transaction_date != null) {\r\n        def fmt = java.time.format.DateTimeFormatter.ofPattern(\"yyyy-MM-dd\");\r\n\r\n        // Parse dates as LocalDate\r\n        def opened = java.time.LocalDate.parse(ctx.Account_Opened_Date, fmt);\r\n        def txn    = java.time.LocalDate.parse(ctx.transaction_date, fmt);\r\n\r\n        // Ignore if transaction happens before the account was opened\r\n        if (!txn.isBefore(opened)) {\r\n          // Full years elapsed between the two dates\r\n          long years = java.time.temporal.ChronoUnit.YEARS.between(opened, txn);\r\n\r\n          // How many full 4-year intervals have passed\r\n          if (years >= 4) {\r\n            long intervals = years / 4L;   // integer division\r\n            ctx.Card_Renewed = intervals;\r\n          }\r\n        }\r\n      }"
+      }
+    },
+    {
+      "script": {
+        "ignore_failure": true,
+        "source": "if (ctx.Account_Opened_Date != null && ctx.transaction_date != null) {\r\n        def fmt = java.time.format.DateTimeFormatter.ofPattern(\"yyyy-MM-dd\");\r\n\r\n        def opened = java.time.LocalDate.parse(ctx.Account_Opened_Date, fmt);\r\n        def txn    = java.time.LocalDate.parse(ctx.transaction_date, fmt);\r\n\r\n        // Ignore if transaction is before account open\r\n        if (!txn.isBefore(opened)) {\r\n\r\n          long intervals = 0;\r\n          def renewal = opened.plusYears(4L);\r\n\r\n          // Walk forward in 4-year jumps, as long as the renewal date is <= transaction date\r\n          while (!renewal.isAfter(txn)) {\r\n            intervals += 1;\r\n\r\n            // e.g. Date_Renewed_1, Date_Renewed_2, ...\r\n            ctx[\"Date_Renewed_\" + intervals] = renewal.format(fmt);\r\n\r\n            renewal = renewal.plusYears(4L);\r\n          }\r\n\r\n          if (intervals > 0) {\r\n            ctx.Card_Renewed = intervals;\r\n          }\r\n        }\r\n      }"
+      }
+    }
+  ]
+}
