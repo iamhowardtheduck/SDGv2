@@ -1,4 +1,4 @@
-#!/bin/bash
+# !/bin/bash
 # Ensure root
 if [ "$EUID" -ne 0 ]; then
   echo "Please run as root or with sudo."
