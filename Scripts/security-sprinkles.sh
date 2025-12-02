@@ -12,8 +12,8 @@ clear
 echo
 echo "Pre-loading malware simulation / aka security sprinkles."
 echo
-chmod +x /SDGv2/Scripts/install_oniux.sh
-bash /SDGv2/Scripts/install_oniux.sh
+chmod +x /root/SDGv2/Scripts/install_oniux.sh
+bash /root/SDGv2/Scripts/install_oniux.sh
 echo
 echo "Security sprinkles applied, Bon Appétit!!!"
 echo 
