@@ -1,9 +1,6 @@
 #!/bin/bash
-# Ensure root
-if [ "$EUID" -ne 0 ]; then
-  echo "Please run as root or with sudo."
-  exit 1
-fi
+set -e
+
 # --- Non-interactive & auto-restart for services ---
 export DEBIAN_FRONTEND=noninteractive
 sudo mkdir -p /etc/needrestart/conf.d
