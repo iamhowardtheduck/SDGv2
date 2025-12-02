@@ -12,4 +12,4 @@ done
 
 echo "[$(date --iso-8601=seconds)] All $COUNT runs completed."
 
-bash /root/SDGv2/Scripts/security-cake.sh
+bash /workspace/workshop/SDGv2/Scripts/security-cake.sh
