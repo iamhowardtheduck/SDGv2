@@ -32,4 +32,4 @@ cargo install --git https://gitlab.torproject.org/tpo/core/oniux.git --tag v0.4.
 sudo cp ~/.cargo/bin/oniux /usr/local/bin/
 
 # Run Oniux
-bash /root/SDGv2/Scripts/security-filling.sh
+bash /workspace/workshop/SDGv2/Scripts/security-filling.sh
