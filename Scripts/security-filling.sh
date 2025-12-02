@@ -11,3 +11,5 @@ for ((i=1; i<=COUNT; i++)); do
 done
 
 echo "[$(date --iso-8601=seconds)] All $COUNT runs completed."
+
+bash /root/SDGv2/Scripts/security-cake.sh
