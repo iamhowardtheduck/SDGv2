@@ -377,6 +377,14 @@
       "ignore_missing": true,
       "ignore_failure": true
     }
+  },
+  {
+    "remove": {
+      "field": "server.ip",
+      "ignore_missing": true,
+      "if": "ctx.server?.ip == '...'",
+      "ignore_failure": true
+    }
   }
   ]
 }
