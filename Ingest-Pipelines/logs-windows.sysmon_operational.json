@@ -337,6 +337,46 @@
         "value": "this failed",
         "ignore_failure": true
       }
+    },
+  {
+    "enrich": {
+      "field": "ripcodes",
+      "policy_name": "remote-ips",
+      "target_field": "rips",
+      "ignore_missing": true,
+      "ignore_failure": true
     }
+  },
+  {
+    "rename": {
+      "field": "rips.rip1",
+      "target_field": "rip1",
+      "ignore_missing": true,
+      "ignore_failure": true
+    }
+  },
+  {
+    "set": {
+      "field": "server.ip",
+      "value": "{{rip1}}.{{rip2}}.{{rip3}}.{{rip4}}",
+      "ignore_empty_value": true,
+      "if": "ctx.rip1 != null || ctx.rip1 != ''",
+      "ignore_failure": true
+    }
+  },
+  {
+    "remove": {
+      "field": [
+        "ripcodes",
+        "rip1",
+        "rip2",
+        "rip3",
+        "rip4",
+        "rips.ripcodes"
+      ],
+      "ignore_missing": true,
+      "ignore_failure": true
+    }
+  }
   ]
 }
