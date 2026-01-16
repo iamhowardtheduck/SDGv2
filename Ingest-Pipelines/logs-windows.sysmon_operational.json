@@ -328,15 +328,6 @@
         "if": "ctx.host?.ip == '10.49.110.17'",
         "ignore_failure": true
       }
-    }
-  ],
-  "on_failure": [
-    {
-      "set": {
-        "field": "error.message",
-        "value": "this failed",
-        "ignore_failure": true
-      }
     },
   {
     "enrich": {
@@ -386,5 +377,14 @@
       "ignore_failure": true
     }
   }
+  ],
+  "on_failure": [
+    {
+      "set": {
+        "field": "error.message",
+        "value": "this failed",
+        "ignore_failure": true
+      }
+    }
   ]
 }
